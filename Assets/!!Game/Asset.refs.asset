@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ab316f2041483ab2054ce15b8176de, type: 3}
+  m_Name: Asset.refs
+  m_EditorClassIdentifier: 
+  DisablePipeline: 0
+  EnabledTasks:
+  - Enabled: 1
+    Task:
+      rid: 3009909224690941952
+  - Enabled: 1
+    Task:
+      rid: 3009908962306031618
+  - Enabled: 1
+    Task:
+      rid: 3009908962306031616
+  references:
+    version: 2
+    RefIds:
+    - rid: 3009908962306031616
+      type: {class: ResourcesPopulateRefs, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
+      data: 
+    - rid: 3009908962306031618
+      type: {class: AddRefsDirect, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
+      data:
+        _refs:
+        - {fileID: 3289095164040996168, guid: 069f665c8c7ec0543b84a34b2c307884, type: 3}
+        - {fileID: 4200789476672242700, guid: d1be6da70d122814e85788d63b8276bd, type: 3}
+        - {fileID: 11400000, guid: 11f95cb70947da346bb92451118ea417, type: 2}
+        - {fileID: 102900000, guid: 1afdd18b2b9c65e4b866284337ba9044, type: 3}
+        - {fileID: 102900000, guid: 6bfc812ba38db7b47bc55722377eb3a5, type: 3}
+    - rid: 3009909224690941952
+      type: {class: RunOnBuildPreprocess, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
+      data: 

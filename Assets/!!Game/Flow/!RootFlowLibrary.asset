@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98dc713b27c7413490371c5ffc0749bc, type: 3}
+  m_Name: '!RootFlowLibrary'
+  m_EditorClassIdentifier: 
+  _dependencies:
+  - {fileID: 11400000, guid: c1be01a1ef3f6734f83f38792be212c9, type: 2}
+  - {fileID: 11400000, guid: 9b6dca4bba14b264fb9ebc6b437a639e, type: 2}
+  - {fileID: 11400000, guid: 37edc546be7a27c4ba54355ebaa475ac, type: 2}
+  _stages:
+  - _uid:
+      serializedVersion: 2
+      Hash: 069f665c8c7ec0543b84a34b2c307884
+    _subId: 0
+  - _uid:
+      serializedVersion: 2
+      Hash: d1be6da70d122814e85788d63b8276bd
+    _subId: 0
+  _states:
+  - TypeFullName: Test.Runner.CoreGame.UI.DTLoader_Coregame
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: c1055f23b34e09a4496fc2c881bb0920
+      _subId: 0

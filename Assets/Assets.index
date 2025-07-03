@@ -1,0 +1,17 @@
+{
+    "name": "",
+    "type": "asset",
+    "roots": [],
+    "includes": [],
+    "excludes": [
+        "External/"
+    ],
+    "options": {
+        "disabled": false,
+        "types": true,
+        "properties": false,
+        "extended": false,
+        "dependencies": false
+    },
+    "baseScore": 100
+}
