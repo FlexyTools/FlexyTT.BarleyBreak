@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 725c3423f0a150548a75df1c9375f327, type: 3}
+  m_Name: Mobs
+  m_EditorClassIdentifier: 
+  _volume: 1
+  _clips:
+  - _name: Jump
+    _key: 47
+    _clip: {fileID: 8300000, guid: 7c27a13555c6947eab6aca916a0f03ed, type: 3}
+  - _name: Hit
+    _key: 166
+    _clip: {fileID: 8300000, guid: e2a915bbc58734650bd17de4e87a001c, type: 3}
+  - _name: Hero_Death
+    _key: 96
+    _clip: {fileID: 8300000, guid: 4668d9fcf8d264f3693f23878a14042b, type: 3}
+  - _name: Explosion
+    _key: 163
+    _clip: {fileID: 8300000, guid: 066d4f15549a6480eaea224b69a1c85f, type: 3}
