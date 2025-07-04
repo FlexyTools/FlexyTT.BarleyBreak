@@ -20,19 +20,25 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 	        set => _figure = value;
         }
 
-        public Boolean IsEmpty => _figure == null;
-        public Vector3 GlobalPosition => _rectTransform.position;
+        public Boolean IsEmpty			=> _figure == null;
+        public Boolean IsSolved			=> _figure == _originalFigure;
+        public Vector3 GlobalPosition	=> _rectTransform.position;
 
         public		void	MakeLastCellClear	( )	
         {
 	        Destroy(Figure.gameObject);
 	        Figure = null;
+	        _originalFigure = null;
         }
-        public		void	Reset				( )	
+        public		void	ResetCell			( )	
         {
-			_figure = _originalFigure;
-	        _originalFigure.parent = transform;
-	        _originalFigure.position = GlobalPosition;
+			_figure				= _originalFigure;
+	        
+	        if (_figure)
+	        {
+		        _figure.SetParent	( transform );
+		        _figure.position	= GlobalPosition;
+	        }
         }
 
         private		void	Awake		( )	

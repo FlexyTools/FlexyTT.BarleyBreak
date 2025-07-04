@@ -5,7 +5,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 		[Bindable]			Int32		RunMinutes		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).Minutes;
 		[Bindable]			Int32		RunSeconds		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).Seconds;
 		[Bindable]			Int32		RunMiliseconds	=> TimeSpan.FromSeconds( Game.Mode.RunTime ).Milliseconds;
-		
+
 		protected override void		OnBackShow	( )		
 		{
 			Time.timeScale = 1;
@@ -16,17 +16,22 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 			return false;
 		}
 
-		private			void		OnApplicationPause	( Boolean pauseStatus )	
+		private		void	Update				( )						
+		{
+			if (Game.Mode.IsWin)
+				GameStage.CloseStage( );
+		}
+		private		void	OnApplicationPause	( Boolean pauseStatus )	
 		{
 			if( !Application.isEditor )
 				Game.UI.Pause.Open( );
 		}
 		
-        [Callable] void Pause		( )			
+        [Callable]	void	Pause		( )			
         {
 			Game.UI.Pause.Open( );
         }
-		[Callable] void OpenFreeCam	( )			
+		[Callable]	void	OpenFreeCam	( )			
 		{
 			Game.UI.FreeCam.Open( );
 		}

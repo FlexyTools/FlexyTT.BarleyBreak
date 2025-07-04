@@ -1,5 +1,5 @@
-﻿using UnityEngine.SceneManagement;
-using Facade_Game = Flexy.Template.BarleyBreak.CoreGame.Facade_Game;
+﻿using Flexy.Template.BarleyBreak.CoreGame.Minigames;
+using UnityEngine.SceneManagement;
 
 namespace Flexy.Template.BarleyBreak.CoreGame
 {
@@ -18,16 +18,16 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 
         protected override	void	OnShow				( )		
 		{
-			LoadZone( ).Forget( Debug.LogException );
+			LoadField( ).Forget( Debug.LogException );
 		}
 		protected override	void	OnBackShow			( )		
 		{
 			_runResult = Game.Mode.RunTime;
 			
-			UnloadZone( ).Forget( Debug.LogException );
+			UnloadField( ).Forget( Debug.LogException );
 		}
 
-		private async	UniTask		LoadZone			( )		
+		private async	UniTask		LoadField			( )		
 		{
 			Debug.Log( $"[DTLoader_Coregame] ----------- ===========   Coregame Loading: START   =========== -----------" );
 			
@@ -88,17 +88,20 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 			
 			//Make sure loading screen is visible at least 1 second
 			var elapsedTimeFromStartLoad	= Time.realtimeSinceStartup - timeStartLoad; 
-			if( elapsedTimeFromStartLoad < 1 )
+			if( elapsedTimeFromStartLoad < 0.5f )
 				await UniTask.Delay( TimeSpan.FromSeconds(1-elapsedTimeFromStartLoad), DelayType.Realtime );
 			
 			await UniTask.DelayFrame( 1 );
 			Time.timeScale	= 1f;
 			
+			var loadedMinigame = FindObjectsByType<Minigame_BarleyBreak>( FindObjectsSortMode.None );
+			GameStage.Context.SetService( loadedMinigame );
+			
 			GameStage.OpenRootState( );
 			
 			Debug.Log( $"[DTLoader_Coregame] ----------- ===========   Coregame Loading: DONE   =========== -----------" );
 		}
-		private async	UniTask		UnloadZone			( )		
+		private async	UniTask		UnloadField			( )		
 		{
 			Debug.Log( $"[DTLoader_Coregame] ----------- ===========   Coregame Unloading: START   =========== -----------" );
 			

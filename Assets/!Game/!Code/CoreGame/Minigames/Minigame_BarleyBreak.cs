@@ -11,7 +11,9 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 	
 	    private List<Minigame_BarleyBreak_Cell> _cells = new();
 	
-        public		Single	RunTime		{ get; }
+	    private		Single	StartTime	{ get; set; }
+        public		Single	RunTime		=> Time.realtimeSinceStartup - StartTime;
+        public		Boolean	IsWin		{ get; set; }
 
         private     void    Awake       ( )     
         {
@@ -45,6 +47,12 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
             Check( x+1, y, animate );
             Check( x, y-1, animate );
             Check( x, y+1, animate );
+            
+            if (CheckWin( ))
+			{
+				_inputBlocker.SetActive( true );
+				IsWin = true;
+			}
             
             return;
 
@@ -82,7 +90,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
         private async	UniTask		InitMinigameAsync	( )		
         {
 	        foreach (var cell in _cells)
-		        cell.Reset( );
+		        cell.ResetCell( );
         
 			//Time.timeScale = 10;
         
@@ -113,6 +121,8 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 					return _cells[targetIndex];
 				}
 			}
+			
+			StartTime = Time.realtimeSinceStartup;
         }
         private async	UniTask		AnimateFigureTo		( Minigame_BarleyBreak_Cell from, Minigame_BarleyBreak_Cell to, Single animationDuration = 1 ) 
         {
@@ -141,19 +151,16 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
             // if( target == _cells[8].anchoredPosition )
             //     DoWinSequenseAsync( ).Forget( );
         }
-        private async	UniTask		DoWinSequenseAsync	( )	    
+        
+        private			Boolean		CheckWin			( )		
         {
-            _inputBlocker.SetActive( true );
-			
-            // Tween.Value( 0.01f, 1, 0.5f ).BindTo( _hole, static (h, scale) => h.localScale = new(scale, scale, scale) ).Run( );
-			         //
-            // await UniTask.Delay( 700 );
-			         //
-            // Tween.LocalPositionY( _mainCup, _mainCup.localPosition.y, _mainCup.localPosition.y -400, 0.3f ).Run( );
-			         //
-            // await UniTask.Delay( 400 );
-		
-            gameObject.SetActive( false );
-        }
+            for (var i = 0; i < _cells.Count - 1; i++)
+            {
+                if (_cells[i].IsEmpty || !_cells[i].IsSolved)
+                    return false;
+            }
+
+            return true;
+        } 
     }
 }
