@@ -11,7 +11,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 	
 	    private List<Minigame_BarleyBreak_Cell> _cells = new();
 	
-        public Single RunTime { get; }
+        public		Single	RunTime		{ get; }
 
         private     void    Awake       ( )     
         {
@@ -29,30 +29,26 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
                 cell.gameObject.SetActive(true);
             }
             
-            // Clear last cell
-            var f = _cells[^1].Figure;
-            _cells[^1].Figure = null;
-            Destroy(f.gameObject);
+            _cells[^1].MakeLastCellClear();
         }
-
         private		void	OnEnable	( )		
         {
             InitMinigameAsync( ).Forget( );
         }
 
-        internal	void	ClickCell	( Int32 cellIndex )				
+        internal	void	ClickCell		( Int32 cellIndex, Boolean animate = true )															
         {
             var x = cellIndex % _gridSize;
             var y = cellIndex / _gridSize;
         
-            Check( x-1, y );
-            Check( x+1, y );
-            Check( x, y-1 );
-            Check( x, y+1 );
+            Check( x-1, y, animate );
+            Check( x+1, y, animate );
+            Check( x, y-1, animate );
+            Check( x, y+1, animate );
             
             return;
 
-            void Check( Int32 x, Int32 y )
+            void Check( Int32 x, Int32 y, Boolean animate )
             {
 				if (x<0|y<0|x>=_gridSize|y>=_gridSize) 
 					return;
@@ -61,29 +57,67 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 				    
 				if (_cells[index].IsEmpty)
 				{
-					MoveFigureTo( _cells[cellIndex], index );
+					MoveFigureTo( _cells[cellIndex], _cells[index], animate );
 				}
             }
         }
-        private		void	MoveFigureTo		( Minigame_BarleyBreak_Cell sourceCell, Int32 to, Boolean animate = true )	
+        private		void	MoveFigureTo	( Minigame_BarleyBreak_Cell sourceCell, Minigame_BarleyBreak_Cell targetCell, Boolean animate = true )	
         {
-			var targetCell = _cells[to];
+			var figure		= sourceCell.Figure;
         
             if (animate)
+            {
 				AnimateFigureTo( sourceCell, targetCell, 0.4f ).Forget( );
+			}
+			else
+			{
+				figure.SetParent(targetCell.transform, true);
+				figure.position	= targetCell.GlobalPosition;
+			}
 				
-            targetCell.Figure = sourceCell.Figure;
+            targetCell.Figure = figure;
             sourceCell.Figure = null;
         }
 	
         private async	UniTask		InitMinigameAsync	( )		
         {
-            // for (var i = 0; i < _cups.Length; i++)
-            //     if( _cups[i] )
-            //         AnimateFigureTo( _cups[i], _cells[i].anchoredPosition).Forget( );
+	        foreach (var cell in _cells)
+		        cell.Reset( );
+        
+			//Time.timeScale = 10;
+        
+			var currEmptyCell = _cells[^1];
+            for (var i = 0; i < 500; i++)
+            {
+	            var dir = Random.Range(0, 4);
+            
+	            var x = currEmptyCell.Index % _gridSize;
+	            var y = currEmptyCell.Index / _gridSize;
+        
+				switch(dir)
+				{
+					case 0: currEmptyCell = Check( currEmptyCell, x-1, y ); break;
+					case 1: currEmptyCell = Check( currEmptyCell, x+1, y ); break;
+					case 2: currEmptyCell = Check( currEmptyCell, x, y-1 ); break;
+					case 3: currEmptyCell = Check( currEmptyCell, x, y+1 ); break;
+				}
+        
+				Minigame_BarleyBreak_Cell Check( Minigame_BarleyBreak_Cell curr, Int32 x, Int32 y )
+				{
+					if (x<0|y<0|x>=_gridSize|y>=_gridSize) 
+						return curr;
+
+					var targetIndex = y * _gridSize + x;
+					MoveFigureTo( _cells[targetIndex], curr, false );
+					
+					return _cells[targetIndex];
+				}
+			}
         }
         private async	UniTask		AnimateFigureTo		( Minigame_BarleyBreak_Cell from, Minigame_BarleyBreak_Cell to, Single animationDuration = 1 ) 
         {
+			//use exponen tween
+        
 			var figure = from.Figure;
 	        figure.SetParent(from.transform.parent, true);
         

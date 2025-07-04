@@ -71,7 +71,6 @@ GameObject:
   - component: {fileID: 2783757913122837740}
   - component: {fileID: 9177113893495440294}
   - component: {fileID: 1342580290730135017}
-  - component: {fileID: 7450108052369670842}
   m_Layer: 5
   m_Name: Minigame_Barley-Break
   m_TagString: Untagged
@@ -115,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cellPrefab: {fileID: 1426877114923522732}
   _inputBlocker: {fileID: 5715347257595549983}
-  _cellContainer: {fileID: 5659502088408275590}
+  _cellContainer: {fileID: 7779828629872575134}
   _gridSize: 3
 --- !u!222 &1342580290730135017
 CanvasRenderer:
@@ -125,36 +124,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2783757913122837741}
   m_CullTransparentMesh: 1
---- !u!114 &7450108052369670842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2783757913122837741}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.13315454, g: 0.12745458, b: 0.19245279, a: 0.8862745}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &3956841815233405898
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,14 +264,17 @@ MonoBehaviour:
   EnableClickDelay: 0.2
   ReclickTimeout: 0.5
   DoubleClickMode: 0
-  ClickSfx:
-    _library: {fileID: 0}
-    _clip: 0
-    _volume: 1
-  MisclickSfx:
-    _library: {fileID: 0}
-    _clip: 0
-    _volume: 1
+  Clicked:
+    _action:
+      rid: -2
+  Misclicked:
+    _action:
+      rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &5715347257595549983
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,8 +404,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 8
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a0a54980b3526fb4293a91ff33783c04, type: 2}
-  m_sharedMaterial: {fileID: -3760787228119373654, guid: a0a54980b3526fb4293a91ff33783c04, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 496c65f8240993647bc940d914baa346, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -463,7 +435,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

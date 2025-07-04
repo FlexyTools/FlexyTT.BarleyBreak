@@ -609,16 +609,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_Barley-Break
       objectReference: {fileID: 0}
-    - target: {fileID: 9177113893495440294, guid: e648965002c923243b36cdfef8f4d9f5, type: 3}
-      propertyPath: _gridSize
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9177113893495440294, guid: e648965002c923243b36cdfef8f4d9f5, type: 3}
-      propertyPath: _cellContainer
-      value: 
-      objectReference: {fileID: 3701781295052326633}
-    m_RemovedComponents:
-    - {fileID: 7450108052369670842, guid: e648965002c923243b36cdfef8f4d9f5, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -628,17 +619,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2783757913122837740, guid: e648965002c923243b36cdfef8f4d9f5, type: 3}
   m_PrefabInstance: {fileID: 3701781295052326631}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3701781295052326633 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7779828629872575134, guid: e648965002c923243b36cdfef8f4d9f5, type: 3}
-  m_PrefabInstance: {fileID: 3701781295052326631}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &8064960190023036520
 CanvasRenderer:
   m_ObjectHideFlags: 0

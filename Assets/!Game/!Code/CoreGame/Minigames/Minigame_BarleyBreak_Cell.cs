@@ -7,6 +7,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
         [FormerlySerializedAs("_visualItem")] 
         [SerializeField]    RectTransform   _figure;
 
+        private RectTransform _originalFigure;
         private RectTransform _rectTransform;
         public Int32 Index { get; set; }
 
@@ -22,9 +23,22 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
         public Boolean IsEmpty => _figure == null;
         public Vector3 GlobalPosition => _rectTransform.position;
 
+        public		void	MakeLastCellClear	( )	
+        {
+	        Destroy(Figure.gameObject);
+	        Figure = null;
+        }
+        public		void	Reset				( )	
+        {
+			_figure = _originalFigure;
+	        _originalFigure.parent = transform;
+	        _originalFigure.position = GlobalPosition;
+        }
+
         private		void	Awake		( )	
         {
-	        _rectTransform = GetComponent<RectTransform>();
+	        _rectTransform	= GetComponent<RectTransform>();
+	        _originalFigure	= _figure;
         }
 
         [Callable]	void	ClickCell	( )	
