@@ -1,6 +1,6 @@
 using UnityEngine.Serialization;
 
-namespace Test.Runner.CoreGame.Minigames
+namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 {
     public class Minigame_BarleyBreak_Cell : MonoBehEx
     {

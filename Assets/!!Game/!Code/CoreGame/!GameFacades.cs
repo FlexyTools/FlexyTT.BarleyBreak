@@ -1,7 +1,7 @@
-using Test.Runner.CoreGame.Minigames;
-using Test.Runner.CoreGame.UI;
+using Flexy.Template.BarleyBreak.CoreGame.Minigames;
+using Flexy.Template.BarleyBreak.CoreGame.UI;
 
-namespace Test.Runner.CoreGame;
+namespace Flexy.Template.BarleyBreak.CoreGame;
 
 public struct	Facade_Game
 {
@@ -9,7 +9,6 @@ public struct	Facade_Game
 													
     public	Facade_UIWindows_Core   UI				=> new(Ctx.GetService<GameStage>( ));
     public	GameSettingsService	    Settings		=> Ctx.GetService<GameSettingsService>( );
-    public	AudioPlaylist		    AudioPlayer		=> Ctx.GetService<AudioPlaylist>( );
     public  Minigame_BarleyBreak	Mode         	=> Ctx.GetService<Minigame_BarleyBreak>( );
 
     public	Facade_Game			GetCached			( Component callSource )

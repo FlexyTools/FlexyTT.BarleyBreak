@@ -1,6 +1,7 @@
 ﻿using UnityEngine.SceneManagement;
+using Facade_Game = Flexy.Template.BarleyBreak.CoreGame.Facade_Game;
 
-namespace Test.Runner.CoreGame
+namespace Flexy.Template.BarleyBreak.CoreGame
 {
 	public class CoregameLoader : State, IStateWithResult<Single>
 	{

@@ -1,27 +1,28 @@
-﻿namespace Runner.UI
+﻿using Flexy.Template.BarleyBreak.Settings;
+
+namespace Flexy.Template.BarleyBreak.UI
 {
 	public class Window_GameSettings : UIWindowEx
 	{
-		private AudioSettingsTab _audioSettingsTab;
+		private ColorSettingsTab _colorSettingsTab;
 
-		[Bindable]	Single	MusicVolume		 
+		[Bindable]	Color	PrimaryColor		 
 		{
-			get => _audioSettingsTab.MusicVolume;
-			set { _audioSettingsTab.MusicVolume.Set( value ); RebindProperty( "MusicVolume", "MusicVolume_100" ); }
+			get => _colorSettingsTab.PrimaryColor.Get();
+			set { _colorSettingsTab.PrimaryColor.Set( value ); RebindProperty( "PrimaryColor" ); }
 		}
-		[Bindable]	Int32	MusicVolume_100 => (Int32)(MusicVolume * 100);
+		//[Bindable]	Int32	MusicVolume_100 => (Int32)(MusicVolume * 100);
 		
-		[Bindable]	Single	SfxVolume		
+		[Bindable]	Color	SecondaryColor		
 		{
-			get => _audioSettingsTab.SfxVolume;
-			set { _audioSettingsTab.SfxVolume.Set( value ); RebindProperty( "SfxVolume", "SfxVolume_100" ); }
+			get => _colorSettingsTab.SecondaryColor.Get();
+			set { _colorSettingsTab.SecondaryColor.Set( value ); RebindProperty( "SecondaryColor" ); }
 		}
-		[Bindable]	Int32	SfxVolume_100	=> (Int32)(SfxVolume * 100);
+		//[Bindable]	Int32	SfxVolume_100	=> (Int32)(SfxVolume * 100);
 		
 		private		void	Awake	( )		
 		{
-			_audioSettingsTab = Game.Settings.Get<AudioSettingsTab>( );
+			_colorSettingsTab = Game.Settings.Get<ColorSettingsTab>( );
 		}
 	}
 }
-

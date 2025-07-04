@@ -1,8 +1,8 @@
 ﻿// ReSharper disable AccessToStaticMemberViaDerivedType
 
-using Runner.UI;
+using Flexy.Template.BarleyBreak.UI;
 
-namespace Runner;
+namespace Flexy.Template.BarleyBreak;
 
 public struct	Facade_Game
 {
@@ -10,7 +10,6 @@ public struct	Facade_Game
 
 	public	Facade_UIWindows	UI					=> new(Ctx.GetService<GameStage>( ));
 	public	GameSettingsService	Settings			=> Ctx.GetService<GameSettingsService>( );
-	public	AudioPlaylist		AudioPlayer			=> Ctx.GetService<AudioPlaylist>( );
 
 	public	Facade_Game			GetCached			( Component callSource )
 	{

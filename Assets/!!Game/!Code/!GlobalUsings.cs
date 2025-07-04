@@ -9,15 +9,11 @@ global using Flexy.GameFlow;
 global using Flexy.GameFlow.Binding;
 global using Flexy.UI;
 global using Flexy.UI.Bindings;
-global using Flexy.Audio;
 
 global using UnityEngine;
 global using UnityEngine.UI;
 
 global using Cysharp.Threading.Tasks;
-
-global using Runner;
-
 global using Object		= System.Object;
 global using Random		= UnityEngine.Random;
 

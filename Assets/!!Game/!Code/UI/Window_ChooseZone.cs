@@ -1,4 +1,4 @@
-﻿namespace Runner.UI
+﻿namespace Flexy.Template.BarleyBreak.UI
 {
 	public class Window_ChooseZone : UIWindowEx
 	{

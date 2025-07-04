@@ -351,14 +351,6 @@
       "dependencies": {},
       "hash": "7408b91b2b60e2a78263295fe81815dc40cb6fe1"
     },
-    "fun.flexy.audio": {
-      "version": "file:fun.flexy.audio",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "fun.flexy.core": "5.0.0"
-      }
-    },
     "fun.flexy.core": {
       "version": "file:fun.flexy.core",
       "depth": 0,

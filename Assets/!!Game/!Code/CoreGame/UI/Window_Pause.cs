@@ -1,4 +1,4 @@
-﻿namespace Test.Runner.CoreGame.UI
+﻿namespace Flexy.Template.BarleyBreak.CoreGame.UI
 {
 	public class Window_Pause : UIWindowEx
 	{

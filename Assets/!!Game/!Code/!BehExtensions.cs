@@ -1,4 +1,4 @@
-﻿namespace Runner
+﻿namespace Flexy.Template.BarleyBreak
 {
 	public class			MonoBehEx: MonoBehaviour				
 	{
