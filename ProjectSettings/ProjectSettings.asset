@@ -895,10 +895,10 @@ PlayerSettings:
     Android: 2
     Standalone: 2
   il2cppCodeGeneration:
-    Android: 1
+    Android: 0
   il2cppStacktraceInformation: {}
   managedStrippingLevel:
-    Android: 4
+    Android: 1
     EmbeddedLinux: 1
     GameCoreScarlett: 1
     GameCoreXboxOne: 1
