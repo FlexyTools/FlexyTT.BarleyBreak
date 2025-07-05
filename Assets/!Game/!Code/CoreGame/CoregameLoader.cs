@@ -14,7 +14,6 @@ namespace Flexy.Template.BarleyBreak.CoreGame
         private SceneRef    _map;
         
 		private Single		_runResult;
-		private GameContext	_gameModeCtx;
 
         protected override	void	OnShow				( )		
 		{
@@ -94,7 +93,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 			await UniTask.DelayFrame( 1 );
 			Time.timeScale	= 1f;
 			
-			var loadedMinigame = FindObjectsByType<Minigame_BarleyBreak>( FindObjectsSortMode.None );
+			var loadedMinigame = FindAnyObjectByType<Minigame_BarleyBreak>( );
 			GameStage.Context.SetService( loadedMinigame );
 			
 			GameStage.OpenRootState( );
@@ -105,8 +104,6 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 		{
 			Debug.Log( $"[DTLoader_Coregame] ----------- ===========   Coregame Unloading: START   =========== -----------" );
 			
-			_gameModeCtx.gameObject.SetActive(false);
-			_gameModeCtx.Destroy( );
 			await UniTask.NextFrame( );
 
 			GameStage.transform.parent = null;

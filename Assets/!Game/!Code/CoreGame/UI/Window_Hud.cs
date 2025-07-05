@@ -19,7 +19,8 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 		private		void	Update				( )						
 		{
 			if (Game.Mode.IsWin)
-				GameStage.CloseStage( );
+				FinishGameAsync( ).Forget( );
+				
 		}
 		private		void	OnApplicationPause	( Boolean pauseStatus )	
 		{
@@ -27,13 +28,21 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 				Game.UI.Pause.Open( );
 		}
 		
-        [Callable]	void	Pause		( )			
+        [Callable]	void	Pause				( )			
         {
 			Game.UI.Pause.Open( );
         }
-		[Callable]	void	OpenFreeCam	( )			
+		[Callable]	void	OpenFreeCam			( )			
 		{
 			Game.UI.FreeCam.Open( );
+		}
+		
+		private async	UniTaskVoid		FinishGameAsync	( )	
+		{
+			await UniTask.Delay( 1000, DelayType.UnscaledDeltaTime );
+		
+			// This will close through CoregameLoader
+			GameStage.CloseStage( );
 		}
     }
 }
