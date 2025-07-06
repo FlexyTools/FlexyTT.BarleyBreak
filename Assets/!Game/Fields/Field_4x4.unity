@@ -362,8 +362,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 200
-  far clip plane: 2000
+  near clip plane: 1000
+  far clip plane: 3000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -391,7 +391,7 @@ Transform:
   m_GameObject: {fileID: 1816152879}
   serializedVersion: 2
   m_LocalRotation: {x: 0.015009303, y: 0, z: 0, w: 0.99988735}
-  m_LocalPosition: {x: 9, y: 36, z: -1206}
+  m_LocalPosition: {x: 9, y: 57, z: -2697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 8064960190162606026}
   - component: {fileID: 1466881220645300775}
   m_Layer: 5
-  m_Name: Map
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -664,7 +664,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 4000, y: 0}
+  m_SizeDelta: {x: 4000, y: 4000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

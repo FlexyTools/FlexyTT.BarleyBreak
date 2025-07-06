@@ -123,6 +123,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2323264519867302732, guid: 1ac0f6443f1853448825d662c0c296f4, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323264519867302732, guid: 1ac0f6443f1853448825d662c0c296f4, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1920
+      objectReference: {fileID: 0}
     - target: {fileID: 3289095164040996168, guid: 1ac0f6443f1853448825d662c0c296f4, type: 3}
       propertyPath: m_Name
       value: Stage_Coregame
