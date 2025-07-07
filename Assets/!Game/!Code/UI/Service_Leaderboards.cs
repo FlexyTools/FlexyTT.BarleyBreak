@@ -15,13 +15,13 @@ namespace Flexy.Template.BarleyBreak.UI
 		public	BoardData	Leaderboard4X4 => _leaderboard4x4;
 		public	BoardData	Leaderboard5X5 => _leaderboard5x5;
 
-		public	void		AddRecord	( Byte boardSize, Single score )
+		public	void		AddRecord	( EField field, Single score )
 		{
-			var board = boardSize switch
+			var board = field switch
 			{
-				3 => _leaderboard3x3,
-				4 => _leaderboard4x4,
-				5 => _leaderboard5x5,
+				EField.Board3x3 => _leaderboard3x3,
+				EField.Board4x4 => _leaderboard4x4,
+				EField.Board5x5 => _leaderboard5x5,
 			};
 			
 			board.Records.Add( score );

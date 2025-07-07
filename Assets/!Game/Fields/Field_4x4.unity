@@ -610,6 +610,10 @@ PrefabInstance:
       value: Minigame_Barley-Break
       objectReference: {fileID: 0}
     - target: {fileID: 9177113893495440294, guid: e648965002c923243b36cdfef8f4d9f5, type: 3}
+      propertyPath: _board
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177113893495440294, guid: e648965002c923243b36cdfef8f4d9f5, type: 3}
       propertyPath: _gridSize
       value: 4
       objectReference: {fileID: 0}

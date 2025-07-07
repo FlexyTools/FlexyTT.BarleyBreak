@@ -609,6 +609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_Barley-Break
       objectReference: {fileID: 0}
+    - target: {fileID: 9177113893495440294, guid: e648965002c923243b36cdfef8f4d9f5, type: 3}
+      propertyPath: _board
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -6,6 +6,16 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 		[Bindable]			Int32		RunSeconds		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).Seconds;
 		[Bindable]			Int32		RunMiliseconds	=> TimeSpan.FromSeconds( Game.Mode.RunTime ).Milliseconds;
 
+		private Boolean _finishingStarted;
+
+		protected override void		OnShow		( )		
+		{
+			_finishingStarted = false;
+		}
+		protected override void		OnFwdHide	( )		
+		{
+			Time.timeScale = 0.001f;
+		}
 		protected override void		OnBackShow	( )		
 		{
 			Time.timeScale = 1;
@@ -18,9 +28,11 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 
 		private		void	Update				( )						
 		{
-			if (Game.Mode.IsWin)
+			if (Game.Mode.IsWin && !_finishingStarted)
+			{
+				_finishingStarted = true;
 				FinishGameAsync( ).Forget( );
-				
+			}	
 		}
 		private		void	OnApplicationPause	( Boolean pauseStatus )	
 		{
@@ -32,14 +44,12 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
         {
 			Game.UI.Pause.Open( );
         }
-		[Callable]	void	OpenFreeCam			( )			
-		{
-			Game.UI.FreeCam.Open( );
-		}
 		
 		private async	UniTaskVoid		FinishGameAsync	( )	
 		{
 			await UniTask.Delay( 1500, DelayType.UnscaledDeltaTime );
+		
+			Game.Leaderboards.AddRecord( Game.Mode.Board, Game.Mode.RunTime );
 		
 			await Game.UI.FieldComplete.Open( Game.Mode.Board, Game.Mode.RunTime ).WaitShow( );
 			

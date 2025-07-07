@@ -1,5 +1,6 @@
 using Flexy.Template.BarleyBreak.CoreGame.Minigames;
 using Flexy.Template.BarleyBreak.CoreGame.UI;
+using Flexy.Template.BarleyBreak.UI;
 
 namespace Flexy.Template.BarleyBreak.CoreGame;
 
@@ -10,6 +11,7 @@ public struct	Facade_Game
     public	Facade_UIWindows_Core   UI				=> new(Ctx.GetService<GameStage>( ));
     public	GameSettingsService	    Settings		=> Ctx.GetService<GameSettingsService>( );
     public  Minigame_BarleyBreak	Mode         	=> Ctx.GetService<Minigame_BarleyBreak>( );
+    public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>( );
 
     public	Facade_Game			GetCached			( Component callSource )
     {
