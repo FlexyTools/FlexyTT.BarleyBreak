@@ -1,7 +1,10 @@
+using Flexy.Template.BarleyBreak.UI;
+
 namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 {
     public class Minigame_BarleyBreak : MonoBehEx
     {
+	    [SerializeField]	EField			_board;
         [SerializeField]	Minigame_BarleyBreak_Cell _cellPrefab;
         [SerializeField]	GameObject		_inputBlocker;
         [SerializeField]	GridLayoutGroup	_cellContainer;
@@ -10,8 +13,9 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
         private readonly	AnimationCurve	_animCurve = AnimationCurve.EaseInOut( 0, 0, 1, 1 );
 	
 	    private List<Minigame_BarleyBreak_Cell> _cells = new();
-	
-	    private		Single	StartTime	{ get; set; }
+
+	    public		EField	Board		=> _board;
+	    public		Single	StartTime	{ get; set; }
         public		Single	RunTime		=> Time.realtimeSinceStartup - StartTime;
         public		Boolean	IsWin		{ get; set; }
 

@@ -15,25 +15,19 @@ MonoBehaviour:
   _dependencies: []
   _stages: []
   _states:
-  - TypeFullName: Test.Runner.CoreGame.UI.Window_Hud
+  - TypeFullName: Flexy.Template.BarleyBreak.CoreGame.UI.Window_Hud
     Ref:
       _uid:
         serializedVersion: 2
         Hash: b3edd5d743edafc4dba2935e50c5d94e
       _subId: 1736641978287482669
-  - TypeFullName: Flexy.UI.Extra.Window_FreeCam
-    Ref:
-      _uid:
-        serializedVersion: 2
-        Hash: 6d9ac7a35d5e2874aa16dada499dec56
-      _subId: 7802541308493587785
-  - TypeFullName: Test.Runner.CoreGame.UI.Window_Pause
+  - TypeFullName: Flexy.Template.BarleyBreak.CoreGame.UI.Window_Pause
     Ref:
       _uid:
         serializedVersion: 2
         Hash: cdc7031cfb4337f45a7e8c8d0d1e3641
       _subId: 4388097260016340715
-  - TypeFullName: Test.Runner.CoreGame.UI.Window_GameOver
+  - TypeFullName: Flexy.Template.BarleyBreak.CoreGame.UI.Window_FieldComplete
     Ref:
       _uid:
         serializedVersion: 2

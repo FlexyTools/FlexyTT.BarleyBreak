@@ -39,7 +39,11 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 		
 		private async	UniTaskVoid		FinishGameAsync	( )	
 		{
-			await UniTask.Delay( 1000, DelayType.UnscaledDeltaTime );
+			await UniTask.Delay( 1500, DelayType.UnscaledDeltaTime );
+		
+			await Game.UI.FieldComplete.Open( Game.Mode.Board, Game.Mode.RunTime ).WaitShow( );
+			
+			await UniTask.WaitUntil( () => gameObject.activeSelf == false );
 		
 			// This will close through CoregameLoader
 			GameStage.CloseStage( );
