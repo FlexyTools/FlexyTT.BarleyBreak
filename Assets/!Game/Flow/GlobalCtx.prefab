@@ -433,7 +433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rootFlowLibrary: {fileID: 11400000, guid: 11f95cb70947da346bb92451118ea417, type: 2}
-  _switchStatesEarlyNextFrame: 1
   _backInputHandling: 1
 --- !u!1 &8602492318775139687
 GameObject:

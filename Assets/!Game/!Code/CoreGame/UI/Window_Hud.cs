@@ -50,10 +50,16 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 			await UniTask.Delay( 1500, DelayType.UnscaledDeltaTime );
 		
 			Game.Leaderboards.AddRecord( Game.Mode.Board, Game.Mode.RunTime );
+
+			Debug.Log( "[FinishGameAsync] Record Added" );
 		
-			await Game.UI.FieldComplete.Open( Game.Mode.Board, Game.Mode.RunTime ).WaitShow( );
+			Game.UI.FieldComplete.Open( Game.Mode.Board, Game.Mode.RunTime );
 			
-			await UniTask.WaitUntil( () => gameObject.activeSelf == false );
+			Debug.Log( "[FinishGameAsync] Sequence of windows started" );
+			
+			await Handle.WaitBack( );
+		
+			Debug.Log( "[FinishGameAsync] returned back to hud so close stage" );
 		
 			// This will close through CoregameLoader
 			GameStage.CloseStage( );
