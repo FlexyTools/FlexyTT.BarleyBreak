@@ -25,8 +25,9 @@ namespace Flexy.Template.BarleyBreak.UI
 			};
 			
 			board.Records.Add( score );
-			if (board.Records.Count > 10)
-				board.Records.RemoveAt(0);
+			board.Records.Sort( );
+			while (board.Records.Count > 7)
+				board.Records.RemoveAt( 0 );
 			
 			Save( );
 		}

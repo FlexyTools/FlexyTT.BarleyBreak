@@ -41,6 +41,14 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
         {
             InitMinigameAsync( ).Forget( );
         }
+        
+        #if UNITY_EDITOR
+        private		void	Update		( )		
+        {
+	        if (Input.GetKeyDown(KeyCode.W))
+				IsWin = true;
+        }
+        #endif
 
         internal	void	ClickCell		( Int32 cellIndex, Boolean animate = true )															
         {

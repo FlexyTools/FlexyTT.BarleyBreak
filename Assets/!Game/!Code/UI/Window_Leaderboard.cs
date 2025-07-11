@@ -22,8 +22,8 @@ namespace Flexy.Template.BarleyBreak.UI
 		
 		public record struct Opener( OpenCtx Ctx ) : IOpener
 		{
-			public	StateHandle		Open	( EOpenType openType = EOpenType.Open ) => Ctx.Open( null, openType );
-			public	StateHandle		Open	( EField board, EOpenType openType = EOpenType.Open ) => Ctx.Open( board, openType );
+			public	StateHandle		Open	( )					=> Ctx.Open( null );
+			public	StateHandle		Open	( EField board )	=> Ctx.Open( board );
 		}
 		
 		[StateTest]	Object	Board3x3	( ) => EField.Board3x3;
