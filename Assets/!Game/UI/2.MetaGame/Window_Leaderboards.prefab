@@ -1139,7 +1139,7 @@ MonoBehaviour:
     Params: Score
   _mutStringCapacity: 12
   _pointDigits: 2
-  _zeroPlaceholder: 
+  _zeroPlaceholder: '-'
   _label: {fileID: 7280995440030776305}
 --- !u!114 &7280995440030776305 stripped
 MonoBehaviour:
@@ -1924,7 +1924,7 @@ MonoBehaviour:
     Params: Score
   _mutStringCapacity: 12
   _pointDigits: 2
-  _zeroPlaceholder: 
+  _zeroPlaceholder: '-'
   _label: {fileID: 1862222886058770235}
 --- !u!114 &1862222886058770235 stripped
 MonoBehaviour:
@@ -2592,7 +2592,7 @@ MonoBehaviour:
     Params: Score
   _mutStringCapacity: 12
   _pointDigits: 2
-  _zeroPlaceholder: 
+  _zeroPlaceholder: '-'
   _label: {fileID: 4202476098105637226}
 --- !u!1001 &8360365965555703489
 PrefabInstance:
@@ -2748,7 +2748,7 @@ MonoBehaviour:
     Params: Score
   _mutStringCapacity: 12
   _pointDigits: 2
-  _zeroPlaceholder: 
+  _zeroPlaceholder: '-'
   _label: {fileID: 2769949804170078551}
 --- !u!224 &4422992613330944762 stripped
 RectTransform:

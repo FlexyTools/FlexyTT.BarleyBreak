@@ -26,8 +26,9 @@ namespace Flexy.Template.BarleyBreak.UI
 			
 			board.Records.Add( score );
 			board.Records.Sort( );
+			
 			while (board.Records.Count > 7)
-				board.Records.RemoveAt( 0 );
+				board.Records.RemoveAt( board.Records.Count-1 );
 			
 			Save( );
 		}
@@ -46,6 +47,10 @@ namespace Flexy.Template.BarleyBreak.UI
 			_leaderboard3x3 = JsonUtility.FromJson<BoardData>( PlayerPrefs.GetString( "Leaderboard_3x3", "{}" ) );
 			_leaderboard4x4 = JsonUtility.FromJson<BoardData>( PlayerPrefs.GetString( "Leaderboard_4x4", "{}" ) );
 			_leaderboard5x5 = JsonUtility.FromJson<BoardData>( PlayerPrefs.GetString( "Leaderboard_5x5", "{}" ) );
+			
+			while (_leaderboard3x3.Records.Count < 7) _leaderboard3x3.Records.Add( Single.PositiveInfinity );
+			while (_leaderboard4x4.Records.Count < 7) _leaderboard4x4.Records.Add( Single.PositiveInfinity );
+			while (_leaderboard5x5.Records.Count < 7) _leaderboard5x5.Records.Add( Single.PositiveInfinity );
 		}
 		
 		[Serializable]
