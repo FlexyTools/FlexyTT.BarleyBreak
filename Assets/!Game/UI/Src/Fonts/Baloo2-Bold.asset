@@ -49,8 +49,9 @@ MonoBehaviour:
     atlasWidth: 2048
     atlasHeight: 1024
     characterSetSelectionMode: 7
-    characterSequence: "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\_\u200B\u2026\u25C1\u25A0\u25B7"
-    referencedFontAssetGUID: 19d5239f6bfc00349910c2e374e84567
+    characterSequence: "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`
+      abcdefghijklmnopqrstuvwxyz{|}~\_\u200B\u2026\u25C1\u25A0\u25B7"
+    referencedFontAssetGUID: dd29343b679cc614abba5e4e4da36528
     referencedTextAssetGUID: 
     fontStyle: 0
     fontStyleModifier: 0
@@ -61,6 +62,21 @@ MonoBehaviour:
   m_AtlasPopulationMode: 0
   InternalDynamicOS: 0
   m_GlyphTable:
+  - m_Index: 3
+    m_Metrics:
+      m_Width: 0
+      m_Height: 0
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 0
+      m_HorizontalAdvance: 48
+    m_GlyphRect:
+      m_X: 0
+      m_Y: 0
+      m_Width: 0
+      m_Height: 0
+    m_Scale: 1
+    m_AtlasIndex: 0
+    m_ClassDefinitionType: 0
   - m_Index: 4
     m_Metrics:
       m_Width: 41.515625
@@ -1563,6 +1579,10 @@ MonoBehaviour:
     m_ClassDefinitionType: 0
   m_CharacterTable:
   - m_ElementType: 1
+    m_Unicode: 32
+    m_GlyphIndex: 3
+    m_Scale: 1
+  - m_ElementType: 1
     m_Unicode: 33
     m_GlyphIndex: 4
     m_Scale: 1
@@ -2763,7 +2783,7 @@ Texture2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Baloo2-Bold SDF Atlas
+  m_Name: Baloo2-Bold Atlas
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000

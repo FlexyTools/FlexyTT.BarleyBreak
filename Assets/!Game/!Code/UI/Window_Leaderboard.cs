@@ -17,7 +17,12 @@ namespace Flexy.Template.BarleyBreak.UI
 
 		private void Setup( GameObject widget, Object data, Boolean isNew, Int32 index )
 		{
-			widget.GetComponent<BindableDataStore>( ).SetValue( "Score", (Single)data );
+			var seconds	= (Single)data;
+			var value	= Single.IsPositiveInfinity(seconds) ? "-" : seconds >= 60 
+				? TimeSpan.FromSeconds( seconds ).ToString( @"mm\:ss\.ff" ) 
+				: TimeSpan.FromSeconds( seconds ).ToString( @"ss\.ff" );
+				
+			widget.GetComponent<BindableDataStore>( ).SetValue( "Score", value );
 		}
 		
 		public record struct Opener( OpenCtx Ctx ) : IOpener
