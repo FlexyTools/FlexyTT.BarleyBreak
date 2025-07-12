@@ -2,9 +2,9 @@ namespace Flexy.Template.BarleyBreak.UI
 {
 	public class Window_MainMenu : UIWindowEx
 	{
-		[Callable]	void	OpenChooseZones		( )		
+		[Callable]	void	OpenPlayFields		( )		
 		{
-			Game.UI.ChooseZone.Open( );
+			Game.UI.PlayFields.Open( );
 		}
 		[Callable]	void	OpenSettings		( )		
 		{

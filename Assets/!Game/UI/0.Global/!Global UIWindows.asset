@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: '!Global UIWindows'
   m_EditorClassIdentifier: 
   _dependencies: []
-  _windows:
-  - TypeFullName: Runner.UI.Window_GameSettings
+  _stages: []
+  _states:
+  - TypeFullName: Flexy.Template.BarleyBreak.UI.Window_GameSettings
     Ref:
       _uid:
         serializedVersion: 2
         Hash: 59f65f829106a2b418bdb7eefd672868
-      _subId: 1849295314665467560
+      _subId: 0

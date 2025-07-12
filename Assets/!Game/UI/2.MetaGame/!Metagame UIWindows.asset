@@ -21,12 +21,12 @@ MonoBehaviour:
         serializedVersion: 2
         Hash: e35616b6349e6884481db3654ef57ef1
       _subId: 1849295314665467560
-  - TypeFullName: Flexy.Template.BarleyBreak.UI.Window_ChooseZone
+  - TypeFullName: Flexy.Template.BarleyBreak.UI.Window_PlayFields
     Ref:
       _uid:
         serializedVersion: 2
         Hash: b63d37d8ee9500d47b535c3c984560a2
-      _subId: 1849295314665467560
+      _subId: 0
   - TypeFullName: Flexy.Template.BarleyBreak.UI.Window_Leaderboard
     Ref:
       _uid:

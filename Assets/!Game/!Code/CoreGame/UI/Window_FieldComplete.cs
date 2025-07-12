@@ -1,5 +1,3 @@
-using Flexy.Template.BarleyBreak.UI;
-
 namespace Flexy.Template.BarleyBreak.CoreGame.UI
 {
 	public class Window_FieldComplete : UIWindowEx

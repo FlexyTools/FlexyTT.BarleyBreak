@@ -1,6 +1,6 @@
 ﻿namespace Flexy.Template.BarleyBreak.UI
 {
-	public class Window_ChooseZone : UIWindowEx
+	public class Window_PlayFields : UIWindowEx
 	{
 		[SerializeField]	SceneRef	_field_3x3;
 		[SerializeField]	SceneRef	_field_4x4;

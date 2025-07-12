@@ -1,6 +1,3 @@
-using Flexy.Core.Actions;
-using Flexy.Template.BarleyBreak.UI;
-
 namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 {
     public class Minigame_BarleyBreak : MonoBehEx

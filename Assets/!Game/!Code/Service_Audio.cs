@@ -1,10 +1,6 @@
-using Flexy.Core.Actions;
-using Flexy.Template.BarleyBreak.Settings;
-using UnityEngine.Audio;
-
 namespace Flexy.Template.BarleyBreak
 {
-	public class AudioService : MonoBehaviour, IService
+	public class Service_Audio : MonoBehaviour, IService
 	{
 		[SerializeField]	AudioSource		_soundSource;
 		[SerializeField]	AudioSource		_sfxSource;
@@ -50,7 +46,7 @@ namespace Flexy.Template.BarleyBreak
 	
 		public override void Do	( ActionCtx ctx )	
 		{
-			ctx.CtxObj.gameObject.GetService<AudioService>( ).PlaySfx( _clip );
+			ctx.CtxObj.gameObject.GetService<Service_Audio>( ).PlaySfx( _clip );
 		}
 	}
 }

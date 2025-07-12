@@ -1,5 +1,4 @@
-﻿using Flexy.Template.BarleyBreak.CoreGame.Minigames;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine.SceneManagement;
 
 namespace Flexy.Template.BarleyBreak.CoreGame
 {
@@ -8,8 +7,8 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
         [Bindable] Single	LoadingProgress01	{get;set;} 
 
-        private Facade_Game	_game; 
-        public	Facade_Game	Game		=> _game.GetCached( this );
+        private Facade_Coregame	_game; 
+        public	Facade_Coregame	Game		=> _game.GetCached( this );
         
         private SceneRef    _map;
         
