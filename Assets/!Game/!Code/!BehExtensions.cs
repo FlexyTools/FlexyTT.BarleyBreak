@@ -30,7 +30,7 @@
 		protected override void OnShow() { _result = default; }
 	}
 	
-	public class			WidgetEx:	APropertyBindableBehaviour	
+	public class			UIWidgetEx:	APropertyBindableBehaviour	
 	{
 		private	FlowItem		_panel;
 		private Facade_Game		_game;

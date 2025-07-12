@@ -135,19 +135,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  _methodName: OpenChooseZones
+  _methodName: ExitGame
   _context: 
   EnableClickDelay: 0.2
   ReclickTimeout: 0.5
   DoubleClickMode: 0
-  ClickSfx:
-    _library: {fileID: 11400000, guid: 6d8685588bbba5442ae40c00450221a4, type: 2}
-    _clip: 58
-    _volume: 1
-  MisclickSfx:
-    _library: {fileID: 0}
-    _clip: 0
-    _volume: 1
+  Clicked:
+    _action:
+      rid: 8064851003922972925
+  Misclicked:
+    _action:
+      rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 8064851003922972925
+      type: {class: PlaySfxAction, ns: Flexy.Template.BarleyBreak, asm: '!!Barley-Break'}
+      data:
+        _clip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
 --- !u!1 &4515456943493839911
 GameObject:
   m_ObjectHideFlags: 0

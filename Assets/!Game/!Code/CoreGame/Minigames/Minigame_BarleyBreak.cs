@@ -1,3 +1,4 @@
+using Flexy.Core.Actions;
 using Flexy.Template.BarleyBreak.UI;
 
 namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
@@ -9,6 +10,8 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
         [SerializeField]	GameObject		_inputBlocker;
         [SerializeField]	GridLayoutGroup	_cellContainer;
         [SerializeField]	Int32			_gridSize = 3;
+        
+        [SerializeField]	FlexyEvent		_win;
 	
         private readonly	AnimationCurve	_animCurve = AnimationCurve.EaseInOut( 0, 0, 1, 1 );
 	
@@ -46,7 +49,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
         private		void	Update		( )		
         {
 	        if (Input.GetKeyDown(KeyCode.W))
-				IsWin = true;
+		        Win( );
         }
         #endif
 
@@ -63,7 +66,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
             if (CheckWin( ))
 			{
 				_inputBlocker.SetActive( true );
-				IsWin = true;
+				Win( );
 			}
             
             return;
@@ -173,6 +176,11 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
             }
 
             return true;
+        }
+        private			void		Win					( )		
+        {
+	        IsWin = true;
+	        _win.Raise( this );
         } 
     }
 }

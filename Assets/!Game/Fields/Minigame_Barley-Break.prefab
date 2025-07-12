@@ -112,10 +112,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa05fa7cd6740b24ba9dcbc7a9a91822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _board: 0
   _cellPrefab: {fileID: 1426877114923522732}
   _inputBlocker: {fileID: 5715347257595549983}
   _cellContainer: {fileID: 7779828629872575134}
   _gridSize: 3
+  _win:
+    _action:
+      rid: 8064851003922972928
+  references:
+    version: 2
+    RefIds:
+    - rid: 8064851003922972928
+      type: {class: PlaySfxAction, ns: Flexy.Template.BarleyBreak, asm: '!!Barley-Break'}
+      data:
+        _clip: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
 --- !u!222 &1342580290730135017
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -266,7 +277,7 @@ MonoBehaviour:
   DoubleClickMode: 0
   Clicked:
     _action:
-      rid: -2
+      rid: 8064851003922972927
   Misclicked:
     _action:
       rid: -2
@@ -275,6 +286,10 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 8064851003922972927
+      type: {class: PlaySfxAction, ns: Flexy.Template.BarleyBreak, asm: '!!Barley-Break'}
+      data:
+        _clip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
 --- !u!1 &5715347257595549983
 GameObject:
   m_ObjectHideFlags: 0

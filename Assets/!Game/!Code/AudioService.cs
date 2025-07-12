@@ -1,0 +1,56 @@
+using Flexy.Core.Actions;
+using Flexy.Template.BarleyBreak.Settings;
+using UnityEngine.Audio;
+
+namespace Flexy.Template.BarleyBreak
+{
+	public class AudioService : MonoBehaviour, IService
+	{
+		[SerializeField]	AudioSource		_soundSource;
+		[SerializeField]	AudioSource		_sfxSource;
+		[SerializeField]	AudioMixer		_mixer;
+		
+		private AudioSettingsTab _settings;
+
+		public	Single	SoundVolume		
+		{
+			get => _mixer.GetFloat( "SoundVolume",  out var volume ) ? DbToLinear(volume) : 0;
+			set => _mixer.SetFloat( "SoundVolume",  LinearToDb(value) );
+		}
+		public	Single	SfxVolume		
+		{
+			get => _mixer.GetFloat( "SfxVolume",  out var volume ) ? DbToLinear(volume) : 0;
+			set => _mixer.SetFloat( "SfxVolume",  LinearToDb(value) );
+		}
+
+		public	void	OrderedInit		( GameContext ctx )	
+		{
+			_settings = ctx.GetService<GameSettingsService>( ).Get<AudioSettingsTab>( );
+			
+			_settings.SoundVolume	.Changed += _ => UpdateVolume( );
+			_settings.SfxVolume		.Changed += _ => UpdateVolume( );
+		}
+		public	void	PlaySfx			( AudioClip clip )	
+		{
+			_sfxSource.PlayOneShot( clip );
+		}
+		private	void	UpdateVolume	( )					
+		{
+			SoundVolume	= _settings.SoundVolume;
+			SfxVolume	= _settings.SfxVolume;
+		}
+		
+		private static 	Single 	DbToLinear	( Single db )		=> Mathf.Pow(10f, db / 20f);
+		private static 	Single 	LinearToDb	( Single linear )	=> linear > 0f ? 20f * Mathf.Log10(linear) : -80f;
+	}
+	
+	public class PlaySfxAction : FlexyActionSync
+	{
+		[SerializeField]	AudioClip	_clip;
+	
+		public override void Do	( ActionCtx ctx )	
+		{
+			ctx.CtxObj.gameObject.GetService<AudioService>( ).PlaySfx( _clip );
+		}
+	}
+}

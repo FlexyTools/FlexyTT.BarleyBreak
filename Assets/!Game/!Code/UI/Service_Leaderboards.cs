@@ -4,24 +4,20 @@ namespace Flexy.Template.BarleyBreak.UI
 	{
 		public void OrderedInit( GameContext ctx )
 		{
-			Load();	
+			Load();
 		}
 	
-		[SerializeField]	BoardData	_leaderboard3x3;
-		[SerializeField]	BoardData	_leaderboard4x4;
-		[SerializeField]	BoardData	_leaderboard5x5;
-
-		public	BoardData	Leaderboard3X3 => _leaderboard3x3;
-		public	BoardData	Leaderboard4X4 => _leaderboard4x4;
-		public	BoardData	Leaderboard5X5 => _leaderboard5x5;
+		public	BoardData	Leaderboard3X3 {get; private set;}
+		public	BoardData	Leaderboard4X4 {get; private set;}
+		public	BoardData	Leaderboard5X5 {get; private set;}
 
 		public	void		AddRecord	( EField field, Single score )
 		{
 			var board = field switch
 			{
-				EField.Board3x3 => _leaderboard3x3,
-				EField.Board4x4 => _leaderboard4x4,
-				EField.Board5x5 => _leaderboard5x5,
+				EField.Board3x3 => Leaderboard3X3,
+				EField.Board4x4 => Leaderboard4X4,
+				EField.Board5x5 => Leaderboard5X5,
 			};
 			
 			board.Records.Add( score );
@@ -35,22 +31,22 @@ namespace Flexy.Template.BarleyBreak.UI
 		[ContextMenu("Save")]
 		public	void		Save		( )
 		{ 
-			PlayerPrefs.SetString( "Leaderboard_3x3", JsonUtility.ToJson( _leaderboard3x3 ) );
-			PlayerPrefs.SetString( "Leaderboard_4x4", JsonUtility.ToJson( _leaderboard4x4 ) );
-			PlayerPrefs.SetString( "Leaderboard_5x5", JsonUtility.ToJson( _leaderboard5x5 ) );
+			PlayerPrefs.SetString( "Leaderboard_3x3", JsonUtility.ToJson( Leaderboard3X3 ) );
+			PlayerPrefs.SetString( "Leaderboard_4x4", JsonUtility.ToJson( Leaderboard4X4 ) );
+			PlayerPrefs.SetString( "Leaderboard_5x5", JsonUtility.ToJson( Leaderboard5X5 ) );
 			
 			PlayerPrefs.Save( );
 		}
 		[ContextMenu("Load")]
 		public	void		Load		( )
 		{
-			_leaderboard3x3 = JsonUtility.FromJson<BoardData>( PlayerPrefs.GetString( "Leaderboard_3x3", "{}" ) );
-			_leaderboard4x4 = JsonUtility.FromJson<BoardData>( PlayerPrefs.GetString( "Leaderboard_4x4", "{}" ) );
-			_leaderboard5x5 = JsonUtility.FromJson<BoardData>( PlayerPrefs.GetString( "Leaderboard_5x5", "{}" ) );
+			Leaderboard3X3 = JsonUtility.FromJson<BoardData>( PlayerPrefs.GetString( "Leaderboard_3x3", "{}" ) );
+			Leaderboard4X4 = JsonUtility.FromJson<BoardData>( PlayerPrefs.GetString( "Leaderboard_4x4", "{}" ) );
+			Leaderboard5X5 = JsonUtility.FromJson<BoardData>( PlayerPrefs.GetString( "Leaderboard_5x5", "{}" ) );
 			
-			while (_leaderboard3x3.Records.Count < 7) _leaderboard3x3.Records.Add( Single.PositiveInfinity );
-			while (_leaderboard4x4.Records.Count < 7) _leaderboard4x4.Records.Add( Single.PositiveInfinity );
-			while (_leaderboard5x5.Records.Count < 7) _leaderboard5x5.Records.Add( Single.PositiveInfinity );
+			while (Leaderboard3X3.Records.Count < 7) Leaderboard3X3.Records.Add( Single.PositiveInfinity );
+			while (Leaderboard4X4.Records.Count < 7) Leaderboard4X4.Records.Add( Single.PositiveInfinity );
+			while (Leaderboard5X5.Records.Count < 7) Leaderboard5X5.Records.Add( Single.PositiveInfinity );
 		}
 		
 		[Serializable]
