@@ -92,7 +92,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 			await UniTask.DelayFrame( 1 );
 			Time.timeScale	= 1f;
 			
-			var loadedMinigame = FindAnyObjectByType<Minigame_BarleyBreak>( );
+			var loadedMinigame = FindAnyObjectByType<GameMode>( );
 			GameStage.Context.SetService( loadedMinigame );
 			
 			GameStage.OpenRootState( );

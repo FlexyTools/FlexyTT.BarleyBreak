@@ -1,6 +1,6 @@
-namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
+namespace Flexy.Template.BarleyBreak.CoreGame
 {
-    public class Minigame_BarleyBreak_Cell : MonoBehEx
+    public class Cell : MonoBehEx
     {
         [FormerlySerializedAs("_visualItem")] 
         [SerializeField]    RectTransform   _figure;
@@ -11,7 +11,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 
 		[Bindable]	Int32	Number => Index + 1;
 
-        public Minigame_BarleyBreak Game { get; set; }
+        public GameMode Game { get; set; }
         public RectTransform Figure
         {
 	        get => _figure;

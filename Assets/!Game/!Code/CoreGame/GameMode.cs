@@ -1,9 +1,9 @@
-namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
+namespace Flexy.Template.BarleyBreak.CoreGame
 {
-    public class Minigame_BarleyBreak : MonoBehEx
+    public class GameMode : MonoBehEx
     {
 	    [SerializeField]	EField			_board;
-        [SerializeField]	Minigame_BarleyBreak_Cell _cellPrefab;
+        [SerializeField]	Cell			_cellPrefab;
         [SerializeField]	GameObject		_inputBlocker;
         [SerializeField]	GridLayoutGroup	_cellContainer;
         [SerializeField]	Int32			_gridSize = 3;
@@ -12,7 +12,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 	
         private readonly	AnimationCurve	_animCurve = AnimationCurve.EaseInOut( 0, 0, 1, 1 );
 	
-	    private List<Minigame_BarleyBreak_Cell> _cells = new();
+	    private List<Cell> _cells = new();
 
 	    public		EField	Board		=> _board;
 	    public		Single	StartTime	{ get; set; }
@@ -81,7 +81,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 				}
             }
         }
-        private		void	MoveFigureTo	( Minigame_BarleyBreak_Cell sourceCell, Minigame_BarleyBreak_Cell targetCell, Boolean animate = true )	
+        private		void	MoveFigureTo	( Cell sourceCell, Cell targetCell, Boolean animate = true )	
         {
 			var figure		= sourceCell.Figure;
         
@@ -122,7 +122,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 					case 3: currEmptyCell = Check( currEmptyCell, x, y+1 ); break;
 				}
         
-				Minigame_BarleyBreak_Cell Check( Minigame_BarleyBreak_Cell curr, Int32 x, Int32 y )
+				Cell Check( Cell curr, Int32 x, Int32 y )
 				{
 					if (x<0|y<0|x>=_gridSize|y>=_gridSize) 
 						return curr;
@@ -136,7 +136,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.Minigames
 			
 			StartTime = Time.realtimeSinceStartup;
         }
-        private async	UniTask		AnimateFigureTo		( Minigame_BarleyBreak_Cell from, Minigame_BarleyBreak_Cell to, Single animationDuration = 1 ) 
+        private async	UniTask		AnimateFigureTo		( Cell from, Cell to, Single animationDuration = 1 ) 
         {
 			//use exponen tween
         

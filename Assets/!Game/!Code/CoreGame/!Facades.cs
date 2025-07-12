@@ -7,7 +7,7 @@ public struct	Facade_Coregame
 													
     public	Facade_CoreUIWindows	UI				=> new(Ctx.GetService<GameStage>( ));
     public	GameSettingsService	    Settings		=> Ctx.GetService<GameSettingsService>( );
-    public  Minigame_BarleyBreak	Mode         	=> Ctx.GetService<Minigame_BarleyBreak>( );
+    public  GameMode				Mode         	=> Ctx.GetService<GameMode>( );
     public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>( );
 
     public	Facade_Coregame			GetCached			( Component callSource ) => (GameContext.GetCached(ref Ctx, callSource), this).Item2;
