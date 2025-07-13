@@ -1,3 +1,5 @@
+using Flexy.Core.Tweens;
+
 namespace Flexy.Template.BarleyBreak.CoreGame
 {
     public class GameMode : MonoBehEx
@@ -7,10 +9,9 @@ namespace Flexy.Template.BarleyBreak.CoreGame
         [SerializeField]	GameObject		_inputBlocker;
         [SerializeField]	GridLayoutGroup	_cellContainer;
         [SerializeField]	Int32			_gridSize = 3;
+        [SerializeField]	Single			_animateTime = 0.2f;
         
         [SerializeField]	FlexyEvent		_win;
-	
-        private readonly	AnimationCurve	_animCurve = AnimationCurve.EaseInOut( 0, 0, 1, 1 );
 	
 	    private List<Cell> _cells = new();
 
@@ -87,7 +88,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
         
             if (animate)
             {
-				AnimateFigureTo( sourceCell, targetCell, 0.4f ).Forget( );
+				AnimateFigureTo( sourceCell, targetCell, _animateTime ).Forget( );
 			}
 			else
 			{
@@ -138,30 +139,26 @@ namespace Flexy.Template.BarleyBreak.CoreGame
         }
         private async	UniTask		AnimateFigureTo		( Cell from, Cell to, Single animationDuration = 1 ) 
         {
-			//use exponen tween
-        
 			var figure = from.Figure;
 	        figure.SetParent(from.transform.parent, true);
         
             var fromAnchoredPosition = from.GlobalPosition;
             var toAnchoredPosition = to.GlobalPosition;
             
-            var elapsedTime = 0f;
-            while (elapsedTime < animationDuration)
+            var endTime = Time.time + animationDuration;
+            
+            while (Time.time < endTime)
             {
-                var t = _animCurve.Evaluate(elapsedTime / animationDuration);
-
+	            var t = 1.0f - (endTime - Time.time) / animationDuration; 
+				t = EaseUtility.SCurve(t);
+            
                 figure.position	= Vector2.Lerp(fromAnchoredPosition, toAnchoredPosition, t);
 	        
-                elapsedTime += Time.deltaTime;
                 await UniTask.NextFrame( );
             }
 
             figure.position	= to.GlobalPosition;
 			figure.SetParent(to.transform, true);
-		
-            // if( target == _cells[8].anchoredPosition )
-            //     DoWinSequenseAsync( ).Forget( );
         }
         
         private			Boolean		CheckWin			( )		

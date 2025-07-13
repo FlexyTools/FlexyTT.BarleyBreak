@@ -277,7 +277,7 @@ MonoBehaviour:
   DoubleClickMode: 0
   Clicked:
     _action:
-      rid: 8064851003922972927
+      rid: 8064851003922972990
   Misclicked:
     _action:
       rid: -2
@@ -286,10 +286,22 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 8064851003922972927
+    - rid: 8064851003922972990
+      type: {class: ActionSet, ns: Flexy.Core.Actions, asm: Flexy.Core}
+      data:
+        Run: 0
+        Actions:
+        - rid: 8064851003922972991
+        - rid: 8064851003922972992
+    - rid: 8064851003922972991
+      type: {class: Delay, ns: Flexy.Core.Actions, asm: Flexy.Core}
+      data:
+        _seconds: 0
+        _time: 0
+    - rid: 8064851003922972992
       type: {class: PlaySfxAction, ns: Flexy.Template.BarleyBreak, asm: '!!Barley-Break'}
       data:
-        _clip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
+        _clip: {fileID: 8300000, guid: 7f4655c37470f9a49a451eda8823c0fa, type: 3}
 --- !u!1 &5715347257595549983
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +432,7 @@ MonoBehaviour:
   m_text: 8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 496c65f8240993647bc940d914baa346, type: 2}
+  m_sharedMaterial: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
