@@ -654,6 +654,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+    - target: {fileID: 1361207933947767147, guid: e648965002c923243b36cdfef8f4d9f5, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4285051878
+      objectReference: {fileID: 0}
     - target: {fileID: 2783757913122837740, guid: e648965002c923243b36cdfef8f4d9f5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
