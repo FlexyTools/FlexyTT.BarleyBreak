@@ -1,3 +1,5 @@
+using Flexy.Core.Tweens;
+
 namespace Flexy.Template.BarleyBreak.UI
 {
 	public class Window_MainMenu : UIWindowEx
@@ -22,6 +24,13 @@ namespace Flexy.Template.BarleyBreak.UI
 				UnityEditor.EditorApplication.ExitPlaymode( );
 	#endif
 			}
+		}
+		
+		[SerializeField]	Transform _tr;
+
+		private void Start()
+		{
+			Tween.Value(-675, -345, 1, Ease.InOutSine).BindTo( _tr, static (v, tr) => tr.localPosition = new Vector3(-400, v, 0)).Run();
 		}
 	}
 }

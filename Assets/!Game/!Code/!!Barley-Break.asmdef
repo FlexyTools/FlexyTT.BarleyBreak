@@ -2,6 +2,7 @@
     "name": "!!Barley-Break",
     "rootNamespace": "Flexy.Template.BarleyBreak",
     "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
         "GUID:0c7c5eb5b8006c2449ad5b70f4947317",
         "GUID:529b74b51f9df9847a64e490b76761e8",
         "GUID:8f8cd9da846c03a4e94c08df4d8e4e10",
