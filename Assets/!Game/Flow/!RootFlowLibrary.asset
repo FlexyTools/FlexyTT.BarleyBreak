@@ -26,7 +26,7 @@ MonoBehaviour:
       Hash: d1be6da70d122814e85788d63b8276bd
     _subId: 0
   _states:
-  - TypeFullName: Test.Runner.CoreGame.UI.DTLoader_Coregame
+  - TypeFullName: Flexy.Template.BarleyBreak.CoreGame.CoregameLoader
     Ref:
       _uid:
         serializedVersion: 2

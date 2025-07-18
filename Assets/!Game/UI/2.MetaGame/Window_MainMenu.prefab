@@ -382,10 +382,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91321310d01dd24ebfc8b4b17c50cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_topLeftColor: {r: 1, g: 1, b: 1, a: 1}
-  m_topRightColor: {r: 1, g: 1, b: 1, a: 1}
-  m_bottomRightColor: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
-  m_bottomLeftColor: {r: 0.77254903, g: 0.7647059, b: 0.7647059, a: 1}
+  _topLeftColor: {r: 1, g: 1, b: 1, a: 1}
+  _topRightColor: {r: 1, g: 1, b: 1, a: 1}
+  _bottomRightColor: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
+  _bottomLeftColor: {r: 0.77254903, g: 0.7647059, b: 0.7647059, a: 1}
 --- !u!224 &7744113034875630036 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8116686128717607029, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
@@ -879,10 +879,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91321310d01dd24ebfc8b4b17c50cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_topLeftColor: {r: 1, g: 1, b: 1, a: 1}
-  m_topRightColor: {r: 1, g: 1, b: 1, a: 1}
-  m_bottomRightColor: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
-  m_bottomLeftColor: {r: 0.77254903, g: 0.7647059, b: 0.7647059, a: 1}
+  _topLeftColor: {r: 1, g: 1, b: 1, a: 1}
+  _topRightColor: {r: 1, g: 1, b: 1, a: 1}
+  _bottomRightColor: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
+  _bottomLeftColor: {r: 0.77254903, g: 0.7647059, b: 0.7647059, a: 1}
 --- !u!1001 &9182609980526110618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1025,7 +1025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91321310d01dd24ebfc8b4b17c50cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_topLeftColor: {r: 1, g: 1, b: 1, a: 1}
-  m_topRightColor: {r: 1, g: 1, b: 1, a: 1}
-  m_bottomRightColor: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
-  m_bottomLeftColor: {r: 0.77254903, g: 0.7647059, b: 0.7647059, a: 1}
+  _topLeftColor: {r: 1, g: 1, b: 1, a: 1}
+  _topRightColor: {r: 1, g: 1, b: 1, a: 1}
+  _bottomRightColor: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
+  _bottomLeftColor: {r: 0.77254903, g: 0.7647059, b: 0.7647059, a: 1}
