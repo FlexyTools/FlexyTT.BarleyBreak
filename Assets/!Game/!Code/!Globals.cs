@@ -7,7 +7,7 @@ global using Flexy.AssetRefs;
 global using Flexy.AssetRefs.LoadExtensions;
 global using Flexy.GameSettings;
 global using Flexy.GameFlow;
-global using Flexy.GameFlow.Binding;
+global using Flexy.Core.Binding;
 global using Flexy.UI;
 global using Flexy.UI.Bindings;
 
