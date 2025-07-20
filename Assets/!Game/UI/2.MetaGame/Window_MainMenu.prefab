@@ -249,10 +249,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7958693760697188935}
     m_Modifications:
-    - target: {fileID: 1031878089485820753, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1415384408975844540, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_text
       value: Settings
@@ -726,40 +722,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 7958693760697188935}
     m_Modifications:
     - target: {fileID: 1031878089485820753, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
-      propertyPath: _angle
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031878089485820753, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031878089485820753, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
-      propertyPath: _ignoreRatio
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031878089485820753, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
-      propertyPath: _bottomLeft.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031878089485820753, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
-      propertyPath: _bottomLeft.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031878089485820753, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
-      propertyPath: _bottomLeft.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031878089485820753, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
-      propertyPath: _bottomRight.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031878089485820753, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
-      propertyPath: _bottomRight.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031878089485820753, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
-      propertyPath: _bottomRight.r
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1415384408975844540, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_text

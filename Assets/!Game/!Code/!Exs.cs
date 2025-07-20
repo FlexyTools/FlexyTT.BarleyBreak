@@ -1,6 +1,6 @@
 ﻿namespace Flexy.Template.BarleyBreak;
 
-public abstract class	UIWindowEx: UIWindow					
+public abstract class	UIWindowEx: State					
 {
 	private Facade_Game		_game; 
 	public	Facade_Game		Game		=> _game.GetCached( this );
