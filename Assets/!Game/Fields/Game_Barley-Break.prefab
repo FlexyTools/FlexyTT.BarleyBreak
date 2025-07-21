@@ -254,7 +254,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 7106627677448183676}
+  m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 3306393548687915169}
   - component: {fileID: 7198888338575457414}
   - component: {fileID: 1361207933947767147}
-  - component: {fileID: 213383726240444318}
+  - component: {fileID: 656552597280989448}
   m_Layer: 5
   m_Name: Label_07
   m_TagString: Untagged
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &213383726240444318
+--- !u!114 &656552597280989448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -510,23 +510,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 6029822260069279440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d012c69d88a73e408cab12446380d27, type: 3}
+  m_Script: {fileID: 11500000, guid: 1096bb6b32873b94397413f321976198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _source:
     Component: {fileID: 1426877114923522732}
     MemberName: Number
     Params: 
-  _mutStringCapacity: 7
-  _stringMinSize: 0
-  _zeroPlaceholder: 
-  _formatString: 
-  _useTween: 0
-  _startFromZero: 0
-  _tweenTimeOnGrow: 1.5
-  _tweenTimeOnFall: 0.5
-  _tweenEaseType: 20
   _label: {fileID: 0}
+  _makeUpperCase: 0
 --- !u!1 &6625453055607137198
 GameObject:
   m_ObjectHideFlags: 0

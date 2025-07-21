@@ -8,8 +8,6 @@ global using Flexy.AssetRefs.LoadExtensions;
 global using Flexy.GameSettings;
 global using Flexy.GameFlow;
 global using Flexy.Core.Binding;
-global using Flexy.UI;
-global using Flexy.UI.Bindings;
 
 global using UnityEngine;
 global using UnityEngine.UI;

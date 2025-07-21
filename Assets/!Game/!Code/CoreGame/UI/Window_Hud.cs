@@ -2,9 +2,9 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 {
     public class Window_Hud : UIWindowEx
     {
-		[Bindable]			Int32		RunMinutes		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).Minutes;
-		[Bindable]			Int32		RunSeconds		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).Seconds;
-		[Bindable]			Int32		RunMiliseconds	=> TimeSpan.FromSeconds( Game.Mode.RunTime ).Milliseconds;
+		[Bindable]	String	RunMinutes		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"mm" );
+		[Bindable]	String	RunSeconds		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"ss" );
+		[Bindable]	String	RunMiliseconds	=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"ff" );
 
 		private Boolean _finishingStarted;
 
@@ -33,6 +33,8 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 				_finishingStarted = true;
 				FinishGameAsync( ).Forget( );
 			}	
+			
+			RebindAll( );
 		}
 		private		void	OnApplicationPause	( Boolean pauseStatus )	
 		{

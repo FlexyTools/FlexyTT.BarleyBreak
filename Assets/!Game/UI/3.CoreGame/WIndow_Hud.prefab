@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 226494785430708715}
   - component: {fileID: 5873911816378297945}
   - component: {fileID: 6876451732407463509}
-  - component: {fileID: 4581300604777129160}
-  - component: {fileID: 8531357022754196090}
+  - component: {fileID: 51582760098419684}
   m_Layer: 5
   m_Name: Text_Seconds
   m_TagString: Untagged
@@ -138,7 +137,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4581300604777129160
+--- !u!114 &51582760098419684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,38 +146,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 886651300875831596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d012c69d88a73e408cab12446380d27, type: 3}
+  m_Script: {fileID: 11500000, guid: 1096bb6b32873b94397413f321976198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _source:
     Component: {fileID: 1736641978287482669}
     MemberName: RunSeconds
     Params: 
-  _mutStringCapacity: 2
-  _stringMinSize: 2
-  _zeroPlaceholder: 00
-  _formatString: 
-  _useTween: 0
-  _startFromZero: 0
-  _tweenTimeOnGrow: 1.5
-  _tweenTimeOnFall: 0.5
-  _tweenEaseType: 21
   _label: {fileID: 0}
---- !u!114 &8531357022754196090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886651300875831596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f82020813ec4f14880a5bc373eff4f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _typeUpdate: 1
-  _periodSeconds: 0
-  _isUnscaledTime: 1
+  _makeUpperCase: 0
 --- !u!1 &1823639095479380422
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,8 +339,7 @@ GameObject:
   - component: {fileID: 9001900488141377962}
   - component: {fileID: 720067758425278822}
   - component: {fileID: 4483434044390606254}
-  - component: {fileID: 4949124496233017372}
-  - component: {fileID: 1189460611948931526}
+  - component: {fileID: 444523843960114513}
   m_Layer: 5
   m_Name: Text_Minutes
   m_TagString: Untagged
@@ -490,7 +465,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4949124496233017372
+--- !u!114 &444523843960114513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -499,38 +474,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2444726300076964805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d012c69d88a73e408cab12446380d27, type: 3}
+  m_Script: {fileID: 11500000, guid: 1096bb6b32873b94397413f321976198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _source:
     Component: {fileID: 1736641978287482669}
     MemberName: RunMinutes
     Params: 
-  _mutStringCapacity: 2
-  _stringMinSize: 2
-  _zeroPlaceholder: 00
-  _formatString: 
-  _useTween: 0
-  _startFromZero: 0
-  _tweenTimeOnGrow: 1.5
-  _tweenTimeOnFall: 0.5
-  _tweenEaseType: 21
   _label: {fileID: 0}
---- !u!114 &1189460611948931526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2444726300076964805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f82020813ec4f14880a5bc373eff4f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _typeUpdate: 1
-  _periodSeconds: 0
-  _isUnscaledTime: 1
+  _makeUpperCase: 0
 --- !u!1 &3408262893513176776
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,8 +690,7 @@ GameObject:
   - component: {fileID: 2020873973483545683}
   - component: {fileID: 6410070409292964575}
   - component: {fileID: 278130668009902410}
-  - component: {fileID: 1848462148353422895}
-  - component: {fileID: 2536636197425870439}
+  - component: {fileID: 6945882763965511498}
   m_Layer: 5
   m_Name: Text_Miliseconds
   m_TagString: Untagged
@@ -865,7 +816,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &1848462148353422895
+--- !u!114 &6945882763965511498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -874,40 +825,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8411096230966998102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 844ee470f0c16e34a934a9a38f041ec4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1096bb6b32873b94397413f321976198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _source:
     Component: {fileID: 1736641978287482669}
     MemberName: RunMiliseconds
     Params: 
-  _mutStringCapacity: 2
-  _stringMinSize: 2
-  _zeroPlaceholder: 
-  _formatString: 
-  _useTween: 0
-  _startFromZero: 0
-  _tweenTimeOnGrow: 1.5
-  _tweenTimeOnFall: 0.5
-  _tweenEaseType: 21
   _label: {fileID: 0}
-  _prefix: <size=25>
-  _postfix: 
---- !u!114 &2536636197425870439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8411096230966998102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f82020813ec4f14880a5bc373eff4f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _typeUpdate: 1
-  _periodSeconds: 0
-  _isUnscaledTime: 1
+  _makeUpperCase: 0
 --- !u!1 &8927638002295034370
 GameObject:
   m_ObjectHideFlags: 0
