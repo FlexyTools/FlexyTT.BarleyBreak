@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 9177113893495440294}
   - component: {fileID: 1342580290730135017}
   m_Layer: 5
-  m_Name: Minigame_Barley-Break
+  m_Name: Game_Barley-Break
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
