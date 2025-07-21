@@ -1,6 +1,4 @@
-﻿using Flexy.Template.BarleyBreak.Settings;
-
-namespace Flexy.Template.BarleyBreak.UI
+﻿namespace Flexy.Template.BarleyBreak.UI
 {
 	public class Window_GameSettings : UIWindowEx
 	{
@@ -37,11 +35,11 @@ namespace Flexy.Template.BarleyBreak.UI
 			} 
 		}
 		
-		[Bindable]	Int32	SoundVolume_100 => (Int32)(SoundVolume * 100);
-		[Bindable]	Int32	SfxVolume_100	=> (Int32)(SfxVolume * 100);
+		[Bindable]	String	SoundVolume_100 => ((Int32)(SoundVolume * 100)).ToString();
+		[Bindable]	String	SfxVolume_100	=> ((Int32)(SfxVolume * 100)).ToString();
 
 		// Color Settings
-		[Bindable]	Single	ColorR	
+		[Bindable]	Single	ColorR			
 		{
 			get => _colorSettingsTab.Primary.Get().r / 255f;
 			set 
@@ -51,7 +49,7 @@ namespace Flexy.Template.BarleyBreak.UI
 				RebindProperty( "ColorR_255" ); 
 			}
 		}
-		[Bindable]	Single	ColorG	
+		[Bindable]	Single	ColorG			
 		{
 			get => _colorSettingsTab.Primary.Get().g / 255f;
 			set 
@@ -61,7 +59,7 @@ namespace Flexy.Template.BarleyBreak.UI
 				RebindProperty( "ColorG_255" ); 
 			}
 		}
-		[Bindable]	Single	ColorB	
+		[Bindable]	Single	ColorB			
 		{
 			get => _colorSettingsTab.Primary.Get().b / 255f;
 			set 
@@ -72,10 +70,10 @@ namespace Flexy.Template.BarleyBreak.UI
 			}
 		}
 		
-		[Bindable]	Int32	ColorR_255 => (Int32)(ColorR * 255);
-		[Bindable]	Int32	ColorG_255 => (Int32)(ColorG * 255);
-		[Bindable]	Int32	ColorB_255 => (Int32)(ColorB * 255);
+		[Bindable]	String	ColorR_255 		=> ((Int32)(ColorR * 255)).ToString();
+		[Bindable]	String	ColorG_255 		=> ((Int32)(ColorG * 255)).ToString();
+		[Bindable]	String	ColorB_255 		=> ((Int32)(ColorB * 255)).ToString();
 		
-		[Bindable]	Color	Color		=> _colorSettingsTab.Primary.Get();
+		[Bindable]	Color	Color			=> _colorSettingsTab.Primary.Get();
 	}
 } 
