@@ -21,12 +21,12 @@ namespace Flexy.Template.BarleyBreak.UI
 			};
 			
 			board.Records.Add( score );
-			board.Records.Sort( );
+			board.Records.Sort();
 			
 			while (board.Records.Count > 7)
 				board.Records.RemoveAt( board.Records.Count-1 );
 			
-			Save( );
+			Save();
 		}
 		[ContextMenu("Save")]
 		public	void		Save		( )

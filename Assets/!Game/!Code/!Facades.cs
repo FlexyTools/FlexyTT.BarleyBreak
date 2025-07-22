@@ -3,22 +3,22 @@ namespace Flexy.Template.BarleyBreak;
 
 public struct	Facade_Game
 {
-	public	GameContext		Ctx;
+	public	GameContext	Ctx;
 
-	public	Facade_UIWindows		UI					=> new( Ctx.GetService<GameStage>( ) );
-	public	Facade_GameSettings		Settings			=> new( Ctx.GetService<GameSettingsService>( ) );
-	public	Service_Leaderboards	Leaderboards		=> Ctx.GetService<Service_Leaderboards>( );
+	public	Facade_UIWindows		UI				=> new( Ctx.GetService<GameStage>( ) );
+	public	Facade_GameSettings		Settings		=> new( Ctx.GetService<GameSettingsService>( ) );
+	public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>( );
 
-	public	Facade_Game				GetCached			( Component callSource ) => (GameContext.GetCached(ref Ctx, callSource), this).Item2; 
+	public	Facade_Game				GetCached		( Component callSource ) => (GameContext.GetCached(ref Ctx, callSource), this).Item2; 
 }
 
-public record struct	Facade_GameSettings (GameSettingsService Svc)
+public record struct	Facade_GameSettings ( GameSettingsService Svc )
 {
-	public	AudioSettingsTab	Audio =>  Svc.Get<AudioSettingsTab>( );
-	public	ColorSettingsTab	Color =>  Svc.Get<ColorSettingsTab>( );
+	public	AudioSettingsTab		Audio	=> Svc.Get<AudioSettingsTab>( );
+	public	ColorSettingsTab		Color	=> Svc.Get<ColorSettingsTab>( );
 }
 
-public readonly record struct Facade_UIWindows( FlowLib Lib )
+public record struct	Facade_UIWindows	( FlowLib Lib )
 {
 	private const String CoreGameStage = "d1be6da70d122814e85788d63b8276bd";
 
