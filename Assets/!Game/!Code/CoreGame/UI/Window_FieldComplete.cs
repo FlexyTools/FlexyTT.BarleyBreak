@@ -12,10 +12,10 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 			Game.UI.Leaderboards.Open( (((EField,Single))OpenParams).Item1 );
 			Close( );
 		}
-        
+
 		public record struct Opener( OpenCtx Ctx ) : IOpener
 		{
-			public	StateHandle		Open	( EField field, Single score ) => Ctx.Open( (field, score) );
+			public	void		Open	( EField field, Single score ) => Ctx.Open( (field, score) );
 		}
 		
 		[StateTest]		Object	Scoew_98	( ) => (EField.Board3x3, 98.1f);

@@ -364,14 +364,6 @@
       "source": "embedded",
       "dependencies": {}
     },
-    "fun.flexy.gameflow": {
-      "version": "file:fun.flexy.gameflow",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "fun.flexy.core": "5.0.0"
-      }
-    },
     "fun.flexy.gamesettings": {
       "version": "file:fun.flexy.gamesettings",
       "depth": 0,

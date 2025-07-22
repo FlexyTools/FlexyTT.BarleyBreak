@@ -1,3 +1,5 @@
+using Flexy.Template.BarleyBreak.GameFlow;
+
 namespace Flexy.Template.BarleyBreak.UI
 {
 	public class Window_Leaderboard : UIWindowEx
@@ -52,10 +54,10 @@ namespace Flexy.Template.BarleyBreak.UI
 			}
 		}
 
-		public record struct Opener( OpenCtx Ctx ) : IOpener
+		public record struct Opener( OpenCtx Ctx )
 		{
-			public	StateHandle		Open	( )					=> Ctx.Open( null );
-			public	StateHandle		Open	( EField board )	=> Ctx.Open( board );
+			public	void		Open	( )					=> Ctx.Open( null );
+			public	void		Open	( EField board )	=> Ctx.Open( board );
 		}
 		
 		[StateTest]	Object	Board3x3	( ) => EField.Board3x3;
