@@ -26,5 +26,5 @@ public record struct	Facade_UIWindows	( FlowLib Lib )
 	public Window_PlayFields		.Opener		PlayFields			=> Lib.GetState<Window_PlayFields>( );
 	public Window_Leaderboard		.Opener		Leaderboards		=> Lib.GetOpener<Window_Leaderboard.Opener>( );
 	
-	public void Play_Field	( SceneRef map )	=> Lib.FlowSvc.SpawnGameStage( new( CoreGameStage ), map );
+	public ResultStateHandle<Single> Play_Field	( SceneRef map )	=> Lib.FlowSvc.SpawnGameStage( new( CoreGameStage ), map );
 }

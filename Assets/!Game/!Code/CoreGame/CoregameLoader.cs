@@ -2,7 +2,7 @@
 
 namespace Flexy.Template.BarleyBreak.CoreGame
 {
-	public class CoregameLoader : State
+	public class CoregameLoader : State, IStateWithResult<Single>
 	{
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
         [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 

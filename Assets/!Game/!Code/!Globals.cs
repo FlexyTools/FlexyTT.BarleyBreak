@@ -6,6 +6,7 @@ global using Flexy.Core.Actions;
 global using Flexy.AssetRefs;
 global using Flexy.AssetRefs.LoadExtensions;
 global using Flexy.GameSettings;
+global using Flexy.GameFlow;
 global using Flexy.Core.Binding;
 
 global using UnityEngine;
@@ -15,7 +16,6 @@ global using UnityEngine.Serialization;
 
 global using Flexy.Template.BarleyBreak.UI;
 global using Flexy.Template.BarleyBreak.Settings;
-global using Flexy.Template.BarleyBreak.GameFlow;
 
 global using Cysharp.Threading.Tasks;
 
