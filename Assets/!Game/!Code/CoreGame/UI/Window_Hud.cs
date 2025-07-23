@@ -66,7 +66,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 		
 			// This will close through CoregameLoader
 			GameStage.CloseStage( );
-			GameStage.FlowService.MainStateHistory.TransitionNow( );
+			GameStage.History.TransitionNow( );
 		}
     }
 }
