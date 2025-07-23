@@ -2,16 +2,12 @@
 
 namespace Flexy.Template.BarleyBreak.CoreGame
 {
-	public class CoregameLoader : State
+	public class CoregameLoader : UIWindowEx
 	{
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
         [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
-
-        private Facade_Coregame	_game; 
-        public	Facade_Coregame	Game		=> _game.GetCached( this );
         
 		private LoadSceneTask	_loadTask;
-		private Single			_runResult;
 
 		protected override	void	OnShow				( )		
 		{
@@ -23,8 +19,6 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 		}
 		protected override	void	OnBackShow			( )		
 		{
-			_runResult = Game.Mode.RunTime;
-			
 			UnloadField( ).Forget( );
 		}
 		protected override	void	OnHide				( )		
@@ -63,7 +57,5 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 			Close( );
 			GameStage.RemoveFromHistoryAfterClose( );
 		}
-		
-		public			Single		GetResult			( )	=> _runResult;
 	}
 }
