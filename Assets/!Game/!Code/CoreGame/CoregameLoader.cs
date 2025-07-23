@@ -2,7 +2,7 @@
 
 namespace Flexy.Template.BarleyBreak.CoreGame
 {
-	public class CoregameLoader : State, IStateWithResult<Single>
+	public class CoregameLoader : State
 	{
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
         [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
@@ -48,7 +48,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 				loadedScene		= await _loadTask;
 			}
 			
-			await UniTask.DelayFrame( 5 );
+			await UniTask.Delay( 350 );
 			GameStage.MoveToLoadedScene( loadedScene );
 			GameStage.OpenRootState( );
 		}
@@ -58,7 +58,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 			
 			_loadTask = SceneRef.LoadDummySceneAsync( gameObject, LoadSceneMode.Single );
 			await _loadTask;
-			await UniTask.DelayFrame( 5 );
+			await UniTask.Delay( 350 );
 			
 			Close( );
 			GameStage.RemoveFromHistoryAfterClose( );

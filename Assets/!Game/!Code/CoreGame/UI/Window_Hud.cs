@@ -59,12 +59,14 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 			
 			Debug.Log( "[FinishGameAsync] Sequence of windows started" );
 			
-			await Handle.WaitBack( );
+			await UniTask.WaitWhile( () => gameObject.activeInHierarchy );
+			await UniTask.WaitWhile( () => !gameObject.activeInHierarchy, PlayerLoopTiming.PreLateUpdate );
 		
 			Debug.Log( "[FinishGameAsync] returned back to hud so close stage" );
 		
 			// This will close through CoregameLoader
 			GameStage.CloseStage( );
+			GameStage.FlowService.MainStateHistory.TransitionNow( );
 		}
     }
 }
