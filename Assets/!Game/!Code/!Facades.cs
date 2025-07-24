@@ -18,7 +18,7 @@ public record struct	Facade_GameSettings ( GameSettingsService Svc )
 	public	ColorSettingsTab		Color	=> Svc.Get<ColorSettingsTab>( );
 }
 
-public record struct	Facade_UIWindows	( FlowLib Lib )
+public record struct	Facade_UIWindows	( Flow Lib )
 {
 	private const String CoreGameStage = "d1be6da70d122814e85788d63b8276bd";
 
