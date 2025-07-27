@@ -37,7 +37,7 @@ namespace Flexy.Template.BarleyBreak
 		}
 		
 		private static 	Single 	DbToLinear	( Single db )		=> Mathf.Pow(10f, db / 20f);
-		private static 	Single 	LinearToDb	( Single linear )	=> linear > 0f ? 20f * Mathf.Log10(linear) : -80f;
+		private static 	Single 	LinearToDb	( Single linear )	=> Mathf.Log10( linear )*20;
 	}
 	
 	public class PlaySfxAction : FlexyActionSync

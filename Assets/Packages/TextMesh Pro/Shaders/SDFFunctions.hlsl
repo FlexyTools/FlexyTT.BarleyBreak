@@ -28,10 +28,10 @@ void GetSurfaceNormal_float(texture2D atlas, float textureWidth, float textureHe
 
 	// Read "height field"
 	float4 h = float4(
-		SAMPLE_TEXTURE2D(atlas, SamplerState_Linear_Clamp, uv - delta.xz).a,
-		SAMPLE_TEXTURE2D(atlas, SamplerState_Linear_Clamp, uv + delta.xz).a,
-		SAMPLE_TEXTURE2D(atlas, SamplerState_Linear_Clamp, uv - delta.zy).a,
-		SAMPLE_TEXTURE2D(atlas, SamplerState_Linear_Clamp, uv + delta.zy).a);
+		SAMPLE_TEXTURE2D(atlas, SamplerStateLinear_Clamp, uv - delta.xz).a,
+		SAMPLE_TEXTURE2D(atlas, SamplerStateLinear_Clamp, uv + delta.xz).a,
+		SAMPLE_TEXTURE2D(atlas, SamplerStateLinear_Clamp, uv - delta.zy).a,
+		SAMPLE_TEXTURE2D(atlas, SamplerStateLinear_Clamp, uv + delta.zy).a);
 
 	bool raisedBevel = _BevelType;
 

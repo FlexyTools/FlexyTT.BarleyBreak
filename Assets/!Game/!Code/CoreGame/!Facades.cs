@@ -13,7 +13,7 @@ public struct	Facade_Coregame
     public	Facade_Coregame			GetCached			( Component callSource ) => (GameContext.GetCached(ref Ctx, callSource), this).Item2;
 }
 
-public readonly record struct Facade_CoreUIWindows( Flow Lib )
+public readonly record struct Facade_CoreUIWindows( ShortLib Lib )
 {
 	public Window_Pause				.Opener		Pause				=> Lib.GetState<Window_Pause>( );
 	public Window_FieldComplete		.Opener		FieldComplete		=> Lib.GetOpener<Window_FieldComplete.Opener>( );

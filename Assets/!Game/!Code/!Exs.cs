@@ -10,9 +10,9 @@ public abstract class	UIPopupEx: UIWindowEx { }
 	
 public class			UIWidgetEx:	APropertyBindableBehaviour	
 {
-	private	FlowItem		_panel;
+	private	State			_panel;
 	private Facade_Game		_game;
 		
 	public	Facade_Game		Game		=> _game.GetCached( this );
-	public	FlowItem		Panel		=> _panel == null ? _panel = gameObject.GetComponentInParent<FlowItem>( true ) : _panel; 
+	public	State			Panel		=> _panel == null ? _panel = gameObject.GetComponentInParent<State>( true ) : _panel; 
 }

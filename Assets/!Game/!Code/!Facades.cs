@@ -18,7 +18,7 @@ public record struct	Facade_GameSettings ( GameSettingsService Svc )
 	public	ColorSettingsTab		Color	=> Svc.Get<ColorSettingsTab>( );
 }
 
-public record struct	Facade_UIWindows	( Flow Lib )
+public record struct	Facade_UIWindows	( ShortLib Lib )
 {
 	private const String CoreGameStage = "d1be6da70d122814e85788d63b8276bd";
 
@@ -26,5 +26,5 @@ public record struct	Facade_UIWindows	( Flow Lib )
 	public Window_PlayFields		.Opener		PlayFields			=> Lib.GetState<Window_PlayFields>( );
 	public Window_Leaderboard		.Opener		Leaderboards		=> Lib.GetOpener<Window_Leaderboard.Opener>( );
 	
-	public void Play_Field	( SceneRef map )	=> Lib.FlowSvc.SpawnGameStage( new( CoreGameStage ), map );
+	public void Play_Field	( SceneRef map )	=> Lib.FlowSvc.OpenGameStage( new( CoreGameStage ), map );
 }
