@@ -65,8 +65,8 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 			Debug.Log( "[FinishGameAsync] returned back to hud so close stage" );
 		
 			// This will close through CoregameLoader
-			GameStage.CloseStage( );
-			GameStage.History.TransitionNow( );
+			GameStage.Close();
+			Node.Graph.TransitionNow();
 		}
     }
 }

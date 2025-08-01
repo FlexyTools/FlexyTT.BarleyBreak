@@ -16,16 +16,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c1be01a1ef3f6734f83f38792be212c9, type: 2}
   - {fileID: 11400000, guid: 9b6dca4bba14b264fb9ebc6b437a639e, type: 2}
   - {fileID: 11400000, guid: 37edc546be7a27c4ba54355ebaa475ac, type: 2}
-  _stages:
-  - _uid:
-      serializedVersion: 2
-      Hash: 069f665c8c7ec0543b84a34b2c307884
-    _subId: 0
-  - _uid:
-      serializedVersion: 2
-      Hash: d1be6da70d122814e85788d63b8276bd
-    _subId: 0
   _states:
+  - TypeFullName: Flexy.GameFlow.RootState
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: 9d235a40ab1fe12489f5801e7729e402
+      _subId: 0
   - TypeFullName: Flexy.Template.BarleyBreak.CoreGame.CoregameLoader
     Ref:
       _uid:

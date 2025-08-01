@@ -44,7 +44,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 			
 			await UniTask.Delay( 350 );
 			GameStage.MoveToLoadedScene( loadedScene );
-			GameStage.OpenRootState( );
+			GameStage.OpenMainState( );
 		}
 		private async	UniTask		UnloadField			( )		
 		{

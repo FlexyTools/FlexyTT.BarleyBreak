@@ -53,17 +53,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4386756fd64831ada4e7f212448bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loaderStateRef:
-    _uid:
-      serializedVersion: 2
-      Hash: 00000000000000000000000000000000
-    _subId: 0
-  _rootStateRef:
+  _showing:
+    _action:
+      rid: -2
+  _hiding:
+    _action:
+      rid: -2
+  _mainStateRef:
     _uid:
       serializedVersion: 2
       Hash: e35616b6349e6884481db3654ef57ef1
     _subId: 1849295314665467560
   _statesContainer: {fileID: 771841701890888736}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!114 &3439183095492819642
 MonoBehaviour:
   m_ObjectHideFlags: 0

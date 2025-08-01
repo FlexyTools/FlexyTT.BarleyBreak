@@ -18,13 +18,13 @@ public record struct	Facade_GameSettings ( GameSettingsService Svc )
 	public	ColorSettingsTab		Color	=> Svc.Get<ColorSettingsTab>( );
 }
 
-public record struct	Facade_UIWindows	( ShortLib Lib )
+public record struct	Facade_UIWindows	( LibCtx LibCtx )
 {
 	private const String CoreGameStage = "d1be6da70d122814e85788d63b8276bd";
 
-	public Window_GameSettings		.Opener		Settings			=> Lib.GetState<Window_GameSettings>( );
-	public Window_PlayFields		.Opener		PlayFields			=> Lib.GetState<Window_PlayFields>( );
-	public Window_Leaderboard		.Opener		Leaderboards		=> Lib.GetOpener<Window_Leaderboard.Opener>( );
+	public Window_GameSettings		.Opener		Settings			=> LibCtx.GetState<Window_GameSettings>( );
+	public Window_PlayFields		.Opener		PlayFields			=> LibCtx.GetState<Window_PlayFields>( );
+	public Window_Leaderboard		.Opener		Leaderboards		=> LibCtx.GetOpener<Window_Leaderboard.Opener>( );
 	
-	public void Play_Field	( SceneRef map )	=> Lib.FlowSvc.OpenGameStage( new( CoreGameStage ), map );
+	public void Play_Field	( SceneRef map )	=> LibCtx.Service.Graph.Open( new( CoreGameStage ), LibCtx.Src, map );
 }
