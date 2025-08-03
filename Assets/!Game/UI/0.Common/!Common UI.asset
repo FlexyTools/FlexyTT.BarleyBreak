@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98dc713b27c7413490371c5ffc0749bc, type: 3}
-  m_Name: '!Global UI'
+  m_Name: '!Common UI'
   m_EditorClassIdentifier: 
   _dependencies: []
-  _stages: []
   _states:
   - TypeFullName: Flexy.Template.BarleyBreak.UI.Window_GameSettings
     Ref:

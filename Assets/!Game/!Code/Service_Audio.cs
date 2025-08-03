@@ -6,7 +6,7 @@ namespace Flexy.Template.BarleyBreak
 		[SerializeField]	AudioSource		_sfxSource;
 		[SerializeField]	AudioMixer		_mixer;
 		
-		private AudioSettingsTab _settings;
+		private SettingsTab_Audio _settings;
 
 		public	Single	SoundVolume		
 		{
@@ -21,7 +21,7 @@ namespace Flexy.Template.BarleyBreak
 
 		public	void	OrderedInit		( GameContext ctx )	
 		{
-			_settings = ctx.GetService<GameSettingsService>( ).Get<AudioSettingsTab>( );
+			_settings = ctx.GetService<GameSettingsService>( ).Get<SettingsTab_Audio>( );
 			
 			_settings.SoundVolume	.Changed += _ => UpdateVolume( );
 			_settings.SfxVolume		.Changed += _ => UpdateVolume( );

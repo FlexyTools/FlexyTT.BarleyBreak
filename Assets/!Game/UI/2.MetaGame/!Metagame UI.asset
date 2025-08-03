@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: '!Metagame UI'
   m_EditorClassIdentifier: 
   _dependencies: []
-  _stages: []
   _states:
   - TypeFullName: Flexy.Template.BarleyBreak.UI.Window_MainMenu
     Ref:

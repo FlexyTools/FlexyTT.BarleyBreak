@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: '!Coregame UI'
   m_EditorClassIdentifier: 
   _dependencies: []
-  _stages: []
   _states:
   - TypeFullName: Flexy.Template.BarleyBreak.CoreGame.UI.Window_Hud
     Ref:

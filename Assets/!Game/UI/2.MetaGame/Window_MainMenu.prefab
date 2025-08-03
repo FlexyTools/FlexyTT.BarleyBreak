@@ -121,7 +121,6 @@ MonoBehaviour:
   _hiding:
     _action:
       rid: -2
-  _tr: {fileID: 0}
   references:
     version: 2
     RefIds:
@@ -173,6 +172,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7958693760697188935}
     m_Modifications:
+    - target: {fileID: 1031878089485820753, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1415384408975844540, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_text
       value: Settings
@@ -795,6 +798,10 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1849295314665467560}
+    - target: {fileID: 5347086588793694454, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
+      propertyPath: _methodName
+      value: Close
+      objectReference: {fileID: 0}
     - target: {fileID: 8116686128717607029, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -4,32 +4,32 @@
 	{
 		private		void	Awake	( )		
 		{
-			_audioSettingsTab = Game.Settings.Svc.Get<AudioSettingsTab>( );
-			_colorSettingsTab = Game.Settings.Svc.Get<ColorSettingsTab>( );
+			_settingsTabAudio = Game.Settings.Svc.Get<SettingsTab_Audio>( );
+			_settingsTabColor = Game.Settings.Svc.Get<SettingsTab_Color>( );
 			
-			_colorSettingsTab.Primary.Changed += _ => RebindProperty( "Color" );
+			_settingsTabColor.Primary.Changed += _ => RebindProperty( "Color" );
 		}
 	
-		private AudioSettingsTab _audioSettingsTab;
-		private ColorSettingsTab _colorSettingsTab;
+		private SettingsTab_Audio _settingsTabAudio;
+		private SettingsTab_Color _settingsTabColor;
 
 		// Audio Settings
 		[Bindable]	Single	SoundVolume		
 		{ 
-			get => _audioSettingsTab.SoundVolume; 
+			get => _settingsTabAudio.SoundVolume; 
 			set 
 			{ 
-				_audioSettingsTab.SoundVolume.Set( value ); 
+				_settingsTabAudio.SoundVolume.Set( value ); 
 				RebindProperty( "SoundVolume" ); 
 				RebindProperty( "SoundVolume_100" ); 
 			} 
 		}
 		[Bindable]	Single	SfxVolume		
 		{ 
-			get => _audioSettingsTab.SfxVolume;  
+			get => _settingsTabAudio.SfxVolume;  
 			set 
 			{
-				_audioSettingsTab.SfxVolume.Set( value ); 
+				_settingsTabAudio.SfxVolume.Set( value ); 
 				RebindProperty( "SfxVolume" ); 
 				RebindProperty( "SfxVolume_100" ); 
 			} 
@@ -41,30 +41,30 @@
 		// Color Settings
 		[Bindable]	Single	ColorR			
 		{
-			get => _colorSettingsTab.Primary.Get().r / 255f;
+			get => _settingsTabColor.Primary.Get().r / 255f;
 			set 
 			{ 
-				_colorSettingsTab.Primary.Set( _colorSettingsTab.Primary.Get() with {r = (Byte)(value*255)} ); 
+				_settingsTabColor.Primary.Set( _settingsTabColor.Primary.Get() with {r = (Byte)(value*255)} ); 
 				RebindProperty( "ColorR" ); 
 				RebindProperty( "ColorR_255" ); 
 			}
 		}
 		[Bindable]	Single	ColorG			
 		{
-			get => _colorSettingsTab.Primary.Get().g / 255f;
+			get => _settingsTabColor.Primary.Get().g / 255f;
 			set 
 			{ 
-				_colorSettingsTab.Primary.Set( _colorSettingsTab.Primary.Get() with {g = (Byte)(value*255)} ); 
+				_settingsTabColor.Primary.Set( _settingsTabColor.Primary.Get() with {g = (Byte)(value*255)} ); 
 				RebindProperty( "ColorG" ); 
 				RebindProperty( "ColorG_255" ); 
 			}
 		}
 		[Bindable]	Single	ColorB			
 		{
-			get => _colorSettingsTab.Primary.Get().b / 255f;
+			get => _settingsTabColor.Primary.Get().b / 255f;
 			set 
 			{
-				_colorSettingsTab.Primary.Set( _colorSettingsTab.Primary.Get() with {b = (Byte)(value*255)} ); 
+				_settingsTabColor.Primary.Set( _settingsTabColor.Primary.Get() with {b = (Byte)(value*255)} ); 
 				RebindProperty( "ColorB" ); 
 				RebindProperty( "ColorB_255" ); 
 			}
@@ -74,6 +74,6 @@
 		[Bindable]	String	ColorG_255 		=> ((Int32)(ColorG * 255)).ToString();
 		[Bindable]	String	ColorB_255 		=> ((Int32)(ColorB * 255)).ToString();
 		
-		[Bindable]	Color	Color			=> _colorSettingsTab.Primary.Get();
+		[Bindable]	Color	Color			=> _settingsTabColor.Primary.Get();
 	}
 } 

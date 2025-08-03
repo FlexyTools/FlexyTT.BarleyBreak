@@ -4197,8 +4197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _topLeft: {r: 1, g: 1, b: 1, a: 1}
   _topRight: {r: 1, g: 1, b: 1, a: 1}
-  _bottomRight: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
   _bottomLeft: {r: 0.77254903, g: 0.7647059, b: 0.7647059, a: 1}
+  _bottomRight: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
   _angle: 0
   _ignoreRatio: 1
 --- !u!224 &6947892025601051746 stripped
@@ -4583,8 +4583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _topLeft: {r: 1, g: 1, b: 1, a: 1}
   _topRight: {r: 1, g: 1, b: 1, a: 1}
-  _bottomRight: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
   _bottomLeft: {r: 0.77254903, g: 0.7647059, b: 0.7647059, a: 1}
+  _bottomRight: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
   _angle: 0
   _ignoreRatio: 1
 --- !u!224 &6709150702142015122 stripped
@@ -4951,7 +4951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _topLeft: {r: 1, g: 1, b: 1, a: 1}
   _topRight: {r: 1, g: 1, b: 1, a: 1}
-  _bottomRight: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
   _bottomLeft: {r: 0.77254903, g: 0.7647059, b: 0.7647059, a: 1}
+  _bottomRight: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
   _angle: 0
   _ignoreRatio: 1

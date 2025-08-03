@@ -2,8 +2,10 @@
 
 namespace Flexy.Template.BarleyBreak.CoreGame
 {
-	public class CoregameLoader : UIWindowEx
+	public class Stage_Coregame : GameStageEx
 	{
+		[SerializeField]	GameObject _loaderOverlay;
+	
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
         [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
         
@@ -11,7 +13,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 
 		protected override	void	OnShow				( )		
 		{
-			LoadField( ).Forget( );
+			LoadGameFieldScene( ).Forget( );
 		}
 		protected override	void	OnFwdHide			( )		
 		{
@@ -19,15 +21,17 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 		}
 		protected override	void	OnBackShow			( )		
 		{
-			UnloadField( ).Forget( );
+			UnloadGameFieldScene( ).Forget( );
 		}
 		protected override	void	OnHide				( )		
 		{
 			_loadTask = default;
 		}
 		
-		private async	UniTask		LoadField			( )		
+		private async	UniTask		LoadGameFieldScene			( )		
 		{
+			_loaderOverlay.gameObject.SetActive(true);
+		
 			var loadedScene = default(Scene);
 			
 			if ( OpenParams == null )
@@ -44,18 +48,21 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 			
 			await UniTask.Delay( 350 );
 			GameStage.MoveToLoadedScene( loadedScene );
-			GameStage.OpenMainState( );
+			GameStage.OpenMainState();
+			
+			_loaderOverlay.gameObject.SetActive(false);
 		}
-		private async	UniTask		UnloadField			( )		
+		private async	UniTask		UnloadGameFieldScene			( )		
 		{
+			_loaderOverlay.gameObject.SetActive(true);
+		
 			GameStage.MoveToServiceScene( );
 			
 			_loadTask = SceneRef.LoadDummySceneAsync( gameObject, LoadSceneMode.Single );
 			await _loadTask;
 			await UniTask.Delay( 350 );
 			
-			Close( );
-			GameStage.RemoveFromHistoryAfterClose( );
+			CloseAndDestroy();
 		}
 	}
 }

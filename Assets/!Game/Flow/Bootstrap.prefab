@@ -45,23 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _globalContext: {fileID: 6094116195305920385, guid: f0ddde7af7c741541b972b4f005cea5f, type: 3}
-  _gameStageBoot:
-    _uid:
-      serializedVersion: 2
-      Hash: 00000000000000000000000000000000
-    _subId: 0
-  _gameStageMeta:
-    _uid:
+  _statesToOpen:
+  - _uid:
       serializedVersion: 2
       Hash: 069f665c8c7ec0543b84a34b2c307884
-    _subId: 5478484117776952767
-  _gameStageCore:
-    _uid:
-      serializedVersion: 2
-      Hash: 00000000000000000000000000000000
-    _subId: 0
-  _stateToOpen:
-    _uid:
-      serializedVersion: 2
-      Hash: 00000000000000000000000000000000
     _subId: 0
