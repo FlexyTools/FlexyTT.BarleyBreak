@@ -23,3 +23,15 @@ MonoBehaviour:
         serializedVersion: 2
         Hash: 9d235a40ab1fe12489f5801e7729e402
       _subId: 0
+  - TypeFullName: Flexy.GameFlow.GameStage
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: 069f665c8c7ec0543b84a34b2c307884
+      _subId: 0
+  - TypeFullName: Flexy.Template.BarleyBreak.CoreGame.Stage_Coregame
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: c1055f23b34e09a4496fc2c881bb0920
+      _subId: 0

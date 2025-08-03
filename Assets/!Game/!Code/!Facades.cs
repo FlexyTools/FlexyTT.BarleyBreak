@@ -20,7 +20,7 @@ public record struct	Facade_GameSettings ( GameSettingsService Svc )
 
 public record struct	Facade_UIWindows	( LibCtx LibCtx )
 {
-	private const String CoreGameStage = "d1be6da70d122814e85788d63b8276bd";
+	private const String CoreGameStage = "c1055f23b34e09a4496fc2c881bb0920";
 
 	public Window_GameSettings		.Opener		Settings			=> LibCtx.GetState<Window_GameSettings>();
 	public Window_PlayFields		.Opener		PlayFields			=> LibCtx.GetState<Window_PlayFields>();
