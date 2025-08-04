@@ -12,24 +12,24 @@ namespace Flexy.Template.BarleyBreak.CoreGame
         
 		private LoadSceneTask	_loadTask;
 
-		protected override	void	OnShow				( )		
+		protected override	void	OnShow					( )		
 		{
 			LoadGameFieldScene( ).Forget( );
 		}
-		protected override	void	OnFirstChildShow	( )		
+		protected override	void	OnFirstChildShow		( )		
 		{
 			_loadTask = default;
 		}
-		protected override	void	OnLastChildHide		( )		
+		protected override	void	OnLastChildHide			( )		
 		{
 			UnloadGameFieldScene( ).Forget( );
 		}
-		protected override	void	OnHide				( )		
+		protected override	void	OnHide					( )		
 		{
 			_loadTask = default;
 		}
 		
-		private async	UniTask		LoadGameFieldScene	( )		
+		private async	UniTask		LoadGameFieldScene		( )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		
@@ -53,7 +53,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 			
 			_loaderOverlay.gameObject.SetActive(false);
 		}
-		private async	UniTask		UnloadGameFieldScene( )		
+		private async	UniTask		UnloadGameFieldScene	( )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		
