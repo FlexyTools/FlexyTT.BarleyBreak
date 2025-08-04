@@ -2,6 +2,7 @@
 
 namespace Flexy.Template.BarleyBreak.CoreGame
 {
+	[ServiceTypes(typeof(GameStage))]
 	public class Stage_Coregame : GameStageEx
 	{
 		[SerializeField]	GameObject _loaderOverlay;
@@ -15,11 +16,11 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 		{
 			LoadGameFieldScene( ).Forget( );
 		}
-		protected override	void	OnFwdHide			( )		
+		protected override	void	OnFirstChildShow	( )		
 		{
 			_loadTask = default;
 		}
-		protected override	void	OnBackShow			( )		
+		protected override	void	OnLastChildHide		( )		
 		{
 			UnloadGameFieldScene( ).Forget( );
 		}
@@ -28,7 +29,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 			_loadTask = default;
 		}
 		
-		private async	UniTask		LoadGameFieldScene			( )		
+		private async	UniTask		LoadGameFieldScene	( )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		
@@ -52,7 +53,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 			
 			_loaderOverlay.gameObject.SetActive(false);
 		}
-		private async	UniTask		UnloadGameFieldScene			( )		
+		private async	UniTask		UnloadGameFieldScene( )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		

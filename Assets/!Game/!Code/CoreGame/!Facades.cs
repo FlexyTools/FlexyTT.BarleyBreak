@@ -1,16 +1,15 @@
 // ReSharper disable AccessToStaticMemberViaDerivedType
 namespace Flexy.Template.BarleyBreak.CoreGame;
 
-public struct	Facade_Coregame
+public struct	Facade_Coregame : ICachedContext
 {
-    public	GameContext			    Ctx;
+	public	GameContext				Ctx				{ get; set; }
+	public	Component				CallSource		{ get; set; }
 													
-    public	Facade_CoreUIWindows	UI				=> new(Ctx.GetService<GameStage>( ));
+    public	Facade_CoreUIWindows	UI				=> new(CallSource.GetComponentInParent<State>());
     public	GameSettingsService	    Settings		=> Ctx.GetService<GameSettingsService>( );
     public  GameMode				Mode         	=> Ctx.GetService<GameMode>( );
     public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>( );
-
-    public	Facade_Coregame			GetCached			( Component callSource ) => (GameContext.GetCached(ref Ctx, callSource), this).Item2;
 }
 
 public readonly record struct Facade_CoreUIWindows( LibCtx LibCtx )
