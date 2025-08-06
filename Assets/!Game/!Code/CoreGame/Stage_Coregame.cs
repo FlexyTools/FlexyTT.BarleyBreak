@@ -47,7 +47,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 				loadedScene		= await _loadTask;
 			}
 			
-			await UniTask.Delay( 350 );
+			await UniTask.Delay( 350, ignoreTimeScale:true );
 			GameStage.MoveToLoadedScene( loadedScene );
 			GameStage.OpenMainState();
 			
@@ -61,7 +61,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 			
 			_loadTask = SceneRef.LoadDummySceneAsync( gameObject, LoadSceneMode.Single );
 			await _loadTask;
-			await UniTask.Delay( 350 );
+			await UniTask.Delay( 350, ignoreTimeScale:true );
 			
 			CloseAndDestroy();
 		}

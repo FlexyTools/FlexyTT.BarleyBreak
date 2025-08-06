@@ -2,20 +2,22 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 {
 	public class Window_FieldComplete : UIWindowEx
     {
-        [Bindable]		Single		Seconds				=> (((EField,Single))OpenParams).Item2;
+	    private	(EField Field, Single Seconds) Params => ((EField,Single))OpenParams;
+    
+        [Bindable]		Single		Seconds				=> Params.Seconds;
         [Bindable]		String		FormattedSeconds	=> Seconds >= 60 ? TimeSpan.FromSeconds( Seconds ).ToString( @"mm\:ss\.ff" ) : TimeSpan.FromSeconds( Seconds ).ToString( @"ss\.ff" );
 
         protected override	Boolean	TryGoBack	( )		=> false;
 
         [Callable]		void		Continue	( )	
 		{
-			Game.UI.Leaderboards.Open( (((EField,Single))OpenParams).Item1 );
-			Close( );
+			GameStage.CloseAllStates();
+			Game.UI.Leaderboards.Open( Params.Field );
 		}
         
 		public record struct Opener( OpenCtx Ctx ) : IOpener
 		{
-			public	StateHandle		Open	( EField field, Single score ) => Ctx.Open( (field, score) );
+			public	StateHandle		Open	( EField field, Single seconds ) => Ctx.Open( (field, seconds) );
 		}
 		
 		[StateTest]		Object	Scoew_98	( ) => (EField.Board3x3, 98.1f);

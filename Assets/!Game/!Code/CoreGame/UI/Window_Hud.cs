@@ -12,14 +12,6 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 		{
 			_finishingStarted = false;
 		}
-		protected override void		OnFwdHide	( )		
-		{
-			Time.timeScale = 0.001f;
-		}
-		protected override void		OnBackShow	( )		
-		{
-			Time.timeScale = 1;
-		}
 		protected override Boolean	TryGoBack	( )		
 		{
 			Pause( );
