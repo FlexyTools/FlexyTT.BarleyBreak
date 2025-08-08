@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4479850502415063041}
   - component: {fileID: 8248694392746036552}
+  - component: {fileID: 1200356775325888788}
   m_Layer: 5
   m_Name: Board_3x3
   m_TagString: Untagged
@@ -120,6 +121,25 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1200356775325888788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074209976543121940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4251a8d9b14ae68e1581945c165f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source:
+    Component: {fileID: 724411808135472079}
+    MemberName: Records3x3
+    Params: 
+  _container: {fileID: 9016817043591195031}
+  _prefab: {fileID: 4180271258400123415}
+  _prefabGroup: {fileID: 0}
 --- !u!1 &1198440002922028922
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,13 +258,6 @@ MonoBehaviour:
   _hiding:
     _action:
       rid: -2
-  _recordPrefab: {fileID: 6345905434254999577}
-  _scores_3x3: {fileID: 4479850502415063041}
-  _scores_4x4: {fileID: 5956703001176043857}
-  _scores_5x5: {fileID: 6923793611479200327}
-  _scores_3x3_Container: {fileID: 9016817043591195031}
-  _scores_4x4_Container: {fileID: 8907803677235349064}
-  _scores_5x5_Container: {fileID: 6601327799330781932}
   references:
     version: 2
     RefIds:
@@ -260,6 +273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6923793611479200327}
   - component: {fileID: 8319317525173779485}
+  - component: {fileID: 8199120647606143470}
   m_Layer: 5
   m_Name: Board_5x5
   m_TagString: Untagged
@@ -308,6 +322,25 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &8199120647606143470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290269338420222780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4251a8d9b14ae68e1581945c165f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source:
+    Component: {fileID: 724411808135472079}
+    MemberName: Records5x5
+    Params: 
+  _container: {fileID: 6601327799330781932}
+  _prefab: {fileID: 4180271258400123415}
+  _prefabGroup: {fileID: 0}
 --- !u!1 &3347838110787004116
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +503,9 @@ GameObject:
   m_Component:
   - component: {fileID: 793192525241922522}
   - component: {fileID: 4415399487817056915}
+  - component: {fileID: 8648381265111515318}
+  - component: {fileID: 7470602799643062346}
+  - component: {fileID: 274719967753091238}
   m_Layer: 0
   m_Name: Boards
   m_TagString: Untagged
@@ -525,6 +561,63 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &8648381265111515318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581671362748102036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7db45de88df24d63a7201ec233f3705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source:
+    Component: {fileID: 724411808135472079}
+    MemberName: IsShowBoard
+    Params: 0
+  _disableObjectsOnAwake: 0
+  _true: {fileID: 1074209976543121940}
+  _false: {fileID: 0}
+--- !u!114 &7470602799643062346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581671362748102036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7db45de88df24d63a7201ec233f3705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source:
+    Component: {fileID: 724411808135472079}
+    MemberName: IsShowBoard
+    Params: 1
+  _disableObjectsOnAwake: 0
+  _true: {fileID: 8264322944103216078}
+  _false: {fileID: 0}
+--- !u!114 &274719967753091238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581671362748102036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7db45de88df24d63a7201ec233f3705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source:
+    Component: {fileID: 724411808135472079}
+    MemberName: IsShowBoard
+    Params: 2
+  _disableObjectsOnAwake: 0
+  _true: {fileID: 3290269338420222780}
+  _false: {fileID: 0}
 --- !u!1 &8264322944103216078
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5956703001176043857}
   - component: {fileID: 5485110096508245528}
+  - component: {fileID: 2698265913308548333}
   m_Layer: 5
   m_Name: Board_4x4
   m_TagString: Untagged
@@ -583,6 +677,25 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2698265913308548333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264322944103216078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4251a8d9b14ae68e1581945c165f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source:
+    Component: {fileID: 724411808135472079}
+    MemberName: Records4x4
+    Params: 
+  _container: {fileID: 8907803677235349064}
+  _prefab: {fileID: 4180271258400123415}
+  _prefabGroup: {fileID: 0}
 --- !u!1001 &3998740040854998119
 PrefabInstance:
   m_ObjectHideFlags: 0
