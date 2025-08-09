@@ -1,4 +1,4 @@
-namespace Flexy.Template.BarleyBreak.UI
+namespace Flexy.Template.BarleyBreak
 {
 	public class Service_Leaderboards: MonoBehaviour, IService
 	{

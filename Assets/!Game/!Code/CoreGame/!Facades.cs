@@ -7,7 +7,7 @@ public struct	Facade_Coregame : ICachedContext
 	public	Component				CallSource		{ get; set; }
 													
     public	Facade_CoreUIWindows	UI				=> new(CallSource.GetComponentInParent<State>());
-    public	GameSettingsService	    Settings		=> Ctx.GetService<GameSettingsService>( );
+    public	Service_GameSettings	    Settings		=> Ctx.GetService<Service_GameSettings>( );
     public  GameMode				Mode         	=> Ctx.GetService<GameMode>( );
     public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>( );
 }

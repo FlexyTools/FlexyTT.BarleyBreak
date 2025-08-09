@@ -7,14 +7,14 @@ public struct	Facade_Game : ICachedContext
 	public	Component				CallSource		{ get; set; }
 
 	public	Facade_UIWindows		UI				=> new( Ctx.GetService<GameStage>() );
-	public	Facade_GameSettings		Settings		=> new( Ctx.GetService<GameSettingsService>() );
+	public	Facade_GameSettings		Settings		=> new( Ctx.GetService<Service_GameSettings>() );
 	public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>();
 }
 
-public record struct	Facade_GameSettings ( GameSettingsService Svc )
+public record struct	Facade_GameSettings ( Service_GameSettings Svc )
 {
-	public	SettingsTab_Audio		SettingsTabAudio	=> Svc.Get<SettingsTab_Audio>();
-	public	SettingsTab_Color		SettingsTabColor	=> Svc.Get<SettingsTab_Color>();
+	public	SettingsTab_Audio		Audio		=> Svc.Get<SettingsTab_Audio>();
+	public	SettingsTab_Color		Color		=> Svc.Get<SettingsTab_Color>();
 }
 
 public record struct	Facade_UIWindows	( LibCtx LibCtx )

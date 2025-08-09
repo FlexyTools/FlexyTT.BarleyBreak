@@ -21,7 +21,7 @@ namespace Flexy.Template.BarleyBreak
 
 		public	void	OrderedInit		( GameContext ctx )	
 		{
-			_settings = ctx.GetService<GameSettingsService>( ).Get<SettingsTab_Audio>( );
+			_settings = ctx.GetService<Service_GameSettings>( ).Get<SettingsTab_Audio>( );
 			
 			_settings.SoundVolume	.Changed += _ => UpdateVolume( );
 			_settings.SfxVolume		.Changed += _ => UpdateVolume( );
