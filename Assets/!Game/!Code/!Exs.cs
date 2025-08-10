@@ -8,7 +8,7 @@ public abstract class	UIWindowEx: State
 	
 public abstract class	UIPopupEx: UIWindowEx { }
 	
-public class			UIWidgetEx:	APropertyBindableBehaviour	
+public class			UIWidgetEx:	BindableBehaviour	
 {
 	private	State			_panel;
 	private Facade_Game		_game;

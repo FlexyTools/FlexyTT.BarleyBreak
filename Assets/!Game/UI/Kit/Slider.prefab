@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 706084463457929341}
   - component: {fileID: 8885008360490591634}
-  - component: {fileID: 5783634072679335375}
+  - component: {fileID: 1588595095800178816}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &5783634072679335375
+--- !u!114 &1588595095800178816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,14 +100,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 367441704868816389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcd333c62f1cdea43a52d8ff50e9c4d0, type: 3}
+  m_Script: {fileID: 11500000, guid: ad4d185222292a14e8261c8b6619fa19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _source:
     Component: {fileID: 0}
-    MemberName: SoundVolume
+    MemberName: 
     Params: 
-  _slider: {fileID: 0}
+  _slider: {fileID: 8885008360490591634}
   _useTween: 0
   _startFromZero: 0
   _tweenTime: 0

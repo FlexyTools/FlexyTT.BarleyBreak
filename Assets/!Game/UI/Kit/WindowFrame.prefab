@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3030415992803314121}
   - component: {fileID: 8967938212448727386}
-  - component: {fileID: 2006535052453712187}
   - component: {fileID: 2394963411267915045}
   - component: {fileID: 1524849142951647658}
   - component: {fileID: 3204673403680560704}
+  - component: {fileID: 7141397673829552199}
   m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
@@ -52,25 +52,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3504bf180a384bf4967746528e9dc29d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2006535052453712187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476238348295141100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2964f88cc30a3146af3f8653ef63873, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _source:
-    Component: {fileID: 8967938212448727386}
-    MemberName: BorderColor
-    Params: 
-  _widget: {fileID: 1524849142951647658}
-  _useCustomAlpha: 0
-  _customAlpha: 0
 --- !u!222 &2394963411267915045
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -127,6 +108,25 @@ MonoBehaviour:
   _bottomRight: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
   _angle: 0
   _ignoreRatio: 1
+--- !u!114 &7141397673829552199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476238348295141100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15611c7ab91e4c84da96065c29ed5391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source:
+    Component: {fileID: 8967938212448727386}
+    MemberName: BorderColor
+    Params: 
+  _widget: {fileID: 1524849142951647658}
+  _useCustomAlpha: 0
+  _customAlpha: 0
 --- !u!1 &7398551476530489919
 GameObject:
   m_ObjectHideFlags: 0

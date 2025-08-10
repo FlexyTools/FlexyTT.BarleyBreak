@@ -33,11 +33,11 @@ namespace Flexy.Template.BarleyBreak
 		private	void	UpdateVolume	( )					
 		{
 			SoundVolume	= _settings.SoundVolume;
-			SfxVolume	= _settings.SfxVolume;
+			SfxVolume	= _settings.SfxVolume; 
 		}
 		
 		private static 	Single 	DbToLinear	( Single db )		=> Mathf.Pow(10f, db / 20f);
-		private static 	Single 	LinearToDb	( Single linear )	=> Mathf.Log10( linear )*20;
+		private static 	Single 	LinearToDb	( Single linear )	=> linear <= 0f ? -80 : Mathf.Log10( linear )*20;
 	}
 	
 	public class PlaySfxAction : FlexyActionSync

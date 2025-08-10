@@ -1,6 +1,6 @@
 namespace Flexy.Template.BarleyBreak.UI
 {
-	public class ColoredBorder : UIWidgetEx
+	public class Widget_ColoredBorder : UIWidgetEx
 	{
 		[Bindable]	Color	BorderColor		=> Game.Settings.Color.Primary;
 	
