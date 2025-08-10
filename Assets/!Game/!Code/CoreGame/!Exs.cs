@@ -6,20 +6,14 @@ public abstract class	GameStageEx: GameStage
 	public	Facade_Coregame	Game		=> _game.GetCached( this );
 }
 
-public abstract class	GameStateEx: State					
+public abstract class	StateEx: State					
 {
 	private Facade_Coregame	_game; 
 	public	Facade_Coregame	Game		=> _game.GetCached( this );
 }
 
-public class			MonoBehEx: MonoBehaviour				
+public abstract class	MonoBehEx: MonoBehaviour				
 {
     public	Facade_Coregame	_game; 
     public	Facade_Coregame	Game		=> _game.GetCached( this ); 
-}
-	
-public abstract class	UIWindowEx: State					
-{
-    private Facade_Coregame	_game; 
-    public	Facade_Coregame	Game		=> _game.GetCached( this );
 }

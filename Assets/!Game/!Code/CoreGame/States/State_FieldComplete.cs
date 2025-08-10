@@ -1,6 +1,6 @@
 namespace Flexy.Template.BarleyBreak.CoreGame.UI
 {
-	public class Window_FieldComplete : UIWindowEx
+	public class State_FieldComplete : StateEx
     {
 	    private	(EField Field, Single Seconds) Params => ((EField,Single))OpenParams;
     
@@ -12,7 +12,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
         [Callable]		void		Continue	( )	
 		{
 			GameStage.CloseAllStates();
-			Game.UI.Leaderboards.Open( Params.Field );
+			Game.States.Leaderboards.Open( Params.Field );
 		}
         
 		public record struct Opener( OpenCtx Ctx ) : IOpener

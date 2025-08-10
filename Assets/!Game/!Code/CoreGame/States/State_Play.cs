@@ -1,6 +1,7 @@
 namespace Flexy.Template.BarleyBreak.CoreGame.UI
 {
-    public class Window_Hud : UIWindowEx
+	// Visually this state is Coregame HUD
+    public class State_Play : StateEx
     {
 		[Bindable]	String	RunMinutes		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"mm" );
 		[Bindable]	String	RunSeconds		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"ss" );
@@ -31,12 +32,12 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 		private		void	OnApplicationPause	( Boolean pauseStatus )	
 		{
 			if( !Application.isEditor )
-				Game.UI.Pause.Open( );
+				Game.States.Pause.Open( );
 		}
 		
         [Callable]	void	Pause				( )			
         {
-			Game.UI.Pause.Open( );
+			Game.States.Pause.Open( );
         }
 		
 		private async	UniTaskVoid		FinishGameAsync	( )	
@@ -47,7 +48,7 @@ namespace Flexy.Template.BarleyBreak.CoreGame.UI
 
 			Debug.Log( "[FinishGameAsync] Record Added" );
 		
-			Game.UI.FieldComplete.Open( Game.Mode.Board, Game.Mode.RunTime );
+			Game.States.FieldComplete.Open( Game.Mode.Board, Game.Mode.RunTime );
 			
 			Debug.Log( "[FinishGameAsync] Sequence of windows started" );
 			
