@@ -139,7 +139,6 @@ MonoBehaviour:
     Params: 
   _container: {fileID: 9016817043591195031}
   _prefab: {fileID: 4180271258400123415}
-  _prefabGroup: {fileID: 0}
 --- !u!1 &1198440002922028922
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +339,6 @@ MonoBehaviour:
     Params: 
   _container: {fileID: 6601327799330781932}
   _prefab: {fileID: 4180271258400123415}
-  _prefabGroup: {fileID: 0}
 --- !u!1 &3347838110787004116
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +693,6 @@ MonoBehaviour:
     Params: 
   _container: {fileID: 8907803677235349064}
   _prefab: {fileID: 4180271258400123415}
-  _prefabGroup: {fileID: 0}
 --- !u!1001 &3998740040854998119
 PrefabInstance:
   m_ObjectHideFlags: 0

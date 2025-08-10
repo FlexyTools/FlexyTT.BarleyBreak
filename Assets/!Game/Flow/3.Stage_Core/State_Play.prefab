@@ -1114,6 +1114,10 @@ PrefabInstance:
       propertyPath: m_PixelsPerUnitMultiplier
       value: 0.61
       objectReference: {fileID: 0}
+    - target: {fileID: 7141397673829552199, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
+      propertyPath: _source.Component
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7398551476530489919, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
       propertyPath: m_Name
       value: IverseBlack

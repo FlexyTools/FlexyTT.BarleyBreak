@@ -318,10 +318,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _statesToOpen.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
-      propertyPath: _statesToOpen.Array.data[1]._uid
+      propertyPath: _statesToOpen.Array.data[2]._uid
       value: e35616b6349e6884481db3654ef57ef1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
