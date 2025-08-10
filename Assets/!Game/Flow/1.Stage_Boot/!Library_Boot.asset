@@ -14,17 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dependencies: []
   _states:
-  - TypeFullName: Flexy.GameFlow.GameStage
+  - TypeFullName: Flexy.Template.BarleyBreak.CoreGame.Stage_Boot
     Ref:
       _uid:
         serializedVersion: 2
         Hash: 86be155ef18fabb448f0ce6aa6544783
-      _subId: 0
-  - TypeFullName: Flexy.Template.BarleyBreak.UI.Leaderboards.Window_Leaderboards
-    Ref:
-      _uid:
-        serializedVersion: 2
-        Hash: b1a8109c8bbf89d4d8d851b4bac15d9f
       _subId: 0
   - TypeFullName: Flexy.Template.BarleyBreak.UI.Window_PlayFields
     Ref:

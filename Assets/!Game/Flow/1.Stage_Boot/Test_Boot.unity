@@ -321,11 +321,19 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
+      propertyPath: _bootstrapContext.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _statesToOpen.Array.data[0]._uid
       value: 86be155ef18fabb448f0ce6aa6544783
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _statesToOpen.Array.data[1]._uid
+      value: b1a8109c8bbf89d4d8d851b4bac15d9f
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
+      propertyPath: _bootstrapContext.Array.data[1]._uid
       value: b1a8109c8bbf89d4d8d851b4bac15d9f
       objectReference: {fileID: 0}
     m_RemovedComponents: []

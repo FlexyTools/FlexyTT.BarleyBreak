@@ -325,8 +325,16 @@ PrefabInstance:
       value: 1849295314665467560
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
+      propertyPath: _bootstrapTarget._uid
+      value: ca45dc890c3a22a45ae3c9c105f42d50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _statesToOpen.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
+      propertyPath: _bootstrapContext.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _statesToOpen.Array.data[0]._uid
@@ -334,6 +342,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _statesToOpen.Array.data[1]._uid
+      value: ca45dc890c3a22a45ae3c9c105f42d50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
+      propertyPath: _bootstrapContext.Array.data[1]._uid
       value: ca45dc890c3a22a45ae3c9c105f42d50
       objectReference: {fileID: 0}
     m_RemovedComponents: []

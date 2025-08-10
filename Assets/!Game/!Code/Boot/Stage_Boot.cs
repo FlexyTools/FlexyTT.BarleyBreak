@@ -1,11 +1,11 @@
-﻿using UnityEngine.SceneManagement;
-
-namespace Flexy.Template.BarleyBreak.CoreGame
+﻿namespace Flexy.Template.BarleyBreak.CoreGame
 {
 	[ServiceTypes(typeof(GameStage))]
 	public class Stage_Boot : GameStageEx
 	{
 		[SerializeField]	GameObject _loaderOverlay;
+		[SerializeField]	AssetRef<State>[] _bootStates;
+		[SerializeField]	AssetRef<GameStage> _meta;
 	
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
         [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
@@ -14,56 +14,31 @@ namespace Flexy.Template.BarleyBreak.CoreGame
 
 		protected override	void	OnShow					( )		
 		{
-			LoadGameFieldScene( ).Forget( );
+			BootGame( ).Forget( );
 		}
 		protected override	void	OnFirstChildShow		( )		
 		{
 			_loadTask = default;
 		}
-		protected override	void	OnLastChildHide			( )		
-		{
-			UnloadGameFieldScene( ).Forget( );
-		}
-		protected override	void	OnHide					( )		
-		{
-			_loadTask = default;
-		}
 		
-		private async	UniTask		LoadGameFieldScene		( )		
+		private async	UniTask		BootGame		( )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		
-			var loadedScene = default(Scene);
-			
-			if ( OpenParams == null )
-			{
-				//We started from coregame scene so just simulate short loading and open root state
-				loadedScene		= SceneManager.GetActiveScene( );
-			}
-			else
-			{
-				var sceneRef	= (SceneRef)OpenParams;
-				_loadTask		= sceneRef.LoadSceneAsync( gameObject, LoadSceneMode.Single );
-				loadedScene		= await _loadTask;
-			}
-			
-			await UniTask.Delay( 350, ignoreTimeScale:true );
-			GameStage.MoveToLoadedScene( loadedScene );
-			GameStage.OpenMainState();
-			
+			await UniTask.Delay( 1_000, ignoreTimeScale:true );
+			await Context.WaitInitializing();
+
 			_loaderOverlay.gameObject.SetActive(false);
-		}
-		private async	UniTask		UnloadGameFieldScene	( )		
-		{
-			_loaderOverlay.gameObject.SetActive(true);
-		
-			GameStage.MoveToServiceScene( );
+
+			foreach (var state in _bootStates)
+			{
+				var h = Graph.Open(state, this);
+				
+				while(h.IsOpened)
+					await UniTask.Yield(PlayerLoopTiming.LastUpdate);
+			}
 			
-			_loadTask = SceneRef.LoadDummySceneAsync( gameObject, LoadSceneMode.Single );
-			await _loadTask;
-			await UniTask.Delay( 350, ignoreTimeScale:true );
-			
-			CloseAndDestroy();
+			Graph.Open( _meta, Context );
 		}
 	}
 }
