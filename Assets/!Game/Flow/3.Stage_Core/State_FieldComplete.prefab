@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 703223811490157672}
   - component: {fileID: 6873678594087484110}
   m_Layer: 0
-  m_Name: Window_FieldComplete
+  m_Name: State_FieldComplete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

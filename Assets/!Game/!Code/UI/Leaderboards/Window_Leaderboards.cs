@@ -1,8 +1,8 @@
 using Flexy.UI.Bindings;
 
-namespace Flexy.Template.BarleyBreak.UI
+namespace Flexy.Template.BarleyBreak.UI.Leaderboards
 {
-	public class Window_Leaderboard : UIWindowEx
+	public class Window_Leaderboards : UIWindowEx
 	{
 		[Bindable]	Collection	Records3x3 	=> new (Game.Leaderboards.Leaderboard3X3.Records, Setup);
 		[Bindable]	Collection	Records4x4 	=> new (Game.Leaderboards.Leaderboard4X4.Records, Setup);

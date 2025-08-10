@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7283421318329261102}
   - component: {fileID: 1701991962787116990}
   m_Layer: 0
-  m_Name: Stage_Coregame
+  m_Name: Stage_Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9a146b6d684a0e8e4c39df5db016a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Coregame Ctx
+  _name: Stage_Core
   _services: {fileID: 1292369948585655546}
   _ignoreServiceInitFailures: 0
   LinkTo: 0

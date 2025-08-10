@@ -1,4 +1,7 @@
 ﻿// ReSharper disable AccessToStaticMemberViaDerivedType
+
+using Flexy.Template.BarleyBreak.UI.Leaderboards;
+
 namespace Flexy.Template.BarleyBreak;
 
 public struct	Facade_Game : ICachedContext
@@ -23,7 +26,7 @@ public record struct	Facade_UIWindows	( LibCtx LibCtx )
 
 	public Window_GameSettings		.Opener		Settings			=> LibCtx.GetState<Window_GameSettings>();
 	public Window_PlayFields		.Opener		PlayFields			=> LibCtx.GetState<Window_PlayFields>();
-	public Window_Leaderboard		.Opener		Leaderboards		=> LibCtx.GetOpener<Window_Leaderboard.Opener>();
+	public Window_Leaderboards		.Opener		Leaderboards		=> LibCtx.GetOpener<Window_Leaderboards.Opener>();
 	
 	public void Play_Field	( SceneRef map )	=> LibCtx.Service.Graph.Open( new( CoreGameStage ), LibCtx.Src, map );
 }

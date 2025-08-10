@@ -310,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _stateToOpen._uid
-      value: cdc7031cfb4337f45a7e8c8d0d1e3641
+      value: ea1798fd377e1be4583de3735b1ce55a
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _windowToOpen._uid
@@ -323,6 +323,18 @@ PrefabInstance:
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _windowToOpen._subId
       value: 1849295314665467560
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
+      propertyPath: _statesToOpen.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
+      propertyPath: _statesToOpen.Array.data[0]._uid
+      value: 86be155ef18fabb448f0ce6aa6544783
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
+      propertyPath: _statesToOpen.Array.data[1]._uid
+      value: ca45dc890c3a22a45ae3c9c105f42d50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

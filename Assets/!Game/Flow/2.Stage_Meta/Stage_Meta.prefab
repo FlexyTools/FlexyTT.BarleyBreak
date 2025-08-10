@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2323264519867302732}
   - component: {fileID: 5705757772678522024}
   m_Layer: 0
-  m_Name: Stage_Metagame
+  m_Name: Stage_Meta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9a146b6d684a0e8e4c39df5db016a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Metagame Stage
+  _name: Stage_Meta
   _services: {fileID: 8272060130021228884}
   _ignoreServiceInitFailures: 0
   LinkTo: 0
