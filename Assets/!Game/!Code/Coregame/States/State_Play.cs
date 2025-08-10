@@ -1,4 +1,4 @@
-namespace Flexy.Template.BarleyBreak.CoreGame.UI
+namespace Flexy.Template.BarleyBreak.Coregame.States
 {
 	// Visually this state is Coregame HUD
     public class State_Play : StateEx

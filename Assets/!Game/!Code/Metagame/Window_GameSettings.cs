@@ -1,4 +1,4 @@
-﻿namespace Flexy.Template.BarleyBreak.UI
+﻿namespace Flexy.Template.BarleyBreak.Metagame
 {
 	public class Window_GameSettings : UIWindowEx
 	{

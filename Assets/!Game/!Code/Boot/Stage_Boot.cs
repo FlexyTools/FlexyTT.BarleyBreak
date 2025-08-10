@@ -1,4 +1,6 @@
-﻿namespace Flexy.Template.BarleyBreak.CoreGame
+﻿using Flexy.Core.Binding;
+
+namespace Flexy.Template.BarleyBreak.Boot
 {
 	[ServiceTypes(typeof(GameStage))]
 	public class Stage_Boot : GameStageEx

@@ -1,6 +1,7 @@
 ﻿// ReSharper disable AccessToStaticMemberViaDerivedType
 
-using Flexy.Template.BarleyBreak.UI.Leaderboards;
+using Flexy.Template.BarleyBreak.Metagame;
+using Flexy.Template.BarleyBreak.Metagame.Leaderboards;
 
 namespace Flexy.Template.BarleyBreak;
 

@@ -1,6 +1,4 @@
-using Flexy.UI.Bindings;
-
-namespace Flexy.Template.BarleyBreak.UI.Leaderboards
+namespace Flexy.Template.BarleyBreak.Metagame.Leaderboards
 {
 	public class Window_Leaderboards : UIWindowEx
 	{

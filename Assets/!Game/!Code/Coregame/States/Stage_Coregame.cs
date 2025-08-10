@@ -1,6 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 
-namespace Flexy.Template.BarleyBreak.CoreGame
+namespace Flexy.Template.BarleyBreak.Coregame.States
 {
 	[ServiceTypes(typeof(GameStage))]
 	public class Stage_Coregame : GameStageEx

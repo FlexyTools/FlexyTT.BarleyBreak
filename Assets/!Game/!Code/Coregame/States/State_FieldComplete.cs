@@ -1,4 +1,4 @@
-namespace Flexy.Template.BarleyBreak.CoreGame.UI
+namespace Flexy.Template.BarleyBreak.Coregame.States
 {
 	public class State_FieldComplete : StateEx
     {

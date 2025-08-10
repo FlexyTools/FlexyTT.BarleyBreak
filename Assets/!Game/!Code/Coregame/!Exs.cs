@@ -1,4 +1,4 @@
-namespace Flexy.Template.BarleyBreak.CoreGame;
+namespace Flexy.Template.BarleyBreak.Coregame;
 
 public abstract class	GameStageEx: GameStage					
 {
