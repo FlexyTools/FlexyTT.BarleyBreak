@@ -1,29 +1,22 @@
-﻿using Flexy.Core.Binding;
-
-namespace Flexy.Template.BarleyBreak.Boot
+﻿namespace Flexy.Template.BarleyBreak.Boot
 {
 	[ServiceTypes(typeof(GameStage))]
 	public class Stage_Boot : GameStageEx
 	{
-		[SerializeField]	GameObject _loaderOverlay;
-		[SerializeField]	AssetRef<State>[] _bootStates;
-		[SerializeField]	AssetRef<GameStage> _meta;
+		[SerializeField]	GameObject			_loaderOverlay;
+		[SerializeField]	AssetRef<State>[]	_bootStates;
+		[SerializeField]	AssetRef<GameStage>	_metaStageRef;
 	
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
         [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
         
 		private LoadSceneTask	_loadTask;
 
-		protected override	void	OnShow					( )		
+		protected override	void	OnShow				( )		
 		{
-			BootGame( ).Forget( );
+			BootGame().Forget();
 		}
-		protected override	void	OnFirstChildShow		( )		
-		{
-			_loadTask = default;
-		}
-		
-		private async	UniTask		BootGame		( )		
+		private async	UniTask		BootGame			( )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		
@@ -34,13 +27,13 @@ namespace Flexy.Template.BarleyBreak.Boot
 
 			foreach (var state in _bootStates)
 			{
-				var h = Graph.Open(state, this);
+				var h = Graph.Open( state, this );
 				
-				while(h.IsOpened)
-					await UniTask.Yield(PlayerLoopTiming.LastUpdate);
+				while (h.IsOpened)
+					await UniTask.Yield( PlayerLoopTiming.LastUpdate );
 			}
 			
-			Graph.Open( _meta, Context );
+			Graph.Open( _metaStageRef, Context );
 		}
 	}
 }
