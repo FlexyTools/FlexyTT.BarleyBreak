@@ -69,8 +69,8 @@ MonoBehaviour:
     _subId: 0
   _statesContainer: {fileID: 3252589738470269002}
   _loaderOverlay: {fileID: 5665586641681189239}
-  _bootStates:
-  - _uid:
+  _boot_eula:
+    _uid:
       serializedVersion: 2
       Hash: ca45dc890c3a22a45ae3c9c105f42d50
     _subId: 0
