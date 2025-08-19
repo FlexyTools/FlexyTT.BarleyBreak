@@ -1,6 +1,6 @@
 namespace Flexy.Template.BarleyBreak.Metagame.Leaderboards
 {
-	public class Service_Leaderboards: MonoBehaviour, IService
+	public class Service_Leaderboards : MonoBehaviour, IService
 	{
 		public void OrderedInit( GameContext ctx )
 		{

@@ -10,12 +10,13 @@
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
         [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
         
-        private BooleanSetting	_eulaAccepted;
+        private BooleanSetting	_eulaAccepted	= new("Boot_EulaAccepted", false, readLater:true);
 		private LoadSceneTask	_loadTask;
 
 		protected override	void	OnShow				( )		
 		{
-			_eulaAccepted	= new("Boot_EulaAccepted", false);
+			_eulaAccepted.Read();
+				
 			BootGame().Forget();
 		}
 		private async	UniTask		BootGame			( )		
@@ -33,6 +34,7 @@
 				_eulaAccepted.Set(true);
 			}
 			
+			// Potential boot states
 			// await ShowState(_boot_age);
 			// await ShowState(_boot_intro);
 
