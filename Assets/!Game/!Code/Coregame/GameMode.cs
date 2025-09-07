@@ -148,7 +148,7 @@ namespace Flexy.Template.BarleyBreak.Coregame
 			while (Time.time < endTime)
 			{
 				var t = 1.0f - (endTime - Time.time) / animationDuration; 
-				t = EaseUtility.SCurve(t);
+				t = EaseUtility.InOutSine(t);
             
 				figure.position	= Vector2.Lerp(fromAnchoredPosition, toAnchoredPosition, t);
 	        

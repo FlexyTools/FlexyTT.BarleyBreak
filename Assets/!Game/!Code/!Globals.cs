@@ -25,4 +25,4 @@ global using Cysharp.Threading.Tasks;
 global using Object		= System.Object;
 global using Random		= UnityEngine.Random;
 
-global using static Flexy.Core.TweenStatic;
+global using static Flexy.Core.Tweens.AccessPoint;
