@@ -1,0 +1,29 @@
+﻿namespace Flexy.Tweens;
+
+public static class TweenExtensions
+{
+	public static	TweenParams<Single, Adapter_Single>		    Value		        ( this TweenAccess ft, Single from,	Single to,	Single duration, Ease ease = default )					=> Value<Single, Adapter_Single>		( ft, from, to, duration, ease );
+	public static	TweenParams<Int32, Adapter_Int32>			Value		        ( this TweenAccess ft, Int32 from,	Int32 to,	Single duration, Ease ease = default )					=> Value<Int32, Adapter_Int32>		( ft, from, to, duration, ease );
+	                                                                        	
+	public static	TweenParams<Vector3, Adapter_Vector3>		Position	        ( this TweenAccess ft,	Transform tr, Vector3 from,	Vector3 to,		Single duration, Ease ease = default )		=> ft.Value<Vector3, Adapter_Vector3>( from, to, duration, ease )	.BindTo( tr, static (value, tr) => tr.position = value );
+	public static	TweenParams<Single, Adapter_Single>		    PositionX	        ( this TweenAccess ft,	Transform tr, Single from,	Single to,		Single duration, Ease ease = default )		=> ft.Value<Single, Adapter_Single>( from, to, duration, ease )	.BindTo( tr, static (value, tr) => tr.position = tr.position with {x=value} );
+	public static	TweenParams<Single, Adapter_Single>		    PositionY	        ( this TweenAccess ft,	Transform tr, Single from,	Single to,		Single duration, Ease ease = default )		=> ft.Value<Single, Adapter_Single>( from, to, duration, ease )	.BindTo( tr, static (value, tr) => tr.position = tr.position with {y=value} );
+	public static	TweenParams<Single, Adapter_Single>		    PositionZ	        ( this TweenAccess ft,	Transform tr, Single from,	Single to,		Single duration, Ease ease = default )		=> ft.Value<Single, Adapter_Single>( from, to, duration, ease )	.BindTo( tr, static (value, tr) => tr.position = tr.position with {z=value} );
+	                                                                        	
+	public static	TweenParams<Vector3, Adapter_Vector3>		LocalPosition	    ( this TweenAccess ft,	Transform tr, Vector3 from,	Vector3 to,		Single duration, Ease ease = default )		=> ft.Value<Vector3, Adapter_Vector3>( from, to, duration, ease )	.BindTo( tr, static (value, tr) => tr.localPosition = value );
+	public static	TweenParams<Single, Adapter_Single>		    LocalPositionX	    ( this TweenAccess ft,	Transform tr, Single from,	Single to,		Single duration, Ease ease = default )		=> ft.Value<Single, Adapter_Single>( from, to, duration, ease )	.BindTo( tr, static (value, tr) => tr.localPosition = tr.localPosition with {x=value} );
+	public static	TweenParams<Single, Adapter_Single>		    LocalPositionY	    ( this TweenAccess ft,	Transform tr, Single from,	Single to,		Single duration, Ease ease = default )		=> ft.Value<Single, Adapter_Single>( from, to, duration, ease )	.BindTo( tr, static (value, tr) => tr.localPosition = tr.localPosition with {y=value} );
+	public static	TweenParams<Single, Adapter_Single>		    LocalPositionZ	    ( this TweenAccess ft,	Transform tr, Single from,	Single to,		Single duration, Ease ease = default )		=> ft.Value<Single, Adapter_Single>( from, to, duration, ease )	.BindTo( tr, static (value, tr) => tr.localPosition = tr.localPosition with {z=value} );
+	
+	public static	TweenParams<Quaternion, Adapter_Quaternion>	Rotation	        ( this TweenParams<Quaternion, Adapter_Quaternion> b,	Transform tr, Quaternion from,	Quaternion to,	Single duration, Ease ease = default )		=> b.BindTo( tr, static (value, tr) => tr.rotation = value );
+	public static	TweenParams<Single, Adapter_Single>			RotationX	        ( this TweenParams<Single, Adapter_Single> b,			Transform tr, Single from,		Single to,		Single duration, Ease ease = default )		=> b.BindTo( tr, static (value, tr) => tr.eulerAngles = tr.eulerAngles with {x=value} );
+	public static	TweenParams<Single, Adapter_Single>			RotationY	        ( this TweenParams<Single, Adapter_Single> b,			Transform tr, Single from,		Single to,		Single duration, Ease ease = default )		=> b.BindTo( tr, static (value, tr) => tr.eulerAngles = tr.eulerAngles with {y=value} );
+	public static	TweenParams<Single, Adapter_Single>			RotationZ	        ( this TweenParams<Single, Adapter_Single> b,			Transform tr, Single from,		Single to,		Single duration, Ease ease = default )		=> b.BindTo( tr, static (value, tr) => tr.eulerAngles = tr.eulerAngles with {z=value} );
+	                                                                        	
+	public static	TweenParams<Quaternion, Adapter_Quaternion>	LocalRotation       ( this TweenParams<Quaternion, Adapter_Quaternion> b,	Transform tr, Quaternion from,	Quaternion to,	Single duration, Ease ease = default )		=> b.BindTo( tr, static (value, tr) => tr.localRotation = value );
+	public static	TweenParams<Single, Adapter_Single>			LocalRotationX      ( this TweenParams<Single, Adapter_Single> b,			Transform tr, Single from,		Single to,		Single duration, Ease ease = default )		=> b.BindTo( tr, static (value, tr) => tr.localEulerAngles = tr.localEulerAngles with {x=value} );
+	public static	TweenParams<Single, Adapter_Single>			LocalRotationY      ( this TweenParams<Single, Adapter_Single> b,			Transform tr, Single from,		Single to,		Single duration, Ease ease = default )		=> b.BindTo( tr, static (value, tr) => tr.localEulerAngles = tr.localEulerAngles with {y=value} );
+	public static	TweenParams<Single, Adapter_Single>			LocalRotationZ      ( this TweenParams<Single, Adapter_Single> b,			Transform tr, Single from,		Single to,		Single duration, Ease ease = default )		=> b.BindTo( tr, static (value, tr) => tr.localEulerAngles = tr.localEulerAngles with {z=value} );
+	
+	private static	TweenParams<T, TLerp>						Value<T, TLerp>		( this TweenAccess ts, T from , T to, Single duration, Ease ease = default ) where T: unmanaged where TLerp: unmanaged, ITweenAdapter<T> => new( ts.Svc, from, to , duration, ease );
+}

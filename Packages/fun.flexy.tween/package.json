@@ -1,0 +1,17 @@
+{
+  "name": "fun.flexy.tween",
+  "displayName": "Flexy Tween",
+  "version": "5.0.0",
+  "unity": "2022.3",
+  "description": "Flexible universal tween lib",
+  "keywords": [
+    "Flexy",
+	"Tween"
+  ],
+  "category": "Tools",
+  "author": {
+    "name": "Flexy Tools",
+    "email": "JesObertyukh@gmail.com",
+    "url": "https://github.com/FlexyTools/Flexy.Tween"
+  }
+}
