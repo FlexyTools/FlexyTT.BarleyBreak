@@ -1,3 +1,5 @@
+using Flexy.Tweens;
+
 namespace Flexy.Template.BarleyBreak.Coregame
 {
 	public class GameMode : MonoBehEx

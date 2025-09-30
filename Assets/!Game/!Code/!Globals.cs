@@ -3,7 +3,6 @@ global using System.Collections.Generic;
 
 global using Flexy.Core;
 global using Flexy.Core.Actions;
-global using Flexy.Core.Tweens;
 global using Flexy.Core.Binding;
 global using Flexy.AssetRefs;
 global using Flexy.AssetRefs.LoadExtensions;
