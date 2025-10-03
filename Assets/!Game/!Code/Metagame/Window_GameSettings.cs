@@ -4,8 +4,8 @@
 	{
 		private		void	Awake	( )		
 		{
-			_settingsTabAudio = Game.Settings.Svc.Get<SettingsTab_Audio>( );
-			_settingsTabColor = Game.Settings.Svc.Get<SettingsTab_Color>( );
+			_settingsTabAudio = Game.Settings.Audio;
+			_settingsTabColor = Game.Settings.Color;
 			
 			_settingsTabColor.Primary.Changed += _ => RebindProperty( "Color" );
 		}

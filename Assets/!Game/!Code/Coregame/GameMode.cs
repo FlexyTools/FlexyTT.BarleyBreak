@@ -1,5 +1,3 @@
-using Flexy.Tweens;
-
 namespace Flexy.Template.BarleyBreak.Coregame
 {
 	public class GameMode : MonoBehEx
@@ -144,13 +142,12 @@ namespace Flexy.Template.BarleyBreak.Coregame
         
 			var fromAnchoredPosition = from.GlobalPosition;
 			var toAnchoredPosition = to.GlobalPosition;
-            
 			var endTime = Time.time + animationDuration;
             
 			while (Time.time < endTime)
 			{
 				var t = 1.0f - (endTime - Time.time) / animationDuration; 
-				t = EaseUtility.InOutSine(t);
+				t = 3*t*t - 2*t*t*t;
             
 				figure.position	= Vector2.Lerp(fromAnchoredPosition, toAnchoredPosition, t);
 	        

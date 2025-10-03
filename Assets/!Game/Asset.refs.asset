@@ -34,7 +34,6 @@ MonoBehaviour:
       data:
         _refs:
         - {fileID: 3289095164040996168, guid: 069f665c8c7ec0543b84a34b2c307884, type: 3}
-        - {fileID: 4200789476672242700, guid: d1be6da70d122814e85788d63b8276bd, type: 3}
         - {fileID: 11400000, guid: 11f95cb70947da346bb92451118ea417, type: 2}
         - {fileID: 102900000, guid: 1afdd18b2b9c65e4b866284337ba9044, type: 3}
         - {fileID: 102900000, guid: 6bfc812ba38db7b47bc55722377eb3a5, type: 3}

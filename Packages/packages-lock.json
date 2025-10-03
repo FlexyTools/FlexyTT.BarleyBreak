@@ -378,12 +378,6 @@
       "source": "embedded",
       "dependencies": {}
     },
-    "fun.flexy.tween": {
-      "version": "file:fun.flexy.tween",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "fun.flexy.ui": {
       "version": "file:fun.flexy.ui",
       "depth": 0,
