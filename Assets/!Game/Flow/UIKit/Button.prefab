@@ -144,17 +144,15 @@ MonoBehaviour:
       rid: 3444707322364428374
   Misclicked:
     _action:
-      rid: 8064851003922972926
+      rid: 3444707322364428393
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 3444707322364428374
       type: {class: PlaySfxAction, ns: Flexy.Template.BarleyBreak.Common, asm: '!!Barley-Break'}
       data:
         _clip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
-    - rid: 8064851003922972926
-      type: {class: PlaySfxAction, ns: Flexy.Template.BarleyBreak, asm: '!!Barley-Break'}
+    - rid: 3444707322364428393
+      type: {class: PlaySfxAction, ns: Flexy.Template.BarleyBreak.Common, asm: '!!Barley-Break'}
       data:
-        _clip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+        _clip: {fileID: 0}

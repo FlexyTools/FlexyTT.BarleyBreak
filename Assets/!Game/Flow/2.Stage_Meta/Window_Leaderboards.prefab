@@ -410,7 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2845521816083395055}
-  - component: {fileID: 6345905434254999577}
+  - component: {fileID: 6398435654428710916}
   m_Layer: 5
   m_Name: Record
   m_TagString: Untagged
@@ -438,7 +438,7 @@ RectTransform:
   m_AnchoredPosition: {x: 529.4736, y: -1168.2269}
   m_SizeDelta: {x: 800, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6345905434254999577
+--- !u!114 &6398435654428710916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -447,11 +447,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4180271258400123415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c03cbacea19f56944969cb8a74511946, type: 3}
+  m_Script: {fileID: 11500000, guid: 102972be078141d5a2ba733d19b46a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keys: []
-  _exposedObject: {fileID: 0}
 --- !u!1 &5676477239155025502
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _source:
-    Component: {fileID: 6345905434254999577}
+    Component: {fileID: 2845521816083395055}
     MemberName: GetString
     Params: Score
   _label: {fileID: 0}

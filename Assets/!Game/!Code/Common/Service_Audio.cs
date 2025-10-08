@@ -36,8 +36,8 @@ namespace Flexy.Template.BarleyBreak.Common
 			SfxVolume	= _settings.SfxVolume; 
 		}
 		
-		private static 	Single 	DbToLinear	( Single db )		=> Mathf.Pow(10f, db / 20f);
-		private static 	Single 	LinearToDb	( Single linear )	=> linear <= 0f ? -80 : Mathf.Log10( linear )*20;
+		private static 	Single 	DbToLinear	( Single db )		=> Mathf.Pow( 10f, db / 20f );
+		private static 	Single 	LinearToDb	( Single linear )	=> linear <= 0f ? -80 : Mathf.Log10( linear ) * 20;
 	}
 	
 	public class PlaySfxAction : FlexyActionSync
@@ -46,7 +46,7 @@ namespace Flexy.Template.BarleyBreak.Common
 	
 		public override void Do	( ActionCtx ctx )	
 		{
-			ctx.CtxObj.gameObject.GetService<Service_Audio>( ).PlaySfx( _clip );
+			ctx.SrcObject.GetService<Service_Audio>()?.PlaySfx( _clip );
 		}
 	}
 }
