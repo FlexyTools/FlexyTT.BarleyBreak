@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _figure: {fileID: 4002302999730403498}
+  _figureAnimationSpeed: 12
 --- !u!222 &5215570135976060532
 CanvasRenderer:
   m_ObjectHideFlags: 0

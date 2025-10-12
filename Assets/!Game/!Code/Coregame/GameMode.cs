@@ -11,14 +11,14 @@ namespace Flexy.Template.BarleyBreak.Coregame
 
 		[SerializeField]	FlexyEvent		_win;
 	
-		private List<Cell> _cells = new();
+		private		List<Cell>	_cells		= new();
 
-		public		EField	Board		=> _board;
-		public		Single	StartTime	{ get; set; }
-		public		Single	RunTime		=> Time.realtimeSinceStartup - StartTime;
-		public		Boolean	IsWin		{ get; set; }
+		public		EField		Board		=> _board;
+		public		Single		StartTime	{ get; set; }
+		public		Single		RunTime		=> Time.realtimeSinceStartup - StartTime;
+		public		Boolean		IsWin		{ get; set; }
 
-		private     void    Awake       ( )     
+		private     void	Awake       ( )     
 		{
 			_cellPrefab.gameObject.SetActive(false);
 			_cellContainer.constraintCount = _gridSize;
@@ -49,7 +49,7 @@ namespace Flexy.Template.BarleyBreak.Coregame
 		}
 #endif
 
-		internal	void	ClickCell		( Int32 cellIndex, Boolean animate = true )															
+		internal	void	ClickCell		( Int32 cellIndex, Boolean animate = true )						
 		{
 			var x = cellIndex % _gridSize;
 			var y = cellIndex / _gridSize;
@@ -84,15 +84,9 @@ namespace Flexy.Template.BarleyBreak.Coregame
 		{
 			var figure		= sourceCell.Figure;
         
-			if (animate)
-			{
-				AnimateFigureTo( sourceCell, targetCell, _animateTime ).Forget( );
-			}
-			else
-			{
-				figure.SetParent(targetCell.transform, true);
+			figure.SetParent(targetCell.transform, true);
+			if (!animate)
 				figure.position	= targetCell.GlobalPosition;
-			}
 				
 			targetCell.Figure = figure;
 			sourceCell.Figure = null;
@@ -135,29 +129,7 @@ namespace Flexy.Template.BarleyBreak.Coregame
 			
 			StartTime = Time.realtimeSinceStartup;
 		}
-		private async	UniTask		AnimateFigureTo		( Cell from, Cell to, Single animationDuration = 1 ) 
-		{
-			var figure = from.Figure;
-			figure.SetParent(from.transform.parent, true);
-        
-			var fromAnchoredPosition = from.GlobalPosition;
-			var toAnchoredPosition = to.GlobalPosition;
-			var endTime = Time.time + animationDuration;
-            
-			while (Time.time < endTime)
-			{
-				var t = 1.0f - (endTime - Time.time) / animationDuration; 
-				t = 3*t*t - 2*t*t*t;
-            
-				figure.position	= Vector2.Lerp(fromAnchoredPosition, toAnchoredPosition, t);
-	        
-				await UniTask.NextFrame( );
-			}
-
-			figure.position	= to.GlobalPosition;
-			figure.SetParent(to.transform, true);
-		}
-        
+	
 		private			Boolean		CheckWin			( )		
 		{
 			for (var i = 0; i < _cells.Count - 1; i++)

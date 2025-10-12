@@ -3,6 +3,7 @@ namespace Flexy.Template.BarleyBreak.Coregame
     public class Cell : MonoBehEx
     {
         [SerializeField]    RectTransform   _figure;
+        [SerializeField]    Single			_figureAnimationSpeed = 18;
 
         private RectTransform _originalFigure;
         private RectTransform _rectTransform;
@@ -43,6 +44,17 @@ namespace Flexy.Template.BarleyBreak.Coregame
         {
 	        _rectTransform	= GetComponent<RectTransform>();
 	        _originalFigure	= _figure;
+        }
+        private		void	Update		( )	
+        {
+            if (_figure)
+                _figure.anchoredPosition = ExpLerp(_figure.anchoredPosition, Vector2.zero, _figureAnimationSpeed, Time.deltaTime);
+        }
+
+        private		Vector2	ExpLerp		( Vector2 current, Vector2 target, Single speed, Single deltaTime )	
+        {
+	        var t = 1f - Mathf.Exp(-speed * deltaTime);
+	        return Vector2.Lerp(current, target, t);
         }
 
         [Callable]	void	ClickCell	( )	
