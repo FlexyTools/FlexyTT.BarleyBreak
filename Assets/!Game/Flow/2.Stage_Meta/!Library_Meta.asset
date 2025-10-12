@@ -20,19 +20,19 @@ MonoBehaviour:
         serializedVersion: 2
         Hash: 069f665c8c7ec0543b84a34b2c307884
       _subId: 0
-  - TypeFullName: Flexy.Template.BarleyBreak.UI.Window_MainMenu
+  - TypeFullName: Flexy.Template.BarleyBreak.Metagame.Window_MainMenu
     Ref:
       _uid:
         serializedVersion: 2
         Hash: e35616b6349e6884481db3654ef57ef1
       _subId: 1849295314665467560
-  - TypeFullName: Flexy.Template.BarleyBreak.UI.Window_PlayFields
+  - TypeFullName: Flexy.Template.BarleyBreak.Metagame.Window_PlayFields
     Ref:
       _uid:
         serializedVersion: 2
         Hash: b63d37d8ee9500d47b535c3c984560a2
       _subId: 0
-  - TypeFullName: Flexy.Template.BarleyBreak.UI.Leaderboards.Window_Leaderboards
+  - TypeFullName: Flexy.Template.BarleyBreak.Metagame.Leaderboards.Window_Leaderboards
     Ref:
       _uid:
         serializedVersion: 2

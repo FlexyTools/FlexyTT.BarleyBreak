@@ -154,7 +154,6 @@ MonoBehaviour:
     MemberName: RunSeconds
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!1 &1823639095479380422
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +481,6 @@ MonoBehaviour:
     MemberName: RunMinutes
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!1 &3408262893513176776
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +833,6 @@ MonoBehaviour:
     MemberName: RunMiliseconds
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!1 &8927638002295034370
 GameObject:
   m_ObjectHideFlags: 0

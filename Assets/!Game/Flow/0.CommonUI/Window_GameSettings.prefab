@@ -533,7 +533,6 @@ MonoBehaviour:
     MemberName: ColorB_255
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!1001 &978284699183652275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1909,7 +1908,6 @@ MonoBehaviour:
     MemberName: ColorG_255
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!1001 &3912700475878214445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2603,7 +2601,6 @@ MonoBehaviour:
     MemberName: ColorR_255
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!224 &8629332681322498954 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5288453936514210875, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
@@ -2771,7 +2768,6 @@ MonoBehaviour:
     MemberName: SoundVolume_100
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!224 &8547285696722787134 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5288453936514210875, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
@@ -2944,7 +2940,6 @@ MonoBehaviour:
     MemberName: SfxVolume_100
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!1001 &7278896401218888923
 PrefabInstance:
   m_ObjectHideFlags: 0

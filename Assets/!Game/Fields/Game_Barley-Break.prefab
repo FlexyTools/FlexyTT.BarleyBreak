@@ -120,16 +120,12 @@ MonoBehaviour:
   _animateTime: 0.2
   _win:
     _action:
-      rid: 8064851003922972928
+      rid: -2
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 8064851003922972928
-      type: {class: PlaySfxAction, ns: Flexy.Template.BarleyBreak, asm: '!!Barley-Break'}
-      data:
-        _clip: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
 --- !u!222 &1342580290730135017
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -520,7 +516,6 @@ MonoBehaviour:
     MemberName: Number
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!1 &6625453055607137198
 GameObject:
   m_ObjectHideFlags: 0

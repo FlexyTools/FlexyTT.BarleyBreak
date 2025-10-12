@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dependencies: []
   _states:
-  - TypeFullName: Flexy.Template.BarleyBreak.CoreGame.Stage_Boot
+  - TypeFullName: Flexy.Template.BarleyBreak.Boot.Stage_Boot
     Ref:
       _uid:
         serializedVersion: 2
         Hash: 86be155ef18fabb448f0ce6aa6544783
       _subId: 0
-  - TypeFullName: Flexy.Template.BarleyBreak.UI.Window_PlayFields
+  - TypeFullName: Flexy.Template.BarleyBreak.Boot.State_EULA
     Ref:
       _uid:
         serializedVersion: 2

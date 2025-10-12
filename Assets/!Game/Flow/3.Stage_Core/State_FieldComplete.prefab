@@ -264,7 +264,6 @@ MonoBehaviour:
     MemberName: FormattedSeconds
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!1 &4825038926597962333
 GameObject:
   m_ObjectHideFlags: 0

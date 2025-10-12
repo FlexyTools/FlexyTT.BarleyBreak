@@ -9,6 +9,8 @@ namespace Flexy.Template.BarleyBreak.Metagame.Leaderboards
 		[Bindable]	Collection	Records5x5 	=> new (Game.Leaderboards.Board5X5.Records.Select(s => new ScoreView(s)));
 		
 		[Bindable]	Boolean		IsShowBoard	( EField field )	=> OpenParams is not EField f || f == field;
+		[Bindable]	String		Bla1	( EField field )	=> "Bla String";
+		[Bindable]	String		Bla2		=> "Bla String";
 		
 		public record struct Opener( OpenCtx Ctx ) : IOpener
 		{

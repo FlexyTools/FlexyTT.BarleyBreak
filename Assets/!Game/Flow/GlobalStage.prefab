@@ -154,7 +154,6 @@ MonoBehaviour:
     MemberName: AppVersion
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!1 &6410495198718301247
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,4 +471,3 @@ MonoBehaviour:
     MemberName: AppRev
     Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0

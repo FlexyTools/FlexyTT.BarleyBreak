@@ -450,6 +450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102972be078141d5a2ba733d19b46a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypeName: Flexy.Template.BarleyBreak.Metagame.Leaderboards.Window_Leaderboards+ScoreView,
+    !!Barley-Break
 --- !u!1 &5676477239155025502
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,11 +831,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _source:
-    Component: {fileID: 2845521816083395055}
-    MemberName: GetString
-    Params: Score
+    Component: {fileID: 6398435654428710916}
+    MemberName: DataStruct.ScoreStr
+    Params: 
   _label: {fileID: 0}
-  _makeUpperCase: 0
 --- !u!224 &9086641394301866076 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5288453936514210875, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}

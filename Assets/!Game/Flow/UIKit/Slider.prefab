@@ -111,7 +111,6 @@ MonoBehaviour:
   _useTween: 0
   _startFromZero: 0
   _tweenTime: 0
-  _tweenEaseType: 20
 --- !u!1 &1739860309744003988
 GameObject:
   m_ObjectHideFlags: 0

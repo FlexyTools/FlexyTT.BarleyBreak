@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2849977584988987332}
   - component: {fileID: 9065454714644930293}
   - component: {fileID: 7471337570573785699}
-  - component: {fileID: 7283421318329261102}
   - component: {fileID: 1701991962787116990}
+  - component: {fileID: 1864737760114159948}
   m_Layer: 0
   m_Name: Stage_Core
   m_TagString: Untagged
@@ -85,7 +85,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9a146b6d684a0e8e4c39df5db016a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stage_Core
   _services: {fileID: 1292369948585655546}
   _ignoreServiceInitFailures: 0
   LinkTo: 0
@@ -112,29 +111,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &7283421318329261102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703223811490157673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1080, y: 1920}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
 --- !u!114 &1701991962787116990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +128,29 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1864737760114159948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703223811490157673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bd77e6df3548f98803bd55c5a64b81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!1 &1292369948585655546
 GameObject:
   m_ObjectHideFlags: 0
