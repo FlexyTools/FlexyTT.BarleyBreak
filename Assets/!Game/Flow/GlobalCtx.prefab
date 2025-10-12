@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5965319038191964616}
   - component: {fileID: 2848875872466650449}
-  - component: {fileID: 7400525128998994455}
+  - component: {fileID: 7546135791089391326}
   - component: {fileID: 5836623456109473478}
   - component: {fileID: 7132176023481459081}
-  - component: {fileID: 7546135791089391326}
   m_Layer: 0
   m_Name: Services
   m_TagString: Untagged
@@ -49,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f4c9ace9254cc4918f9df582fb8b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7400525128998994455
+--- !u!114 &7546135791089391326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,10 +57,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7444179848394254232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a414cdbf9b654dab86e8a373a259ae06, type: 3}
+  m_Script: {fileID: 11500000, guid: ca4edff2ea474fffa1c0aa58e818608e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeSource: 1
 --- !u!114 &5836623456109473478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,18 +82,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 752b1d7d216b4dd280de4e305658c39a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7546135791089391326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7444179848394254232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca4edff2ea474fffa1c0aa58e818608e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8039016402027406603
@@ -145,7 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9a146b6d684a0e8e4c39df5db016a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Global Ctx
   _services: {fileID: 7444179848394254232}
   _ignoreServiceInitFailures: 0
   LinkTo: 0

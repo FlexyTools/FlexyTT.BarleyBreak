@@ -1114,7 +1114,7 @@ PrefabInstance:
     - target: {fileID: 7141397673829552199, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
       propertyPath: _source.Component
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5486631025012848416}
     - target: {fileID: 7398551476530489919, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
       propertyPath: m_Name
       value: IverseBlack
@@ -1122,6 +1122,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8967938212448727386, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
     - {fileID: 2006535052453712187, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
+    - {fileID: 7141397673829552199, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1384,6 +1385,10 @@ PrefabInstance:
     - target: {fileID: 4677989630267563222, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141397673829552199, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
+      propertyPath: _source.MemberName
+      value: BorderColor
       objectReference: {fileID: 0}
     - target: {fileID: 7398551476530489919, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
       propertyPath: m_Name
