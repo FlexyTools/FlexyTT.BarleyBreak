@@ -286,8 +286,8 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 3444707566609498359
-      type: {class: PlaySfxAction, ns: Flexy.Template.BarleyBreak.Common, asm: Barley-Break}
+    - rid: 3444707566609498369
+      type: {class: PlaySfxAction, ns: FlexyTemplates.BarleyBreak.Common, asm: Barley-Break}
       data:
         _clip: {fileID: 8300000, guid: 7f4655c37470f9a49a451eda8823c0fa, type: 3}
     - rid: 8064851003922972990
@@ -296,7 +296,7 @@ MonoBehaviour:
         Run: 0
         Actions:
         - rid: 8064851003922972991
-        - rid: 3444707566609498359
+        - rid: 3444707566609498369
     - rid: 8064851003922972991
       type: {class: Delay, ns: Flexy.Core.Actions, asm: Flexy.Core}
       data:
