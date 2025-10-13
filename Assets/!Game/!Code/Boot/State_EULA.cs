@@ -1,4 +1,4 @@
-namespace Flexy.Template.BarleyBreak.Boot
+namespace FlexyTemplates.BarleyBreak.Boot
 {
     public class State_EULA : StateEx
     {

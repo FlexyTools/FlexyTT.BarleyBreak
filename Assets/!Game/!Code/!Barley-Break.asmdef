@@ -1,6 +1,6 @@
 {
     "name": "Barley-Break",
-    "rootNamespace": "Flexy-Templates.BarleyBreak",
+    "rootNamespace": "FlexyTemplates.BarleyBreak",
     "references": [
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
         "GUID:0c7c5eb5b8006c2449ad5b70f4947317",

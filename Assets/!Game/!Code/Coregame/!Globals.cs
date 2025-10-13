@@ -1,1 +1,1 @@
-﻿global using Flexy.Template.BarleyBreak.Coregame;
+﻿global using FlexyTemplates.BarleyBreak.Coregame;

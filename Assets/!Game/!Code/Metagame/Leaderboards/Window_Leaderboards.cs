@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace Flexy.Template.BarleyBreak.Metagame.Leaderboards
+namespace FlexyTemplates.BarleyBreak.Metagame.Leaderboards
 {
 	public class Window_Leaderboards : UIWindowEx
 	{

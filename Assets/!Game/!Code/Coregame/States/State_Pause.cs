@@ -1,4 +1,4 @@
-﻿namespace Flexy.Template.BarleyBreak.Coregame.States
+﻿namespace FlexyTemplates.BarleyBreak.Coregame.States
 {
 	public class State_Pause : StateEx
 	{

@@ -1,4 +1,4 @@
-namespace Flexy.Template.BarleyBreak.Metagame
+namespace FlexyTemplates.BarleyBreak.Metagame
 {
 	public class Window_MainMenu : UIWindowEx
 	{

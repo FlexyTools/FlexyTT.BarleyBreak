@@ -1,4 +1,4 @@
-namespace Flexy.Template.BarleyBreak;
+namespace FlexyTemplates.BarleyBreak;
 
 public static class Constants
 {	

@@ -1,4 +1,4 @@
-namespace Flexy.Template.BarleyBreak.Metagame.Kit
+namespace FlexyTemplates.BarleyBreak.Metagame.Kit
 {
 	public class Widget_ColoredBorder : UIWidgetEx
 	{
