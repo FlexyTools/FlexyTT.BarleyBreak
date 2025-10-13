@@ -7,9 +7,9 @@ namespace FlexyTemplates.BarleyBreak.Metagame.Leaderboards
 			Load();
 		}
 	
-		public	BoardData	Board3X3	{get; private set;}
-		public	BoardData	Board4X4	{get; private set;}
-		public	BoardData	Board5X5	{get; private set;}
+		public	BoardData	Board3X3	{get; private set;} = null!;
+		public	BoardData	Board4X4	{get; private set;} = null!;
+		public	BoardData	Board5X5	{get; private set;} = null!;
 
 		public	void		AddRecord	( EField field, Single score )	
 		{
@@ -52,7 +52,7 @@ namespace FlexyTemplates.BarleyBreak.Metagame.Leaderboards
 		[Serializable]
 		public class BoardData
 		{
-			[SerializeField] List<Single> _records;
+			[SerializeField] List<Single> _records = new();
 
 			public List<Single> Records => _records;
 		}

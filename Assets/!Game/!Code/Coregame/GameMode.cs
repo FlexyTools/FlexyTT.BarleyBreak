@@ -1,11 +1,13 @@
+using NUnit.Framework;
+
 namespace FlexyTemplates.BarleyBreak.Coregame
 {
 	public class GameMode : MonoBehEx
 	{
 		[SerializeField]	EField			_board;
-		[SerializeField]	Cell			_cellPrefab;
-		[SerializeField]	GameObject		_inputBlocker;
-		[SerializeField]	GridLayoutGroup	_cellContainer;
+		[SerializeField]	Cell			_cellPrefab		= null!;
+		[SerializeField]	GameObject		_inputBlocker	= null!;
+		[SerializeField]	GridLayoutGroup	_cellContainer	= null!;
 		[SerializeField]	Int32			_gridSize		= 3;
 		[SerializeField]	Single			_animateTime	= 0.2f;
 
@@ -83,6 +85,9 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		private		void	MoveFigureTo	( Cell sourceCell, Cell targetCell, Boolean animate = true )	
 		{
 			var figure		= sourceCell.Figure;
+        
+			if (figure == null)
+				throw new ArgumentNullException("sourceCell.Figure is null");
         
 			figure.SetParent(targetCell.transform, true);
 			if (!animate)

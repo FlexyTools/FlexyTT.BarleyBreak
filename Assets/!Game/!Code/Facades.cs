@@ -11,8 +11,8 @@ public struct	Facade_Game : ICachedContext
 	public	Component				CallSource		{ get; set; }
 
 	public	Facade_UIWindows		UI				=> new( Ctx.GetService<GameStage>() );
-	public	Facade_GameSettings		Settings		=> new( Ctx.GetService<Service_GameSettings>() );
-	public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>();
+	public	Facade_GameSettings		Settings		=> new( Ctx.GetService<Service_GameSettings>()! );
+	public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>()!;
 }
 
 public record struct	Facade_GameSettings ( Service_GameSettings Svc )

@@ -2,18 +2,18 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 {
     public class Cell : MonoBehEx
     {
-        [SerializeField]    RectTransform   _figure;
+        [SerializeField]    RectTransform?	_figure;
         [SerializeField]    Single			_figureAnimationSpeed = 18;
 
-        private RectTransform _originalFigure;
-        private RectTransform _rectTransform;
+        private RectTransform?	_originalFigure;
+        private RectTransform	_rectTransform = null!;
         
         internal	Int32	Index	{ get; set; }
         
 		[Bindable]	String	Number	=> (Index + 1).ToString();
 
-        public	GameMode		Game	{ get; set; }
-        public	RectTransform	Figure	
+        public	GameMode		Game	{ get; internal set; } = null!;
+        public	RectTransform?	Figure	
         {
 	        get => _figure;
 	        set => _figure = value;
@@ -25,7 +25,9 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 
         public		void	MakeLastCellClear	( )	
         {
-	        Destroy(Figure.gameObject);
+			if (Figure)
+				Destroy(Figure.gameObject);
+				
 	        Figure = null;
 	        _originalFigure = null;
         }

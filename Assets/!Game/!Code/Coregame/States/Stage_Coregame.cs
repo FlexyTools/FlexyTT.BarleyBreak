@@ -5,7 +5,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 	[ServiceTypes(typeof(GameStage))]
 	public class Stage_Coregame : GameStageEx
 	{
-		[SerializeField]	GameObject _loaderOverlay;
+		[SerializeField]	GameObject _loaderOverlay = null!;
 	
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
         [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 

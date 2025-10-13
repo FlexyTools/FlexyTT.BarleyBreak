@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpectedType: Flexy.Template.BarleyBreak.Metagame.Leaderboards.Window_Leaderboards+ScoreView,
-    !!Barley-Break
+    Barley-Break
 --- !u!1 &5676477239155025502
 GameObject:
   m_ObjectHideFlags: 0

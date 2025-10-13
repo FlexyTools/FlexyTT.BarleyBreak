@@ -8,7 +8,7 @@ public abstract class	UIWindowEx: UIWindow
 	
 public abstract class	UIWidgetEx:	BindableBehaviour	
 {
-	private	State			_state;
+	private	State?			_state;
 	private Facade_Game		_game;
 		
 	public	Facade_Game		Game		=> _game.GetCached( this );

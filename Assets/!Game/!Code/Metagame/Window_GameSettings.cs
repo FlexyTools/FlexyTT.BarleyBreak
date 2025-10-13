@@ -10,8 +10,8 @@
 			_settingsTabColor.Primary.Changed += _ => RebindProperty( "Color" );
 		}
 	
-		private SettingsTab_Audio _settingsTabAudio;
-		private SettingsTab_Color _settingsTabColor;
+		private SettingsTab_Audio _settingsTabAudio = null!;
+		private SettingsTab_Color _settingsTabColor = null!;
 
 		// Audio Settings
 		[Bindable]	Single	SoundVolume		

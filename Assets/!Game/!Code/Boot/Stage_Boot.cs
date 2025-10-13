@@ -3,7 +3,7 @@
 	[ServiceTypes(typeof(GameStage))]
 	public class Stage_Boot : GameStageEx
 	{
-		[SerializeField]	GameObject			_loaderOverlay;
+		[SerializeField]	GameObject			_loaderOverlay = null!;
 		[SerializeField]	AssetRef<State>		_boot_eula;
 		[SerializeField]	AssetRef<GameStage>	_metaStageRef;
 	

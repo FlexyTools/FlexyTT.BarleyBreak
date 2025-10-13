@@ -2,11 +2,11 @@ namespace FlexyTemplates.BarleyBreak.Common
 {
 	public class Service_Audio : MonoBehaviour, IService
 	{
-		[SerializeField]	AudioSource		_soundSource;
-		[SerializeField]	AudioSource		_sfxSource;
-		[SerializeField]	AudioMixer		_mixer;
+		[SerializeField]	AudioSource		_soundSource = null!;
+		[SerializeField]	AudioSource		_sfxSource = null!;
+		[SerializeField]	AudioMixer		_mixer = null!;
 		
-		private SettingsTab_Audio _settings;
+		private SettingsTab_Audio _settings = null!;
 
 		public	Single	SoundVolume		
 		{
@@ -21,14 +21,14 @@ namespace FlexyTemplates.BarleyBreak.Common
 
 		public	void	OrderedInit		( GameContext ctx )	
 		{
-			_settings = ctx.GetService<Service_GameSettings>( ).Get<SettingsTab_Audio>( );
+			_settings = ctx.GetService<Service_GameSettings>()!.Get<SettingsTab_Audio>();
 			
-			_settings.SoundVolume	.Changed += _ => UpdateVolume( );
-			_settings.SfxVolume		.Changed += _ => UpdateVolume( );
+			_settings.SoundVolume	.Changed += _ => UpdateVolume();
+			_settings.SfxVolume		.Changed += _ => UpdateVolume();
 		}
 		public	void	PlaySfx			( AudioClip clip )	
 		{
-			_sfxSource.PlayOneShot( clip );
+			_sfxSource.PlayOneShot(clip);
 		}
 		private	void	UpdateVolume	( )					
 		{
@@ -42,7 +42,7 @@ namespace FlexyTemplates.BarleyBreak.Common
 	
 	public class PlaySfxAction : FlexyActionSync
 	{
-		[SerializeField]	AudioClip	_clip;
+		[SerializeField]	AudioClip	_clip = null!;
 	
 		public override void Do	( ActionCtx ctx )	
 		{
