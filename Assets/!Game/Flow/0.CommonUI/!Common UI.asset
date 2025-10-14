@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dependencies: []
   _states:
-  - TypeFullName: Flexy.Template.BarleyBreak.Metagame.Window_GameSettings
+  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Window_GameSettings
     Ref:
       _uid:
         serializedVersion: 2

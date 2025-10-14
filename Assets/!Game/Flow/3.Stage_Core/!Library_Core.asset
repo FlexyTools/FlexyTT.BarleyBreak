@@ -14,25 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dependencies: []
   _states:
-  - TypeFullName: Flexy.Template.BarleyBreak.Coregame.States.Stage_Coregame
+  - TypeFullName: FlexyTemplates.BarleyBreak.Coregame.States.Stage_Coregame
     Ref:
       _uid:
         serializedVersion: 2
         Hash: c1055f23b34e09a4496fc2c881bb0920
       _subId: 0
-  - TypeFullName: Flexy.Template.BarleyBreak.Coregame.States.State_Play
+  - TypeFullName: FlexyTemplates.BarleyBreak.Coregame.States.State_Play
     Ref:
       _uid:
         serializedVersion: 2
         Hash: b3edd5d743edafc4dba2935e50c5d94e
       _subId: 1736641978287482669
-  - TypeFullName: Flexy.Template.BarleyBreak.Coregame.States.State_Pause
+  - TypeFullName: FlexyTemplates.BarleyBreak.Coregame.States.State_Pause
     Ref:
       _uid:
         serializedVersion: 2
         Hash: cdc7031cfb4337f45a7e8c8d0d1e3641
       _subId: 4388097260016340715
-  - TypeFullName: Flexy.Template.BarleyBreak.Coregame.States.State_FieldComplete
+  - TypeFullName: FlexyTemplates.BarleyBreak.Coregame.States.State_FieldComplete
     Ref:
       _uid:
         serializedVersion: 2
