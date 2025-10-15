@@ -14,7 +14,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 
 		protected override	void	OnShow					( )		
 		{
-			LoadGameFieldScene( ).Forget( );
+			LoadGameFieldScene().Forget();
 		}
 		protected override	void	OnFirstChildShow		( )		
 		{
@@ -22,7 +22,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 		}
 		protected override	void	OnLastChildHide			( )		
 		{
-			UnloadGameFieldScene( ).Forget( );
+			UnloadGameFieldScene().Forget();
 		}
 		protected override	void	OnHide					( )		
 		{
@@ -57,7 +57,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		
-			GameStage.MoveToServiceScene( );
+			GameStage.MoveToServiceScene();
 			
 			_loadTask = SceneRef.LoadDummySceneAsync( gameObject, LoadSceneMode.Single );
 			await _loadTask;

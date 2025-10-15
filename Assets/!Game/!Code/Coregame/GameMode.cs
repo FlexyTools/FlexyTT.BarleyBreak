@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using UnityEngine.InputSystem;
 
 namespace FlexyTemplates.BarleyBreak.Coregame
 {
@@ -40,14 +41,14 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		}
 		private		void	OnEnable	( )		
 		{
-			InitMinigameAsync( ).Forget( );
+			InitMinigameAsync().Forget();
 		}
         
 #if UNITY_EDITOR
 		private		void	Update		( )		
 		{
-			if (Input.GetKeyDown(KeyCode.W))
-				Win( );
+			if (Keyboard.current.wKey.wasPressedThisFrame)
+				Win();
 		}
 #endif
 
@@ -61,17 +62,17 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			Check( x, y-1, animate );
 			Check( x, y+1, animate );
             
-			if (CheckWin( ))
+			if (CheckWin())
 			{
 				_inputBlocker.SetActive( true );
-				Win( );
+				Win();
 			}
             
 			return;
 
 			void Check( Int32 x, Int32 y, Boolean animate )
 			{
-				if (x<0|y<0|x>=_gridSize|y>=_gridSize) 
+				if (x<0 | y<0 | x>=_gridSize | y>=_gridSize) 
 					return;
 
 				var index = y * _gridSize + x;
@@ -100,7 +101,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		private async	UniTask		InitMinigameAsync	( )		
 		{
 			foreach (var cell in _cells)
-				cell.ResetCell( );
+				cell.ResetCell();
         
 			//Time.timeScale = 10;
         
@@ -122,7 +123,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
         
 				Cell Check( Cell curr, Int32 x, Int32 y )
 				{
-					if (x<0|y<0|x>=_gridSize|y>=_gridSize) 
+					if (x<0 | y<0 | x>=_gridSize | y>=_gridSize) 
 						return curr;
 
 					var targetIndex = y * _gridSize + x;
