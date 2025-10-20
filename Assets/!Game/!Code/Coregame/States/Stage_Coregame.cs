@@ -58,8 +58,10 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 			_loaderOverlay.gameObject.SetActive(true);
 		
 			GameStage.MoveToServiceScene();
+			await UniTask.NextFrame();
 			
-			_loadTask = SceneRef.LoadDummySceneAsync( gameObject, LoadSceneMode.Single );
+			_loadTask = SceneRef.LoadUrpDummySceneAsync( gameObject, LoadSceneMode.Single );
+			
 			await _loadTask;
 			await UniTask.Delay( 350, ignoreTimeScale:true );
 			

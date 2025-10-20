@@ -50,17 +50,19 @@ ExportedObj/
 
 **/.DS_Store
 *.blend1
+.utmp/**
 
 #Flexy.Framework specific ignore
 /_GameSavedData/**
 /Assets/Resources/Fun.Flexy/AssetRefs/**
 
 Packages/fun.flexy.gameflow/**
-Assets/!!Game/Audio/**
 Packages/fun.flexy.audio/**
 Packages/fun.flexy.core/**
 Packages/fun.flexy.gamesettings/**
 Packages/fun.flexy.ui/**
-.utmp/**
 Packages/fun.flexy.tween/**
+Packages/fun.flexy.assetrefs/**
+
+Assets/!!Game/Audio/**
 Assets/Packages/LitMotion**
