@@ -153,11 +153,11 @@ MonoBehaviour:
     - rid: 3444707566609498366
       type: {class: PlaySfxAction, ns: FlexyTemplates.BarleyBreak.Common, asm: Barley-Break}
       data:
-        _clip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+        _clip: {fileID: 8300000, guid: 8868866812037aa4ca13b2dd879f1967, type: 3}
     - rid: 3444707566609498367
       type: {class: PlaySfxAction, ns: FlexyTemplates.BarleyBreak.Common, asm: Barley-Break}
       data:
-        _clip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+        _clip: {fileID: 8300000, guid: 8868866812037aa4ca13b2dd879f1967, type: 3}
 --- !u!114 &1031878089485820753
 MonoBehaviour:
   m_ObjectHideFlags: 0
