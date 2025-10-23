@@ -1,6 +1,6 @@
 namespace FlexyTemplates.BarleyBreak.Coregame.States
 {
-	public class State_FieldComplete : StateEx
+	public class State_PlayComplete : StateEx
     {
 	    private	(EField Field, Single Seconds) Params => ((EField,Single))OpenParams;
     

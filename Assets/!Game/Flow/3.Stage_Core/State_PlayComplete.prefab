@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 703223811490157672}
   - component: {fileID: 6873678594087484110}
   m_Layer: 0
-  m_Name: State_FieldComplete
+  m_Name: State_PlayComplete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,7 +565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5941701631351388054, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_text
-      value: Field Complete
+      value: Play Complete
       objectReference: {fileID: 0}
     - target: {fileID: 5941701631351388054, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_sharedMaterial

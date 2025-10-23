@@ -309,15 +309,7 @@ PrefabInstance:
       value: Bootstrap Core
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: 175b557746b2c3f4891e533236e8fa93, type: 3}
-      propertyPath: _statesToOpen.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6552622680880447747, guid: 175b557746b2c3f4891e533236e8fa93, type: 3}
-      propertyPath: _statesToOpen.Array.data[2]._uid
-      value: b3edd5d743edafc4dba2935e50c5d94e
-      objectReference: {fileID: 0}
-    - target: {fileID: 6552622680880447747, guid: 175b557746b2c3f4891e533236e8fa93, type: 3}
-      propertyPath: _statesToOpen.Array.data[3]._uid
+      propertyPath: _bootstrapTarget._uid
       value: cdc7031cfb4337f45a7e8c8d0d1e3641
       objectReference: {fileID: 0}
     m_RemovedComponents: []
