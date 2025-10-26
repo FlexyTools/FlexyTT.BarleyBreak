@@ -64,7 +64,7 @@ MonoBehaviour:
     _uid:
       serializedVersion: 2
       Hash: e35616b6349e6884481db3654ef57ef1
-    _subId: 1849295314665467560
+    _subId: 0
   _statesContainer: {fileID: 771841701890888736}
   references:
     version: 2

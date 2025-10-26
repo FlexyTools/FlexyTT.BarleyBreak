@@ -4,49 +4,63 @@
 	public class Stage_Boot : GameStageEx
 	{
 		[SerializeField]	GameObject			_loaderOverlay = null!;
-		[SerializeField]	AssetRef<State>		_boot_eula;
+		[SerializeField]	AssetRef<State>[]	_bootStates = null!;
 		[SerializeField]	AssetRef<GameStage>	_metaStageRef;
 	
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
         [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
         
-        private BooleanSetting	_eulaAccepted	= new("Boot_EulaAccepted", false, readLater:true);
+        
 		private LoadSceneTask	_loadTask;
 
 		protected override	void	OnShow				( )		
 		{
-			_eulaAccepted.Read();
-				
 			BootGame().Forget();
 		}
 		private async	UniTask		BootGame			( )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		
-			await UniTask.Delay( 1_000, ignoreTimeScale:true );
+			await UniTask.Delay(1_000, ignoreTimeScale:true);
 			await Context.WaitInitializing();
 
 			_loaderOverlay.gameObject.SetActive(false);
 
-			if (!_eulaAccepted)
-			{
-				await ShowState(_boot_eula);
-				_eulaAccepted.Set(true);
-			}
-			
-			// Potential boot states
-			// await ShowState(_boot_age);
-			// await ShowState(_boot_intro);
+			var booti = 0;
 
+			// Check if we have test boot state already opened
+			if (AnySubStateOpened)
+			{
+				booti = 1 + Array.IndexOf(_bootStates, Node.FirstChild?.StateRef);
+
+				var h = Node.FirstChild!.Handle;
+				while (h.IsOpened)
+					await UniTask.Yield(PlayerLoopTiming.LastUpdate);
+			}		
+
+			for (; booti < _bootStates.Length; booti++)
+				await ShowState(_bootStates[booti]);
+			
 			async UniTask ShowState( AssetRef<State> state )
 			{
-				var h = Graph.Open( state, this );
+				var h = Graph.Open(state, this);
+				
+				if (h.State is IBootState { IsDone: true } )
+				{
+					h.Close();
+					return;
+				}
 				
 				while (h.IsOpened)
-					await UniTask.Yield( PlayerLoopTiming.LastUpdate );
+					await UniTask.Yield(PlayerLoopTiming.LastUpdate);
 			}
 			
-			Graph.Open( _metaStageRef, Context );
+			Graph.Open(_metaStageRef, Context);
 		}
+	}
+
+	internal interface IBootState
+	{
+		Boolean IsDone { get; }
 	}
 }

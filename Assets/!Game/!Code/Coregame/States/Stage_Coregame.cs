@@ -14,6 +14,12 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 
 		protected override	void	OnShow					( )		
 		{
+			if (AnySubStateOpened)
+			{
+				_loaderOverlay.SetActive(false);
+				return;
+			}
+			
 			LoadGameFieldScene().Forget();
 		}
 		protected override	void	OnFirstChildShow		( )		

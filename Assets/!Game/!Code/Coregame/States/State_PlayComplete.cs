@@ -22,6 +22,6 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 		
 		[StateTest]		Object	Scoew_98	( ) => (EField.Board3x3, 98.1f);
 		[StateTest]		Object	Scoew_23	( ) => (EField.Board3x3, 23.5f);
-		[StateTest]		Object	Scoew_03	( ) => (EField.Board3x3, 0.52f); 
+		[StateTest]		Object	Scoew_052	( ) => (EField.Board3x3, 0.52f); 
     }
 }

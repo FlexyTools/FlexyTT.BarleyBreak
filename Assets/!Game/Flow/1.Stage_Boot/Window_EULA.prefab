@@ -132,7 +132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.6931152, y: -38.55713}
+  m_AnchoredPosition: {x: -2.6931152, y: -38.55725}
   m_SizeDelta: {x: -164.4695, y: -528.615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &831775646412046944
@@ -177,15 +177,9 @@ MonoBehaviour:
     may provide updates, patches, or support for the Game, and such updates will
     be governed by this Agreement.\r\n\n<b>5. Termination</b>\r\nThis license is
     effective until terminated. You may terminate it at any time by uninstalling
-    the Game. We may terminate it if you violate any terms of this Agreement.\r\n\n<b>6.
-    No Warranties</b>\r\nThe Game is provided \"as is\" without warranties of any
-    kind. We do not guarantee the game will be error-free or uninterrupted.\r\n\n<b>7.
-    Limitation of Liability</b>\r\nIn no event shall [Developer/Company Name] be
-    liable for any damages arising from your use or inability to use the Game.\r\n\n</b>8.
-    General</b>\r\nThis Agreement is governed by the laws of [Jurisdiction]. If any
-    part of this Agreement is invalid, the rest will still apply.\r\n\n<b>Contact
-    Us</b>\r\nIf you have any questions about this Agreement, contact us at [Support
-    Email].\r\n"
+    the Game. We may terminate it if you violate any terms of this Agreement.\r\n\n</b>8.
+    General</b>\r\nBlah blah blah\r\n\n<b>Contact Us</b>\r\nIf you have any questions
+    about this Agreement, contact us at [Support Email].\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
   m_sharedMaterial: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
@@ -513,35 +507,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0.5689016
       objectReference: {fileID: 0}
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0.3035919
       objectReference: {fileID: 0}
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1034.2
+      value: 0.073711395
       objectReference: {fileID: 0}
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 190.3553
+      value: -1676.0332
       objectReference: {fileID: 0}
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -573,11 +567,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.07048042
+      value: -2.6879883
       objectReference: {fileID: 0}
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 874
+      value: 1065
       objectReference: {fileID: 0}
     - target: {fileID: 5288453936514210875, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
