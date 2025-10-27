@@ -43,13 +43,14 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 		
 		private async	UniTaskVoid		FinishGameAsync	( )	
 		{
-			Game.Leaderboards.AddRecord( Game.Mode.Board, Game.Mode.RunTime );
+			var runTime = Game.Mode.RunTime;
+			Game.Leaderboards.AddRecord( Game.Mode.Board, runTime );
 			
 			await UniTask.Delay( 1000, DelayType.UnscaledDeltaTime );
 
 			GameStage.CloseSubStates(true);
 			
-			Game.States.FieldComplete.Open( Game.Mode.Board, Game.Mode.RunTime );
+			Game.States.FieldComplete.Open( Game.Mode.Board, runTime );
 		}
     }
 }
