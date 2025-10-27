@@ -9,9 +9,9 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 
         protected override	Boolean	TryGoBack	( )		=> false;
 
-        [Callable]		void		Continue	( )	
+        [Callable]			void	Continue	( )			
 		{
-			GameStage.CloseAllStates();
+			Close();			
 			Game.States.Leaderboards.Open( Params.Field );
 		}
         
