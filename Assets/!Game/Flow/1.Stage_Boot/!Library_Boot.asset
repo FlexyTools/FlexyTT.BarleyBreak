@@ -20,7 +20,13 @@ MonoBehaviour:
         serializedVersion: 2
         Hash: 86be155ef18fabb448f0ce6aa6544783
       _subId: 0
-  - TypeFullName: FlexyTemplates.BarleyBreak.Boot.State_EULA
+  - TypeFullName: FlexyTemplates.BarleyBreak.Boot.Window_AgeSelect
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: 09d074ca0c8e0fb4ba78b96282866e4d
+      _subId: 0
+  - TypeFullName: FlexyTemplates.BarleyBreak.Boot.Window_EULA
     Ref:
       _uid:
         serializedVersion: 2
