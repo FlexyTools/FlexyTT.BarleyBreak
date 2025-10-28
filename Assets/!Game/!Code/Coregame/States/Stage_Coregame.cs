@@ -14,6 +14,8 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 
 		protected override	void	OnShow					( )		
 		{
+			Game.Audio.SwitchToCore();
+		
 			if (AnySubStateOpened)
 			{
 				_loaderOverlay.SetActive(false);
@@ -32,6 +34,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 		}
 		protected override	void	OnHide					( )		
 		{
+			Game.Audio.SwitchToMeta();
 			_loadTask = default;
 		}
 		

@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 
+  productGUID: a8cac78d433063743aec0cec8248c383
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 1
@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 0
-  companyName: 'Fun FlexyTemplates'
+  companyName: Fun FlexyTemplates
   productName: 'Flexy: Barley-Break'
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}

@@ -2,7 +2,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 {
 	public class State_PlayComplete : StateEx
     {
-	    private	(EField Field, Single Seconds) Params => ((EField,Single))OpenParams;
+	    private	(EField Field, Single Seconds) Params => ((EField,Single))OpenParams!;
     
         [Bindable]		Single		Seconds				=> Params.Seconds;
         [Bindable]		String		FormattedSeconds	=> Seconds >= 60 ? TimeSpan.FromSeconds( Seconds ).ToString( @"mm\:ss\.ff" ) : TimeSpan.FromSeconds( Seconds ).ToString( @"ss\.ff" );

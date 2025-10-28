@@ -13,8 +13,9 @@ public struct	Facade_Coregame : ICachedContext
 													
 	public  GameMode				Mode         	=> Ctx.GetService<GameMode>()!;
     public	Facade_CoreStates		States			=> new(CallSource.GetComponentInParent<State>());
-    public	Service_GameSettings	Settings		=> Ctx.GetService<Service_GameSettings>()!;
-    public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>()!;
+    public	Service_Audio			Audio			=> Ctx.GetService<Service_Audio>();
+    public	Service_GameSettings	Settings		=> Ctx.GetService<Service_GameSettings>();
+    public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>();
 }
 
 public readonly record struct Facade_CoreStates( LibCtx LibCtx )
