@@ -1,6 +1,3 @@
-using NUnit.Framework;
-using UnityEngine.InputSystem;
-
 namespace FlexyTemplates.BarleyBreak.Coregame
 {
 	public class GameMode : MonoBehEx
@@ -18,7 +15,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 
 		public		EField		Board		=> _board;
 		public		Single		StartTime	{ get; set; }
-		public		Single		RunTime		=> Time.realtimeSinceStartup - StartTime;
+		public		Single		RunTime		=> Time.time - StartTime;
 		public		Boolean		IsWin		{ get; set; }
 
 		private     void	Awake       ( )     
@@ -133,7 +130,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 				}
 			}
 			
-			StartTime = Time.realtimeSinceStartup;
+			StartTime = Time.time;
 		}
 	
 		private			Boolean		CheckWin			( )		

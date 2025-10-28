@@ -16,6 +16,7 @@ global using Flexy.UI.Bindings;
 global using UnityEngine;
 global using UnityEngine.UI;
 global using UnityEngine.Audio;
+global using UnityEngine.InputSystem;
 global using UnityEngine.Serialization;
 
 global using FlexyTemplates.BarleyBreak.Common;
