@@ -22,6 +22,9 @@ MonoBehaviour:
       rid: 3444707884455166015
   - Enabled: 1
     Task:
+      rid: 3444707920619503674
+  - Enabled: 1
+    Task:
       rid: 3009908962306031618
   - Enabled: 1
     Task:
@@ -46,4 +49,7 @@ MonoBehaviour:
       data: 
     - rid: 3444707884455166015
       type: {class: SetUniversalVersion, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
+      data: 
+    - rid: 3444707920619503674
+      type: {class: ReadAppRevisionFromGit, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
       data: 
