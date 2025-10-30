@@ -25,9 +25,10 @@ public record struct	Facade_UIWindows	( LibCtx LibCtx )
 {
 	private const String CoreGameStage = "c1055f23b34e09a4496fc2c881bb0920";
 
-	public Window_GameSettings		.Opener		Settings			=> LibCtx.GetState<Window_GameSettings>();
-	public Window_PlayFields		.Opener		PlayFields			=> LibCtx.GetState<Window_PlayFields>();
-	public Window_Leaderboards		.Opener		Leaderboards		=> LibCtx.GetOpener<Window_Leaderboards.Opener>();
+	public Window_GameSettings		.Opener		Settings		=> LibCtx.GetState<Window_GameSettings>();
+	public Window_AppInfo			.Opener		AppInfo			=> LibCtx.GetState<Window_AppInfo>();
+	public Window_PlayFields		.Opener		PlayFields		=> LibCtx.GetState<Window_PlayFields>();
+	public Window_Leaderboards		.Opener		Leaderboards	=> LibCtx.GetOpener<Window_Leaderboards.Opener>();
 	
 	public void Play_Field	( SceneRef map )	=> LibCtx.Service.Graph.Open( new( CoreGameStage ), LibCtx.Src, map );
 }

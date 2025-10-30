@@ -23,5 +23,10 @@ namespace FlexyTemplates.BarleyBreak.Metagame
 	#endif
 			}
 		}
+		
+		[Callable]	void	OpenAppInfo			( )		
+		{
+			Game.UI.AppInfo.Open( );
+		}
 	}
 }

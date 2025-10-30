@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 0
-  companyName: Flexy.Fun.Templates
+  companyName: Fun.Flexy-Templates
   productName: 'Flexy Template: Barley-Break'
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -142,7 +142,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.459.91
+  bundleVersion: 0.460.70
   preloadedAssets:
   - {fileID: 0}
   - {fileID: -944628639613478452, guid: 28400d27034dfd146b7bc6d75ea4f182, type: 3}
@@ -172,12 +172,12 @@ PlayerSettings:
     Standalone: fun.flexytemplate.barleybreak
     iPhone: fun.flexytemplate.barleybreak
   buildNumber:
-    Standalone: 0.459.91
+    Standalone: 0.460.70
     VisionOS: 2502200
-    iPhone: 0.459.91
-    tvOS: 0.459.91
+    iPhone: 0.460.70
+    tvOS: 0.460.70
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 45991
+  AndroidBundleVersionCode: 46070
   AndroidMinSdkVersion: 29
   AndroidTargetSdkVersion: 36
   AndroidPreferredInstallLocation: 0

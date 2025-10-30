@@ -20,3 +20,9 @@ MonoBehaviour:
         serializedVersion: 2
         Hash: 59f65f829106a2b418bdb7eefd672868
       _subId: 0
+  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Window_AppInfo
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: cc1db232150a596459a2769067f2b3fa
+      _subId: 0
