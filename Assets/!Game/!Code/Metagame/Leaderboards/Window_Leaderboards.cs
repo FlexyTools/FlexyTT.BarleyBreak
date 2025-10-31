@@ -21,7 +21,7 @@ namespace FlexyTemplates.BarleyBreak.Metagame.Leaderboards
 			[Bindable]	String	ScoreStr	=> Single.IsPositiveInfinity(Score) ? "-" : TimeSpan.FromSeconds( Score ).ToString( Score >= 60 ? @"mm\:ss\.ff" : @"ss\.ff" );
 		}
 		
-		public record struct Opener( OpenCtx Ctx ) : IOpener
+		public new record struct Opener( OpenCtx Ctx ) : IOpener
 		{
 			public	StateHandle		Open	( )					=> Ctx.Open( null );
 			public	StateHandle		Open	( EField board )	=> Ctx.Open( board );

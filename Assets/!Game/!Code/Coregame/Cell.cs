@@ -8,12 +8,10 @@ namespace FlexyTemplates.BarleyBreak.Coregame
         private RectTransform?	_originalFigure;
         private RectTransform	_rectTransform = null!;
         
-        internal	Int32	Index	{ get; set; }
-        
-		[Bindable]	String	Number	=> (Index + 1).ToString();
-
-        public	GameMode		Game	{ get; internal set; } = null!;
-        public	RectTransform?	Figure	
+        internal	Int32			Index		{ get; set; }
+		[Bindable]	String			Number		=> (Index + 1).ToString();
+        public		GameMode		GameMode	{ get; internal set; } = null!;
+        public		RectTransform?	Figure		
         {
 	        get => _figure;
 	        set => _figure = value;
@@ -61,7 +59,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 
         [Callable]	void	ClickCell	( )	
         {
-            Game.ClickCell( Index );
+            GameMode.ClickCell( Index );
         }
     }
 }

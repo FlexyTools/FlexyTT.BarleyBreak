@@ -7,7 +7,6 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		[SerializeField]	GameObject		_inputBlocker	= null!;
 		[SerializeField]	GridLayoutGroup	_cellContainer	= null!;
 		[SerializeField]	Int32			_gridSize		= 3;
-		[SerializeField]	Single			_animateTime	= 0.2f;
 
 		[SerializeField]	FlexyEvent		_win;
 	
@@ -27,7 +26,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			{
 				var cell = Instantiate( _cellPrefab, _cellContainer.transform );
                 
-				cell.Game = this;
+				cell.GameMode = this;
 				cell.Index = i;
                 
 				_cells.Add( cell );
@@ -38,7 +37,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		}
 		private		void	OnEnable	( )		
 		{
-			InitMinigameAsync().Forget();
+			InitMinigame();
 		}
         
 #if UNITY_EDITOR
@@ -95,7 +94,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			sourceCell.Figure = null;
 		}
 	
-		private async	UniTask		InitMinigameAsync	( )		
+		private		void	InitMinigame	( )		
 		{
 			foreach (var cell in _cells)
 				cell.ResetCell();
@@ -132,8 +131,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			
 			StartTime = Time.time;
 		}
-	
-		private			Boolean		CheckWin			( )		
+		private		Boolean	CheckWin		( )		
 		{
 			for (var i = 0; i < _cells.Count - 1; i++)
 			{
@@ -143,7 +141,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 
 			return true;
 		}
-		private			void		Win					( )		
+		private		void	Win				( )		
 		{
 			IsWin = true;
 			_win.Raise( this );
