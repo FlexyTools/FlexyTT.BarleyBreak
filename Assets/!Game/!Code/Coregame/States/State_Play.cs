@@ -5,7 +5,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
     {
 		[Bindable]	String	RunMinutes		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"mm" );
 		[Bindable]	String	RunSeconds		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"ss" );
-		[Bindable]	String	RunMiliseconds	=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"ff" );
+		[Bindable]	String	RunMilliseconds	=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"ff" );
 
 		private Boolean _finishingStarted;
 

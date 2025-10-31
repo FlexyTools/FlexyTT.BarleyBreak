@@ -830,7 +830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _source:
     Component: {fileID: 1736641978287482669}
-    MemberName: RunMiliseconds
+    MemberName: RunMilliseconds
     Params: 
   _label: {fileID: 0}
 --- !u!1 &8927638002295034370
