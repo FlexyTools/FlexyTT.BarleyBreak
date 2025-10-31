@@ -15,7 +15,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 			Game.States.Leaderboards.Open( Params.Field );
 		}
         
-		public record struct Opener( OpenCtx Ctx ) : IOpener
+		public new record struct Opener( OpenCtx Ctx ) : IOpener
 		{
 			public	StateHandle		Open	( EField field, Single seconds ) => Ctx.Open( (field, seconds) );
 		}
