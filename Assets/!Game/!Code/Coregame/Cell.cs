@@ -26,7 +26,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
         public		void	MakeLastCellClear	( )	
         {
 			if (Figure)
-				Destroy(Figure.gameObject);
+				Destroy(Figure!.gameObject);
 				
 	        Figure = null;
 	        _originalFigure = null;
@@ -37,8 +37,8 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 	        
 	        if (_figure)
 	        {
-		        _figure.SetParent	( transform );
-		        _figure.position	= GlobalPosition;
+		        _figure!.SetParent	( transform );
+		        _figure!.position	= GlobalPosition;
 	        }
         }
 
@@ -50,7 +50,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
         private		void	Update		( )	
         {
             if (_figure)
-                _figure.anchoredPosition = ExpLerp(_figure.anchoredPosition, Vector2.zero, _figureAnimationSpeed, Time.deltaTime);
+                _figure!.anchoredPosition = ExpLerp(_figure!.anchoredPosition, Vector2.zero, _figureAnimationSpeed, Time.deltaTime);
         }
 
         private		Vector2	ExpLerp		( Vector2 current, Vector2 target, Single speed, Single deltaTime )	
