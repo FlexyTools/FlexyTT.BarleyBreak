@@ -16,6 +16,8 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		public		Single		StartTime	{ get; set; }
 		public		Single		RunTime		=> Time.time - StartTime;
 		public		Boolean		IsWin		{ get; set; }
+		
+		public		Single		Result		{ get; private set; }
 
 		private     void	Awake       ( )     
 		{
@@ -144,6 +146,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		private		void	Win				( )		
 		{
 			IsWin = true;
+			Result = RunTime;
 			_win.Raise( this );
 		} 
 	}

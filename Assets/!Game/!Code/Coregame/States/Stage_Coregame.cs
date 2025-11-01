@@ -3,7 +3,7 @@
 namespace FlexyTemplates.BarleyBreak.Coregame.States
 {
 	[ServiceTypes(typeof(GameStage))]
-	public class Stage_Coregame : GameStageEx
+	public class Stage_Coregame : GameStageEx, IStateWithResult<(EField, Single)>
 	{
 		[SerializeField]	GameObject _loaderOverlay = null!;
 	
@@ -11,6 +11,10 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
         [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
         
 		private LoadSceneTask	_loadTask;
+		private EField			_resultBoard;
+		private Single			_resultScore;
+		
+		public	(EField,Single)		GetResult				( )		=> (_resultBoard,_resultScore);
 
 		protected override	void	OnShow					( )		
 		{
@@ -30,6 +34,8 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 		}
 		protected override	void	OnLastChildHide			( )		
 		{
+			_resultBoard = Game.Mode.Board;
+			_resultScore = Game.Mode.Result;
 			UnloadGameFieldScene().Forget();
 		}
 		protected override	void	OnHide					( )		
@@ -59,6 +65,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 			await UniTask.Delay( 350, ignoreTimeScale:true );
 			GameStage.MoveToLoadedScene( loadedScene );
 			GameStage.OpenMainState();
+			Game.RecacheCtx();
 			
 			_loaderOverlay.gameObject.SetActive(false);
 		}

@@ -32,25 +32,22 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 		}
 		private		void	OnApplicationPause	( Boolean pauseStatus )	
 		{
-			if( !Application.isEditor )
-				Game.States.Pause.Open( );
+			if (!Application.isEditor)
+				Game.States.Pause.Open();
 		}
 		
         [Callable]	void	Pause				( )			
         {
-			Game.States.Pause.Open( );
+			Game.States.Pause.Open();
         }
 		
 		private async	UniTaskVoid		FinishGameAsync	( )	
 		{
-			var runTime = Game.Mode.RunTime;
-			Game.Leaderboards.AddRecord( Game.Mode.Board, runTime );
-			
 			await UniTask.Delay( 1000, DelayType.UnscaledDeltaTime );
 
 			GameStage.CloseSubStates(true);
 			
-			Game.States.FieldComplete.Open( Game.Mode.Board, runTime );
+			Game.States.FieldComplete.Open( Game.Mode.Board, Game.Mode.Result );
 		}
     }
 }
