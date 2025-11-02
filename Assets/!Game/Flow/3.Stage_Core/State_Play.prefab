@@ -69,7 +69,7 @@ MonoBehaviour:
   m_text: 29
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
-  m_sharedMaterial: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+  m_sharedMaterial: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -109,17 +109,15 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
-  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -259,7 +257,7 @@ MonoBehaviour:
   m_text: .
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
-  m_sharedMaterial: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+  m_sharedMaterial: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -299,17 +297,15 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
-  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -396,7 +392,7 @@ MonoBehaviour:
   m_text: 01
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
-  m_sharedMaterial: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+  m_sharedMaterial: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -436,17 +432,15 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
-  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -549,7 +543,7 @@ MonoBehaviour:
   m_text: ':'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
-  m_sharedMaterial: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+  m_sharedMaterial: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -589,17 +583,15 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
-  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -748,7 +740,7 @@ MonoBehaviour:
   m_text: 45
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
-  m_sharedMaterial: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+  m_sharedMaterial: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -788,17 +780,15 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
-  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -971,6 +961,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 596031437901033329, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1524849142951647658, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1123,7 +1117,8 @@ PrefabInstance:
     - {fileID: 8967938212448727386, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
     - {fileID: 2006535052453712187, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
     - {fileID: 7141397673829552199, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 596031437901033329, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0a783d52ab690f47b2acfe41d864485, type: 3}
@@ -1163,7 +1158,7 @@ PrefabInstance:
     - target: {fileID: 1415384408975844540, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+      objectReference: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
     - target: {fileID: 1415384408975844540, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4282335039
