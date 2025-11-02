@@ -1,6 +1,6 @@
 namespace FlexyTemplates.BarleyBreak.Boot
 {
-    public class Window_EULA : StateEx, IBootState
+    public class Window_EULA : UIWindowEx, IBootState
     {
 	    private		BooleanSetting	_eulaAccepted	= new("Boot_EulaAccepted", false, readLater:true);
 	    public		Boolean			IsDone			=> _eulaAccepted.Read();

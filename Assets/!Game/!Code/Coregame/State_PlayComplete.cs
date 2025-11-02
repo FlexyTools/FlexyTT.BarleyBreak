@@ -1,4 +1,4 @@
-namespace FlexyTemplates.BarleyBreak.Coregame.States
+namespace FlexyTemplates.BarleyBreak.Coregame
 {
 	public class State_PlayComplete : StateEx
     {
@@ -12,7 +12,6 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
         [Callable]			void	Continue	( )			
 		{
 			Close();			
-			Game.States.Leaderboards.Open( Params.Field );
 		}
         
 		public new record struct Opener( OpenCtx Ctx ) : IOpener

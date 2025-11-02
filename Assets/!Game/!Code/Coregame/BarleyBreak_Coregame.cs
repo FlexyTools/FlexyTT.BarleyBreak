@@ -1,9 +1,9 @@
 ﻿using UnityEngine.SceneManagement;
 
-namespace FlexyTemplates.BarleyBreak.Coregame.States
+namespace FlexyTemplates.BarleyBreak.Coregame
 {
 	[ServiceTypes(typeof(GameStage))]
-	public class Stage_Coregame : GameStageEx
+	public class BarleyBreak_Coregame : GameStageEx, IStateWithResult<(EField, Single)>
 	{
 		[SerializeField]	GameObject _loaderOverlay = null!;
 	
@@ -11,6 +11,16 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
         [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
         
 		private LoadSceneTask	_loadTask;
+		private EField			_resultBoard;
+		private Single			_resultScore;
+		private Boolean			_isLeaving;
+		
+		public	void				LeaveField				( )		
+		{
+			_isLeaving = true;
+			CloseSubStates(true);
+		}
+		public	(EField,Single)		GetResult				( )		=> (_resultBoard,_resultScore);
 
 		protected override	void	OnShow					( )		
 		{
@@ -30,6 +40,16 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 		}
 		protected override	void	OnLastChildHide			( )		
 		{
+			if (_isLeaving)
+			{
+				_resultBoard = default;
+				_resultScore = default;
+			}
+			else
+			{
+				_resultBoard = Game.Mode.Board;
+				_resultScore = Game.Mode.Result;
+			}
 			UnloadGameFieldScene().Forget();
 		}
 		protected override	void	OnHide					( )		
@@ -42,12 +62,12 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		
-			var loadedScene = default(Scene);
+			Scene loadedScene;
 			
 			if ( OpenParams == null )
 			{
 				//We started from coregame scene so just simulate short loading and open root state
-				loadedScene		= SceneManager.GetActiveScene( );
+				loadedScene		= SceneManager.GetActiveScene();
 			}
 			else
 			{
@@ -59,6 +79,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame.States
 			await UniTask.Delay( 350, ignoreTimeScale:true );
 			GameStage.MoveToLoadedScene( loadedScene );
 			GameStage.OpenMainState();
+			Game.RecacheCtx();
 			
 			_loaderOverlay.gameObject.SetActive(false);
 		}

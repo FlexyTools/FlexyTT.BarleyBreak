@@ -23,8 +23,8 @@ namespace FlexyTemplates.BarleyBreak.Metagame.Leaderboards
 		
 		public new record struct Opener( OpenCtx Ctx ) : IOpener
 		{
-			public	StateHandle		Open	( )					=> Ctx.Open( null );
-			public	StateHandle		Open	( EField board )	=> Ctx.Open( board );
+			public	StateHandle		Open	( )					=> Ctx.Open();
+			public	StateHandle		Open	( EField board )	=> Ctx.Open(board);
 		}
 	}
 }

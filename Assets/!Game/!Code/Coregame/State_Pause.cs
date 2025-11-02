@@ -1,4 +1,4 @@
-﻿namespace FlexyTemplates.BarleyBreak.Coregame.States
+﻿namespace FlexyTemplates.BarleyBreak.Coregame
 {
 	public class State_Pause : StateEx
 	{
@@ -7,6 +7,6 @@
 
 		[Callable] void		Resume			( )		=> Close();
 		[Callable] void		OpenSettings	( )		=> Game.States.GameSettings.Open();
-		[Callable] void		ExitBattle		( )		=> GameStage.CloseSubStates(true);
+		[Callable] void		LeaveField		( )		=> Game.Flow.LeaveField();
 	}
 }
