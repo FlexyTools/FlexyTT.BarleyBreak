@@ -7,6 +7,6 @@
 
 		[Callable] void		Resume			( )		=> Close();
 		[Callable] void		OpenSettings	( )		=> Game.States.GameSettings.Open();
-		[Callable] void		ExitBattle		( )		=> GameStage.CloseSubStates(true);
+		[Callable] void		ExitBattle		( )		=> Game.Flow.ExitBattle();
 	}
 }

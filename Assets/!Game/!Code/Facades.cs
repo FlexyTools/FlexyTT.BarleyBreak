@@ -10,7 +10,7 @@ public struct	Facade_Game : ICachedContext
 	public	GameContext				Ctx				{ get; set; }
 	public	Component				CallSource		{ get; set; }
 
-	public	BarleyBreak_GameFlow	Flow			=> Ctx.GetService<BarleyBreak_GameFlow>();
+	public	Facade_Flow				Flow			=> new( Ctx );
 	public	Facade_UIWindows		UI				=> new( Ctx.GetService<GameStage>() );
 	public	Facade_GameSettings		Settings		=> new( Ctx.GetService<Service_GameSettings>() );
 	public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>();
@@ -20,6 +20,11 @@ public record struct	Facade_GameSettings ( Service_GameSettings Svc )
 {
 	public	SettingsTab_Audio		Audio		=> Svc.Get<SettingsTab_Audio>();
 	public	SettingsTab_Color		Color		=> Svc.Get<SettingsTab_Color>();
+}
+
+public readonly record struct Facade_Flow( GameContext Ctx )
+{
+	public	void	PlayField	( SceneRef map )	=> Ctx.GetService<BarleyBreakFlow>().Play_Field(map).Forget();
 }
 
 public record struct	Facade_UIWindows	( LibCtx LibCtx )

@@ -11,11 +11,17 @@ public struct	Facade_Coregame : ICachedContext
 	public	GameContext				Ctx				{ get; set; }
 	public	Component				CallSource		{ get; set; }
 													
-	public  GameMode				Mode         	=> Ctx.GetService<GameMode>()!;
+	public  GameMode				Mode         	=> Ctx.GetService<GameMode>();
+	public	Facade_CoreFlow			Flow 			=> new(CallSource.GetComponentInParent<State>());	
     public	Facade_CoreStates		States			=> new(CallSource.GetComponentInParent<State>());
     public	Service_Audio			Audio			=> Ctx.GetService<Service_Audio>();
     public	Service_GameSettings	Settings		=> Ctx.GetService<Service_GameSettings>();
     public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>();
+}
+
+public readonly record struct Facade_CoreFlow( LibCtx LibCtx )
+{
+	public	void	ExitBattle	( )		=> LibCtx.Src.GameStage.CloseSubStates(true);
 }
 
 public readonly record struct Facade_CoreStates( LibCtx LibCtx )
