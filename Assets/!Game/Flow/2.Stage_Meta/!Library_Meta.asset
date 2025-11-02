@@ -12,20 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98dc713b27c7413490371c5ffc0749bc, type: 3}
   m_Name: '!Library_Meta'
   m_EditorClassIdentifier: 
+  _autoGrabMode: 1
   _dependencies: []
   _states:
-  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Stage_Metagame
+  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.BarleyBreak_Metagame
     Ref:
       _uid:
         serializedVersion: 2
         Hash: 069f665c8c7ec0543b84a34b2c307884
       _subId: 0
-  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Window_MainMenu
-    Ref:
-      _uid:
-        serializedVersion: 2
-        Hash: e35616b6349e6884481db3654ef57ef1
-      _subId: 1849295314665467560
   - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Window_PlayFields
     Ref:
       _uid:
@@ -37,4 +32,10 @@ MonoBehaviour:
       _uid:
         serializedVersion: 2
         Hash: ea1798fd377e1be4583de3735b1ce55a
+      _subId: 0
+  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Window_MainMenu
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: e35616b6349e6884481db3654ef57ef1
       _subId: 0

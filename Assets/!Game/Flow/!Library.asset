@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98dc713b27c7413490371c5ffc0749bc, type: 3}
   m_Name: '!Library'
   m_EditorClassIdentifier: 
+  _autoGrabMode: 1
   _dependencies:
   - {fileID: 11400000, guid: c1be01a1ef3f6734f83f38792be212c9, type: 2}
   - {fileID: 11400000, guid: 0fd0a9e6752b6d14fa7fa06f5cb50c34, type: 2}
   - {fileID: 11400000, guid: 9b6dca4bba14b264fb9ebc6b437a639e, type: 2}
   - {fileID: 11400000, guid: 37edc546be7a27c4ba54355ebaa475ac, type: 2}
   _states:
-  - TypeFullName: Flexy.GameFlow.GlobalStage
+  - TypeFullName: Flexy.GameFlow.FlowRoot
     Ref:
       _uid:
         serializedVersion: 2

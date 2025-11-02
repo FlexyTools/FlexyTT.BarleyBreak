@@ -69,7 +69,7 @@ namespace FlexyTemplates.BarleyBreak.Common
 	
 		public override void Do	( ActionCtx ctx )	
 		{
-			ctx.SrcObject.GetService<Service_Audio>()?.PlaySfx( _clip );
+			ctx.SrcObject.GetService<Service_Audio>().PlaySfx( _clip );
 		}
 	}
 }

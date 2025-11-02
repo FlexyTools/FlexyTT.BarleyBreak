@@ -1,6 +1,6 @@
 namespace FlexyTemplates.BarleyBreak.Boot
 {
-	public class Window_AgeSelect : StateEx, IBootState
+	public class Window_AgeSelect : UIWindowEx, IBootState
 	{
 		private		Int32			_age		= 12;
 		private		Int32Setting	_ageSetting	= new("Boot_SelectedAge", 0, readLater:true);

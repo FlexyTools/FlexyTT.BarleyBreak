@@ -1,4 +1,4 @@
-namespace FlexyTemplates.BarleyBreak.Coregame
+namespace FlexyTemplates.BarleyBreak.Coregame.Kit
 {
 	public class GameMode : MonoBehEx
 	{
@@ -52,13 +52,13 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 
 		internal	void	ClickCell		( Int32 cellIndex, Boolean animate = true )						
 		{
-			var x = cellIndex % _gridSize;
-			var y = cellIndex / _gridSize;
+			var cellX = cellIndex % _gridSize;
+			var cellY = cellIndex / _gridSize;
         
-			Check( x-1, y, animate );
-			Check( x+1, y, animate );
-			Check( x, y-1, animate );
-			Check( x, y+1, animate );
+			Check( cellX-1, cellY, animate );
+			Check( cellX+1, cellY, animate );
+			Check( cellX, cellY-1, animate );
+			Check( cellX, cellY+1, animate );
             
 			if (CheckWin())
 			{
@@ -68,7 +68,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
             
 			return;
 
-			void Check( Int32 x, Int32 y, Boolean animate )
+			void Check( Int32 x, Int32 y, Boolean anim )
 			{
 				if (x<0 | y<0 | x>=_gridSize | y>=_gridSize) 
 					return;
@@ -77,7 +77,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 				    
 				if (_cells[index].IsEmpty)
 				{
-					MoveFigureTo( _cells[cellIndex], _cells[index], animate );
+					MoveFigureTo( _cells[cellIndex], _cells[index], anim );
 				}
 			}
 		}

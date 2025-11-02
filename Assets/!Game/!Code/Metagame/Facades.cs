@@ -1,16 +1,15 @@
 ﻿// ReSharper disable AccessToStaticMemberViaDerivedType
 
-using FlexyTemplates.BarleyBreak.Metagame;
 using FlexyTemplates.BarleyBreak.Metagame.Leaderboards;
 
-namespace FlexyTemplates.BarleyBreak;
+namespace FlexyTemplates.BarleyBreak.Metagame;
 
 public struct	Facade_Game : ICachedContext
 {
 	public	GameContext				Ctx				{ get; set; }
 	public	Component				CallSource		{ get; set; }
 
-	public	Facade_Flow				Flow			=> new( Ctx );
+	public	Facade_Flow				Flow			=> new( Ctx.GetService<BarleyBreak_Metagame>() );
 	public	Facade_UIWindows		UI				=> new( Ctx.GetService<GameStage>() );
 	public	Facade_GameSettings		Settings		=> new( Ctx.GetService<Service_GameSettings>() );
 	public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>();
@@ -22,12 +21,12 @@ public record struct	Facade_GameSettings ( Service_GameSettings Svc )
 	public	SettingsTab_Color		Color		=> Svc.Get<SettingsTab_Color>();
 }
 
-public readonly record struct Facade_Flow( GameContext Ctx )
+public readonly record struct	Facade_Flow	( BarleyBreak_Metagame Meta )
 {
-	public	void	PlayField	( SceneRef map )	=> Ctx.GetService<BarleyBreakFlow>().Play_Field(map).Forget();
+	public	void	PlayField	( SceneRef map )	=> Meta.Play_Field(map).Forget();
 }
 
-public record struct	Facade_UIWindows	( LibCtx LibCtx )
+public readonly record struct	Facade_UIWindows	( LibCtx LibCtx )
 {
 	public Window_GameSettings		.Opener		Settings		=> LibCtx.GetState<Window_GameSettings>();
 	public Window_AppInfo			.Opener		AppInfo			=> LibCtx.GetState<Window_AppInfo>();
