@@ -117,7 +117,6 @@ MonoBehaviour:
   _inputBlocker: {fileID: 5715347257595549983}
   _cellContainer: {fileID: 7779828629872575134}
   _gridSize: 3
-  _animateTime: 0.2
   _win:
     _action:
       rid: 3444707728992763965
@@ -428,7 +427,7 @@ MonoBehaviour:
   m_text: 8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
-  m_sharedMaterial: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+  m_sharedMaterial: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -468,17 +467,15 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
-  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -574,7 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9019608, g: 0.83552927, b: 0.17647061, a: 1}
+  m_Color: {r: 1, g: 0.972549, b: 0.50980395, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -624,8 +621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _topLeft: {r: 1, g: 1, b: 1, a: 1}
-  _topRight: {r: 0.77254903, g: 0.7647059, b: 0.7647059, a: 1}
-  _bottomLeft: {r: 0.18490559, g: 0.18490559, b: 0.18490559, a: 1}
-  _bottomRight: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
+  _topRight: {r: 0.8784314, g: 0.8784314, b: 0.8784314, a: 1}
+  _bottomLeft: {r: 0.77254903, g: 0.7647059, b: 0.7647059, a: 1}
+  _bottomRight: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
   _angle: 0
   _ignoreRatio: 1

@@ -143,7 +143,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1080, y: 1920}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -408,6 +408,14 @@ PrefabInstance:
       propertyPath: _source.MemberName
       value: LoadingProgress01
       objectReference: {fileID: 0}
+    - target: {fileID: 6050231837723647354, guid: 2378ea91d012897469787054ccd23588, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050231837723647354, guid: 2378ea91d012897469787054ccd23588, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8352941
+      objectReference: {fileID: 0}
     - target: {fileID: 6966813234583426620, guid: 2378ea91d012897469787054ccd23588, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0.000030517578
@@ -545,7 +553,7 @@ PrefabInstance:
     - target: {fileID: 5941701631351388054, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+      objectReference: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
     - target: {fileID: 5941701631351388054, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4281193958
@@ -555,7 +563,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5941701631351388054, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      propertyPath: m_ActiveFontFeatures.Array.data[0]
       value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5997068306032154245, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
