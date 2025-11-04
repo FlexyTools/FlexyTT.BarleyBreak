@@ -4,8 +4,11 @@ namespace FlexyTemplates.BarleyBreak.Common.Kit
 {
 	public class Widget_ColoredBorder : UIWidgetEx
 	{
+		[SerializeField]	Color			_tintColor		= Color.white;
+		
 		private		SettingsTab_Color		_colorSettings	= null!;
-		[Bindable]	Color	BorderColor		=> _colorSettings.Primary;
+		
+		[Bindable]	Color	BorderColor		=> _colorSettings.Primary * _tintColor;
 	
 		private		void	OnEnable		( ) => (_colorSettings = Game.Settings.Color).Primary.Changed += RebindColor;
 		private		void	OnDisable		( ) => _colorSettings.Primary.Changed -= RebindColor;
