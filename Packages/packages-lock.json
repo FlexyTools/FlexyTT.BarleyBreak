@@ -273,16 +273,18 @@
       }
     },
     "fun.flexy.assetrefs": {
-      "version": "file:fun.flexy.assetrefs",
+      "version": "https://github.com/FlexyTools/Flexy.AssetRefs.git",
       "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "07c7dd26baf6d30fce84da83b4b4fb7d07f482d1"
     },
     "fun.flexy.core": {
-      "version": "file:fun.flexy.core",
+      "version": "https://github.com/FlexyTools/Flexy.Core.git",
       "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "59ecc925647d629ff1c2dcae103361034a3b688d"
     },
     "fun.flexy.gameflow": {
       "version": "https://github.com/FlexyTools/Flexy.GameFlow-Lite.git",
@@ -301,12 +303,13 @@
       "hash": "f977eb288a688ba421eac75a870f4c394b129ec5"
     },
     "fun.flexy.ui": {
-      "version": "file:fun.flexy.ui",
+      "version": "https://github.com/FlexyTools/Flexy.UI-Lite.git",
       "depth": 0,
-      "source": "embedded",
+      "source": "git",
       "dependencies": {
         "fun.flexy.core": "6.0.0"
-      }
+      },
+      "hash": "38a224c117b99dfac2aad6fcd1c87f174c68ea75"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

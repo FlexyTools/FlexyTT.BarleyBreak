@@ -54,17 +54,7 @@ ExportedObj/
 
 #Flexy.Framework specific ignore
 /_GameSavedData/**
+/Builds/**
 /Assets/Resources/Fun.Flexy/AssetRefs/**
-
-Packages/fun.flexy.gameflow/**
-Packages/fun.flexy.audio/**
-Packages/fun.flexy.core/**
-Packages/fun.flexy.gamesettings/**
-Packages/fun.flexy.ui/**
-Packages/fun.flexy.tween/**
-Packages/fun.flexy.assetrefs/**
-
-Assets/!!Game/Audio/**
-Assets/Packages/LitMotion**
-Assets/Resources/Fun.Flexy/BuildArtifacts/**
-Assets/Resources/Fun.Flexy/BuildArtifacts.meta
+/Assets/Resources/Fun.Flexy/BuildArtifacts/**
+/Assets/Resources/Fun.Flexy/BuildArtifacts.meta
