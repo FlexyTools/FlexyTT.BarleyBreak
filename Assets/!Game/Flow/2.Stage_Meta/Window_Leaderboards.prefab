@@ -257,6 +257,8 @@ MonoBehaviour:
   _hiding:
     _action:
       rid: -2
+  _title:
+    _key: Wnd_Header_LeasdderBoardssd
   references:
     version: 2
     RefIds:
@@ -450,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102972be078141d5a2ba733d19b46a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpectedType: Flexy.Template.BarleyBreak.Metagame.Leaderboards.Window_Leaderboards+ScoreView,
+  _expectedType: Flexy.Template.BarleyBreak.Metagame.Leaderboards.Window_Leaderboards+ScoreView,
     Barley-Break
 --- !u!1 &5676477239155025502
 GameObject:
@@ -530,7 +532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -66}
+  m_AnchoredPosition: {x: 0, y: -66.00012}
   m_SizeDelta: {x: -10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4415399487817056915
@@ -788,7 +790,7 @@ PrefabInstance:
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+      objectReference: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4281193958
@@ -798,7 +800,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      propertyPath: m_ActiveFontFeatures.Array.data[0]
       value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5997068306032154245, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
@@ -939,7 +941,7 @@ PrefabInstance:
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+      objectReference: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4281193958
@@ -949,7 +951,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      propertyPath: m_ActiveFontFeatures.Array.data[0]
       value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5997068306032154245, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
@@ -1065,7 +1067,7 @@ PrefabInstance:
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+      objectReference: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4281193958
@@ -1075,7 +1077,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      propertyPath: m_ActiveFontFeatures.Array.data[0]
       value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5997068306032154245, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
@@ -1191,7 +1193,7 @@ PrefabInstance:
     - target: {fileID: 5941701631351388054, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+      objectReference: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
     - target: {fileID: 5941701631351388054, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4281193958
@@ -1201,7 +1203,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5941701631351388054, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      propertyPath: m_ActiveFontFeatures.Array.data[0]
       value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5997068306032154245, guid: 142b352cfd074a141aa952a0bedb314c, type: 3}
@@ -1241,7 +1243,11 @@ PrefabInstance:
     - target: {fileID: 1415384408975844540, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+      objectReference: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+    - target: {fileID: 1415384408975844540, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279374354
+      objectReference: {fileID: 0}
     - target: {fileID: 1676810426863724115, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_Name
       value: Button_BackLeft
@@ -1456,7 +1462,7 @@ PrefabInstance:
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+      objectReference: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4281193958
@@ -1466,7 +1472,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5941701631351388054, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      propertyPath: m_ActiveFontFeatures.Array.data[0]
       value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5997068306032154245, guid: 79a6b95b17258d64dbe0a71d25da3737, type: 3}
@@ -1759,7 +1765,11 @@ PrefabInstance:
     - target: {fileID: 1415384408975844540, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 8923228475214678261, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+      objectReference: {fileID: 5351978138537110798, guid: dd29343b679cc614abba5e4e4da36528, type: 2}
+    - target: {fileID: 1415384408975844540, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279374354
+      objectReference: {fileID: 0}
     - target: {fileID: 1676810426863724115, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_Name
       value: Button_BackRight

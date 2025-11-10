@@ -285,18 +285,20 @@
       "dependencies": {}
     },
     "fun.flexy.gameflow": {
-      "version": "file:fun.flexy.gameflow",
+      "version": "https://github.com/FlexyTools/Flexy.GameFlow-Lite.git",
       "depth": 0,
-      "source": "embedded",
+      "source": "git",
       "dependencies": {
         "fun.flexy.core": "5.0.0"
-      }
+      },
+      "hash": "6ed5f0449e66a66285fe0b524eb56c9f1d76ade4"
     },
     "fun.flexy.gamesettings": {
-      "version": "file:fun.flexy.gamesettings",
+      "version": "https://github.com/FlexyTools/Flexy.GameSettings.git",
       "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "f977eb288a688ba421eac75a870f4c394b129ec5"
     },
     "fun.flexy.ui": {
       "version": "file:fun.flexy.ui",
