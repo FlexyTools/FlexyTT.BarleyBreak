@@ -16,7 +16,6 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		private Single			_resultScore;
 		private Boolean			_isLeaving;
 		private GameMode?		_gameMode;
-		private Boolean			_winAccepted;
 
 		public	void				Exit				( )		
 		{
@@ -27,6 +26,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 
 		protected override	void	OnShow				( )		
 		{
+			enabled = false;
 			Game.Audio.SwitchToCore();
 		
 			if (AnySubStateOpened) // Case of special boot from state scene
@@ -71,28 +71,22 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			CloseSubStates(true);
 			Game.States.Play.Open();
 			
-			_winAccepted = false;
+			enabled = true;
 			_gameMode.StartPlay();
 		}
 		private			void		Update				( )		
 		{
-			if (_gameMode == null)
+			if (_gameMode == null || !_gameMode.IsWin)
 				return;
-		
-			if (_gameMode.IsWin && !_winAccepted)
-			{
-				_winAccepted = true;
-				enabled = false;
-				FinishGameAsync().Forget();
-				
-				async UniTaskVoid FinishGameAsync ( ) 
-				{
-					await UniTask.Delay( 1000, DelayType.UnscaledDeltaTime );
-
-					GameStage.CloseSubStates(true);
 			
-					Game.States.PlayComplete.Open( _gameMode.Board, _gameMode.Result );
-				}
+			enabled = false;
+			FinishGameAsync().Forget();
+				
+			async UniTaskVoid FinishGameAsync ( ) 
+			{
+				await UniTask.Delay( 1000, DelayType.UnscaledDeltaTime );
+				CloseSubStates(true);
+				Game.States.PlayComplete.Open( _gameMode.Board, _gameMode.Result );
 			}
 		}
 		
