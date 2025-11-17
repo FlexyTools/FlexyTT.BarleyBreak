@@ -67,9 +67,6 @@ namespace FlexyTemplates.BarleyBreak.Common
 	{
 		[SerializeField]	AudioClip	_clip = null!;
 	
-		public override void Do	( ActionCtx ctx )	
-		{
-			ctx.SrcObject.GetService<Service_Audio>().PlaySfx( _clip );
-		}
+		public override void Do	( ActionCtx ctx ) => ctx.SrcObject.GetService<Service_Audio>().PlaySfx(_clip);
 	}
 }

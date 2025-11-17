@@ -15,11 +15,17 @@ MonoBehaviour:
   _autoGrabMode: 1
   _dependencies: []
   _states:
-  - TypeFullName: FlexyTemplates.BarleyBreak.Coregame.BarleyBreak_Coregame
+  - TypeFullName: FlexyTemplates.BarleyBreak.Coregame.Stage_Coregame
     Ref:
       _uid:
         serializedVersion: 2
         Hash: c1055f23b34e09a4496fc2c881bb0920
+      _subId: 0
+  - TypeFullName: FlexyTemplates.BarleyBreak.Coregame.State_Go
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: fb5cffc6f9651a74893827962875c5d1
       _subId: 0
   - TypeFullName: FlexyTemplates.BarleyBreak.Coregame.State_Pause
     Ref:

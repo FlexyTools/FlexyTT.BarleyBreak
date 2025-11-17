@@ -15,7 +15,7 @@ MonoBehaviour:
   _autoGrabMode: 1
   _dependencies: []
   _states:
-  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.BarleyBreak_Metagame
+  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Stage_Metagame
     Ref:
       _uid:
         serializedVersion: 2

@@ -7,6 +7,6 @@
 
 		[Callable] void		Resume			( )		=> Close();
 		[Callable] void		OpenSettings	( )		=> Game.States.GameSettings.Open();
-		[Callable] void		LeaveField		( )		=> Game.Flow.LeaveField();
+		[Callable] void		LeaveField		( )		=> Game.Flow.ExitCoregame();
 	}
 }

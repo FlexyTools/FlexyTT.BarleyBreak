@@ -1,17 +1,19 @@
+using FlexyTemplates.BarleyBreak.Coregame.Kit;
+
 namespace FlexyTemplates.BarleyBreak.Coregame
 {
 	// Visually this state is Coregame HUD
     public class State_Play : StateEx
     {
-		[Bindable]	String	RunMinutes		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"mm" );
-		[Bindable]	String	RunSeconds		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"ss" );
-		[Bindable]	String	RunMilliseconds	=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"ff" );
+		[Bindable]	String	RunMinutes		=> TimeSpan.FromSeconds( _gameMode.RunTime ).ToString( @"mm" );
+		[Bindable]	String	RunSeconds		=> TimeSpan.FromSeconds( _gameMode.RunTime ).ToString( @"ss" );
+		[Bindable]	String	RunMilliseconds	=> TimeSpan.FromSeconds( _gameMode.RunTime ).ToString( @"ff" );
 
-		private Boolean _finishingStarted;
+		private GameMode _gameMode = null!;
 
 		protected override void		OnShow		( )		
 		{
-			_finishingStarted = false;
+			_gameMode = gameObject.GetService<GameMode>();
 		}
 		protected override Boolean	TryGoBack	( )		
 		{
@@ -21,13 +23,6 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 
 		private		void	Update				( )						
 		{
-			if (Game.Mode.IsWin && !_finishingStarted)
-			{
-				_finishingStarted = true;
-				FinishGameAsync().Forget();
-				enabled = false;
-			}	
-			
 			RebindAll();
 		}
 		private		void	OnApplicationPause	( Boolean pauseStatus )	
@@ -40,14 +35,5 @@ namespace FlexyTemplates.BarleyBreak.Coregame
         {
 			Game.States.Pause.Open();
         }
-		
-		private async	UniTaskVoid		FinishGameAsync	( )	
-		{
-			await UniTask.Delay( 1000, DelayType.UnscaledDeltaTime );
-
-			GameStage.CloseSubStates(true);
-			
-			Game.States.FieldComplete.Open( Game.Mode.Board, Game.Mode.Result );
-		}
     }
 }

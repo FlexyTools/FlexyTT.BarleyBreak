@@ -1,7 +1,7 @@
 namespace FlexyTemplates.BarleyBreak.Metagame
 {
 	[ServiceTypes(typeof(GameStage))]
-	public class BarleyBreak_Metagame : GameStageEx
+	public class Stage_Metagame : GameStageEx
 	{
 		private const	String			CoreGameStage = "c1055f23b34e09a4496fc2c881bb0920";
 
