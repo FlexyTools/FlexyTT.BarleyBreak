@@ -9,7 +9,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 
         protected override	Boolean	TryGoBack	( )		=> false;
 
-        [Callable]			void	Continue	( )			
+        [Callable]			void	Continue	( )		
 		{
 			Close();			
 		}

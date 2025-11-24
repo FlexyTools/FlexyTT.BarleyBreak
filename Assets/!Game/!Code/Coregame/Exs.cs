@@ -10,7 +10,7 @@ public abstract class	StateEx: State
 {
 	private		Facade_Coregame	_game; 
 	public	ref Facade_Coregame	Game		=> ref _game.GetCached( this );
-	public		Stage_Coregame	GameStage	=> (Stage_Coregame)Node.GameStageNode.State;
+	public new	Stage_Coregame	GameStage	=> (Stage_Coregame)Node.GameStageNode.State;
 }
 
 public abstract class	MonoBehEx: MonoBehaviour				

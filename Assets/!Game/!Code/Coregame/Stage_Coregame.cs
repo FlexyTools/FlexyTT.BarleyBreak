@@ -121,13 +121,10 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		private async	UniTask		UnloadMap			( )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
-		
 			GameStage.MoveToServiceScene();
+			
 			await UniTask.NextFrame();
-			
-			_loadTask = SceneRef.LoadUrpDummySceneAsync( gameObject, LoadSceneMode.Single );
-			
-			await _loadTask;
+			await SceneRef.LoadUrpDummySceneAsync( gameObject, LoadSceneMode.Single );
 			await UniTask.Delay( 350, ignoreTimeScale:true );
 			
 			CloseAndDestroy();
