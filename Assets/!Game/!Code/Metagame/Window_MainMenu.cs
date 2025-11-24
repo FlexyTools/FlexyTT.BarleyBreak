@@ -2,6 +2,8 @@ namespace FlexyTemplates.BarleyBreak.Metagame
 {
 	public class Window_MainMenu : UIWindowEx
 	{
+		protected override	Boolean	TryGoBack	( )		=> false;
+
 		[Callable]	void	OpenPlayFields		( )		
 		{
 			Game.UI.PlayFields.Open( );

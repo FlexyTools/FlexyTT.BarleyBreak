@@ -17,7 +17,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		}
 		protected override Boolean	TryGoBack	( )		
 		{
-			Pause( );
+			Pause();
 			return false;
 		}
 
