@@ -277,7 +277,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "07c7dd26baf6d30fce84da83b4b4fb7d07f482d1"
+      "hash": "689c2f54230ac6341b503956d2c06c5e959adf0d"
     },
     "fun.flexy.core": {
       "version": "https://github.com/FlexyTools/Flexy.Core.git",
