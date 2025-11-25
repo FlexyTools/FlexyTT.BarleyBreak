@@ -22,7 +22,7 @@
 			_loaderOverlay.gameObject.SetActive(true);
 		
 			await UniTask.Delay(1_000, ignoreTimeScale:true);
-			await Context.WaitInitializing();
+			await Context.WaitInitialization();
 
 			_loaderOverlay.gameObject.SetActive(false);
 

@@ -9,9 +9,8 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		[SerializeField]	GameObject _loaderOverlay = null!;
 	
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
-        [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
+        [Bindable] Single	LoadingProgress01	{ get; set; } 
         
-		private LoadSceneTask	_loadTask;
 		private EField			_resultBoard;
 		private Single			_resultScore;
 		private Boolean			_isLeaving;
@@ -37,10 +36,6 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			
 			LoadMap().Forget();
 		}
-		protected override	void	OnFirstChildShow	( )		
-		{
-			_loadTask = default;
-		}
 		protected override	void	OnLastChildHide		( )		
 		{
 			_resultBoard = default;
@@ -57,7 +52,6 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		protected override	void	OnHide				( )		
 		{
 			Game.Audio.SwitchToMeta();
-			_loadTask = default;
 		}
 		
 		public			void		StartPlay			( )		
@@ -99,13 +93,26 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			if (OpenParams == null)
 			{
 				//We started from coregame scene so just simulate short loading and open root state
-				loadedScene		= SceneManager.GetActiveScene();
+				await UniTask.Delay( 100, ignoreTimeScale:true );
+				loadedScene			= SceneManager.GetActiveScene();
+				LoadingProgress01	= 1.0f;
 			}
 			else
 			{
-				var sceneRef	= (SceneRef)OpenParams;
-				_loadTask		= sceneRef.LoadSceneAsync( gameObject, LoadSceneMode.Single );
-				loadedScene		= await _loadTask;
+				LoadingProgress01	= 0.0f;
+				var sceneRef		= (SceneRef)OpenParams;
+				var loadTask		= sceneRef.LoadSceneAsync( gameObject, LoadSceneMode.Single );
+				
+				while (!loadTask.IsDone)
+				{
+					LoadingProgress01	= loadTask.Progress * 0.9f;
+					await UniTask.NextFrame();
+				}
+				
+				loadedScene	= loadTask.Scene;
+				await GameContext.GetCtx(loadedScene).WaitInitialization();
+				
+				LoadingProgress01	= 1.0f;
 			}
 			
 			await UniTask.Delay( 350, ignoreTimeScale:true );
