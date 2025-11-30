@@ -151,7 +151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _services: {fileID: 7444179848394254232}
-  _ignoreServiceInitFailures: 0
   LinkTo: 0
 --- !u!1 &9096916536750309878
 GameObject:
@@ -195,7 +194,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9096916536750309878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Script: {fileID: 11500000, guid: a749ef1b96ea1d347ab96e7bf903848f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}

@@ -33,3 +33,5 @@ MonoBehaviour:
         _outputDirectory: Builds
         _buildName: Flexy-Template Barley-Break
         _disablePreprocessPipelines: 1
+        _nameAddTime: 1
+        _nameAddHash: 1
