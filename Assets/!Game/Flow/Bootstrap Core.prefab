@@ -45,11 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flowService: {fileID: 591606334878198627, guid: f0ddde7af7c741541b972b4f005cea5f, type: 3}
-  _bootstrapContext:
-  - _uid:
+  _startGameStage:
+    _uid:
       serializedVersion: 2
       Hash: 86be155ef18fabb448f0ce6aa6544783
     _subId: 0
+  _additionalStates:
   - _uid:
       serializedVersion: 2
       Hash: 069f665c8c7ec0543b84a34b2c307884
@@ -58,7 +59,7 @@ MonoBehaviour:
       serializedVersion: 2
       Hash: c1055f23b34e09a4496fc2c881bb0920
     _subId: 0
-  _bootstrapTarget:
+  _targetState:
     _uid:
       serializedVersion: 2
       Hash: 00000000000000000000000000000000
