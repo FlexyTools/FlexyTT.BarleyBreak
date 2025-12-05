@@ -28,10 +28,19 @@ MonoBehaviour:
       rid: 3009908962306031618
   - Enabled: 1
     Task:
+      rid: 781959606881222656
+  - Enabled: 1
+    Task:
       rid: 3009908962306031616
   references:
     version: 2
     RefIds:
+    - rid: 781959606881222656
+      type: {class: AddRefsFromDirectory, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
+      data:
+        DirectoryOptional: {fileID: 102900000, guid: 2eab5a5de1777c641997054f42cb5bf5, type: 3}
+        TypeNamesOptional: 
+        GoToSubdirectories: 0
     - rid: 3009908962306031616
       type: {class: ResourcesPopulateRefs, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
       data: 
@@ -41,9 +50,6 @@ MonoBehaviour:
         _refs:
         - {fileID: 102900000, guid: f04b33b7906a88b408e58e2c73f6840b, type: 3}
         - {fileID: 11400000, guid: 11f95cb70947da346bb92451118ea417, type: 2}
-        - {fileID: 102900000, guid: 1afdd18b2b9c65e4b866284337ba9044, type: 3}
-        - {fileID: 102900000, guid: 6bfc812ba38db7b47bc55722377eb3a5, type: 3}
-        - {fileID: 102900000, guid: 3fb4186ae0d813b44b8097bf7a82b451, type: 3}
     - rid: 3009909224690941952
       type: {class: RunOnBuildPreprocess, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
       data: 
