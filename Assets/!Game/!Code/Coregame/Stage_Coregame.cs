@@ -34,10 +34,16 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 				return;
 			}
 			
-			LoadMap().Forget();
+			LoadMap( OpenParams as SceneRef? ).Forget();
 		}
 		protected override	void	OnLastChildHide		( )		
 		{
+			if (OpenParams is (Boolean replay, SceneRef map))
+			{
+				LoadMap( map ).Forget();
+				return;
+			}
+		
 			_resultBoard = default;
 			_resultScore = default;
 		
@@ -84,13 +90,13 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			}
 		}
 		
-		private async	UniTask		LoadMap				( )		
+		private async	UniTask		LoadMap				( SceneRef? mapToLoad )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		
 			Scene loadedScene;
 			
-			if (OpenParams == null)
+			if (mapToLoad == null)
 			{
 				//We started from coregame scene so just simulate short loading and open root state
 				await UniTask.Delay( 100, ignoreTimeScale:true );
@@ -100,7 +106,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			else
 			{
 				LoadingProgress01	= 0.0f;
-				var sceneRef		= (SceneRef)OpenParams;
+				var sceneRef		= mapToLoad.Value;
 				var loadTask		= sceneRef.LoadSceneAsync( gameObject, LoadSceneMode.Single );
 				
 				while (!loadTask.IsDone)
