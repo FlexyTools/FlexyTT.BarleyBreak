@@ -312,8 +312,16 @@ PrefabInstance:
       value: Bootstrap
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
+      propertyPath: _additionalStates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _bootstrapContext.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
+      propertyPath: _additionalStates.Array.data[0]._uid
+      value: 00000000000000000000000000000000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

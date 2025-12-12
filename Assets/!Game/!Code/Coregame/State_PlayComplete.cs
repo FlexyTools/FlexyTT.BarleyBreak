@@ -16,7 +16,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
         
 		public new record struct Opener( OpenCtx Ctx ) : IOpener
 		{
-			public	StateHandle		Open	( EField field, Single seconds ) => Ctx.Open( (field, seconds) );
+			public	FlowNode	Open	( EField field, Single seconds ) => Ctx.Open( (field, seconds) );
 		}
 		
 		[StateTest]		Object	Score_98	( ) => (EField.Board3x3, 98.1f);

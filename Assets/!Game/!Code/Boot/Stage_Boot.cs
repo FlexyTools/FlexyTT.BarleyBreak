@@ -33,7 +33,7 @@
 			{
 				booti = 1 + Array.IndexOf(_bootStates, Node.FirstChild?.StateRef);
 
-				var h = Node.FirstChild!.Handle;
+				var h = Node.FirstChild!;
 				while (h.IsOpened)
 					await UniTask.Yield(PlayerLoopTiming.LastUpdate);
 			}		
