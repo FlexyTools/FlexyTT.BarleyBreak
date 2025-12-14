@@ -19,12 +19,6 @@ MonoBehaviour:
       rid: 3009909224690941952
   - Enabled: 1
     Task:
-      rid: 3444707884455166015
-  - Enabled: 1
-    Task:
-      rid: 3444707932763848767
-  - Enabled: 1
-    Task:
       rid: 3009908962306031618
   - Enabled: 1
     Task:
@@ -52,17 +46,4 @@ MonoBehaviour:
         - {fileID: 11400000, guid: 11f95cb70947da346bb92451118ea417, type: 2}
     - rid: 3009909224690941952
       type: {class: RunOnBuildPreprocess, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
-      data: 
-    - rid: 3444707884455166015
-      type: {class: SetUniversalVersion, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
-      data:
-        _versionTag: Template
-        _n: 2025
-        _timeSource: 0
-        _major: 1
-        _minor: 2
-        _buildTime: 1
-        _setBuildNumber: 0
-    - rid: 3444707932763848767
-      type: {class: ReadAppRevisionAndBranchFromGit, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
       data: 
