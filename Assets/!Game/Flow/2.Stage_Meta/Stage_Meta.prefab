@@ -66,6 +66,11 @@ MonoBehaviour:
       Hash: e35616b6349e6884481db3654ef57ef1
     _subId: 0
   _statesContainer: {fileID: 771841701890888736}
+  _coreGameStage:
+    _uid:
+      serializedVersion: 2
+      Hash: c1055f23b34e09a4496fc2c881bb0920
+    _subId: 0
   references:
     version: 2
     RefIds:
@@ -84,7 +89,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _services: {fileID: 8272060130021228884}
-  _ignoreServiceInitFailures: 0
   LinkTo: 0
 --- !u!223 &1977180969585706276
 Canvas:

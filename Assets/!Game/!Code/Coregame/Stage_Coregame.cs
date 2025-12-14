@@ -16,13 +16,13 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 		private Boolean			_isLeaving;
 		private GameMode?		_gameMode;
 
+		public	(EField,Single)		GetResult			( FlowNode node ) => (_resultBoard,_resultScore);
 		public	void				Exit				( )		
 		{
 			_isLeaving = true;
 			CloseSubStates(true);
 		}
-		public	(EField,Single)		GetResult			( )		=> (_resultBoard,_resultScore);
-
+		
 		protected override	void	OnShow				( )		
 		{
 			enabled = false;
@@ -126,12 +126,12 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			
 			_gameMode = loadedScene.GetService<GameMode>();
 			
-			GameStage.OpenMainState();
+			GameStage.OpenMainSubState();
 			Game.RecacheCtx();
 			
 			_loaderOverlay.gameObject.SetActive(false);
 		}
-		private async	UniTask		UnloadMap			( )		
+		private async	UniTask		UnloadMap			( )							
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 			GameStage.MoveToServiceScene();

@@ -31,7 +31,7 @@
 			// Check if we have test boot state already opened
 			if (AnySubStateOpened)
 			{
-				booti = 1 + Array.IndexOf(_bootStates, Node.FirstChild?.StateRef);
+				booti = 1 + Array.IndexOf(_bootStates, Node.FirstChild?.State.PrefabRef);
 
 				var h = Node.FirstChild!;
 				while (h.IsOpened)
