@@ -35,7 +35,7 @@ MonoBehaviour:
     - rid: 781959813837357056
       type: {class: RunPipeline, ns: Flexy.AssetRefs.Pipelines, asm: Flexy.AssetRefs}
       data:
-        _pipeline: {fileID: 11400000, guid: 03d308ae4c6c8b9438792b462ff15eb0, type: 2}
+        _pipeline: {fileID: 11400000, guid: 75233584c9149ef47a2a52a374699eb9, type: 2}
     - rid: 3444707932763848768
       type: {class: RunPipeline, ns: Flexy.AssetRefs.Pipelines, asm: Flexy.AssetRefs}
       data:
