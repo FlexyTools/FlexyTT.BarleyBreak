@@ -16,7 +16,7 @@ namespace FlexyTemplates.BarleyBreak.Boot
 				RebindProperty( "AgeString" ); 
 			} 
 		}
-		[Bindable]	String		AgeString	=> Age.ToString(CultureInfo.InvariantCulture);
+		[Bindable]	String		AgeString	=> Age.ToString(CultureInfo.InvariantCulture) + ((Int32)Age == 55 ? "+" : "" );
 		[Callable]	void		Accept		( )		
 		{
 			_ageSetting.Set(_age);
