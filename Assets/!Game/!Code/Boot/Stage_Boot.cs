@@ -8,10 +8,9 @@
 		[SerializeField]	AssetRef<GameStage>	_metaStageRef;
 	
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
-        [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
+        [Bindable] Single	LoadingProgress01	=> _loadTask?.Progress ?? 1; 
         
-        
-		private LoadSceneTask	_loadTask;
+		private LoadSceneTask?	_loadTask;
 
 		protected override	void	OnShow				( )		
 		{

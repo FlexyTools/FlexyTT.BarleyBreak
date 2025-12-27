@@ -16,22 +16,16 @@ MonoBehaviour:
   EnabledTasks:
   - Enabled: 1
     Task:
-      rid: 781959813837357056
-  - Enabled: 1
-    Task:
       rid: 3444707932763848768
   - Enabled: 1
     Task:
-      rid: 781959606881222659
+      rid: 781959813837357056
   - Enabled: 1
     Task:
       rid: 3444707932763848769
   references:
     version: 2
     RefIds:
-    - rid: 781959606881222659
-      type: {class: SetMapsToBuildSettings, ns: FlexyTemplates.BarleyBreak.Build, asm: BarleyBreak.Build}
-      data: 
     - rid: 781959813837357056
       type: {class: RunPipeline, ns: Flexy.AssetRefs.Pipelines, asm: Flexy.AssetRefs}
       data:
