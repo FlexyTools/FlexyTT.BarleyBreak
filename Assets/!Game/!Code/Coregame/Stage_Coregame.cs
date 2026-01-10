@@ -28,7 +28,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			enabled = false;
 			Game.Audio.SwitchToCore();
 		
-			if (AnySubStateOpened) // Case of special boot from state scene
+			if (OpenParams == null && AnySubStateOpened) // Case of special boot from state scene
 			{
 				_loaderOverlay.SetActive(false);
 				return;
@@ -126,7 +126,9 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			
 			_gameMode = loadedScene.GetService<GameMode>();
 			
-			GameStage.OpenMainSubState();
+			if (!AnySubStateOpened)
+				GameStage.OpenMainSubState();
+				
 			Game.RecacheCtx();
 			
 			_loaderOverlay.gameObject.SetActive(false);
@@ -137,7 +139,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			GameStage.MoveToServiceScene();
 			
 			await UniTask.NextFrame();
-			await SceneRef.LoadUrpDummySceneAsync( gameObject, LoadSceneMode.Single );
+			await SceneRef.SceneLoader.LoadDummySceneAsync( gameObject, LoadSceneMode.Single );
 			await UniTask.Delay( 350, ignoreTimeScale:true );
 			
 			CloseAndDestroy();

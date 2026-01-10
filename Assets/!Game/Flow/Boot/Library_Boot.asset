@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98dc713b27c7413490371c5ffc0749bc, type: 3}
-  m_Name: '!Library_Boot'
+  m_Name: Library_Boot
   m_EditorClassIdentifier: 
   _autoGrabMode: 1
   _dependencies: []
@@ -26,6 +26,12 @@ MonoBehaviour:
       _uid:
         serializedVersion: 2
         Hash: 09d074ca0c8e0fb4ba78b96282866e4d
+      _subId: 0
+  - TypeFullName: FlexyTemplates.BarleyBreak.Boot.Window_EULA
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: af54cf804fb51e249a39348b4c1e99e0
       _subId: 0
   - TypeFullName: FlexyTemplates.BarleyBreak.Boot.Window_EULA
     Ref:

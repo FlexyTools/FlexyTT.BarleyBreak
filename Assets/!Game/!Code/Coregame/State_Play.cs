@@ -17,7 +17,7 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			{
 				// We started from test scene because runtime flow dont have Params at all for this State
 				// So close to GameStage with replay request to load requested map
-				GameStage.CloseSubStates(true, (true, sceneRef));
+				GameStage.CloseSubStates(true, false, (true, sceneRef));
 				return;
 			}
 		

@@ -42,7 +42,7 @@
 			
 			async UniTask ShowState( AssetRef<State> state )
 			{
-				var h = Graph.Open(state, this);
+				var h = Graph.Open(state, Node);
 				
 				if (h.State is IBootState { IsDone: true } )
 				{
