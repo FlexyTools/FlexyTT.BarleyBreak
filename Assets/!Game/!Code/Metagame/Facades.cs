@@ -1,15 +1,16 @@
 ﻿// ReSharper disable AccessToStaticMemberViaDerivedType
 
-using FlexyTemplates.BarleyBreak.Metagame.Leaderboards;
+using FlexyTT.BarleyBreak.Metagame.Leaderboards;
+using FlexyTT.BarleyBreak.Settings;
 
-namespace FlexyTemplates.BarleyBreak.Metagame;
+namespace FlexyTT.BarleyBreak.Metagame;
 
 public struct	Facade_Game : ICachedContext
 {
 	public	GameContext				Ctx				{ get; set; }
 	public	Component				CallSource		{ get; set; }
 
-	public	Facade_Flow				Flow			=> new( Ctx.GetService<BarleyBreak_Metagame>() );
+	public	Facade_Flow				Flow			=> new( Ctx.GetService<Stage_Metagame>() );
 	public	Facade_UIWindows		UI				=> new( Ctx.GetService<GameStage>() );
 	public	Facade_GameSettings		Settings		=> new( Ctx.GetService<Service_GameSettings>() );
 	public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>();
@@ -21,7 +22,7 @@ public record struct	Facade_GameSettings ( Service_GameSettings Svc )
 	public	SettingsTab_Color		Color		=> Svc.Get<SettingsTab_Color>();
 }
 
-public readonly record struct	Facade_Flow	( BarleyBreak_Metagame Meta )
+public readonly record struct	Facade_Flow	( Stage_Metagame Meta )
 {
 	public	void	PlayField	( SceneRef map )	=> Meta.Play_Field(map).Forget();
 }

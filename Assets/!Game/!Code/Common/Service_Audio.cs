@@ -1,4 +1,6 @@
-namespace FlexyTemplates.BarleyBreak.Common
+using FlexyTT.BarleyBreak.Settings;
+
+namespace FlexyTT.BarleyBreak.Common
 {
 	public class Service_Audio : MonoBehaviour, IService
 	{
@@ -67,9 +69,6 @@ namespace FlexyTemplates.BarleyBreak.Common
 	{
 		[SerializeField]	AudioClip	_clip = null!;
 	
-		public override void Do	( ActionCtx ctx )	
-		{
-			ctx.SrcObject.GetService<Service_Audio>().PlaySfx( _clip );
-		}
+		public override void Do	( ActionCtx ctx ) => ctx.SrcObject.GetService<Service_Audio>().PlaySfx(_clip);
 	}
 }

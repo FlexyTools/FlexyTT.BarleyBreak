@@ -16,22 +16,28 @@ MonoBehaviour:
   EnabledTasks:
   - Enabled: 1
     Task:
-      rid: 3009909224690941952
-  - Enabled: 1
-    Task:
-      rid: 3444707884455166015
-  - Enabled: 1
-    Task:
-      rid: 3444707932763848767
-  - Enabled: 1
-    Task:
       rid: 3009908962306031618
+  - Enabled: 1
+    Task:
+      rid: 781959606881222656
+  - Enabled: 1
+    Task:
+      rid: 781960106801627137
   - Enabled: 1
     Task:
       rid: 3009908962306031616
   references:
     version: 2
     RefIds:
+    - rid: 781959606881222656
+      type: {class: AddRefsFromDirectory, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
+      data:
+        DirectoryOptional: {fileID: 102900000, guid: 2eab5a5de1777c641997054f42cb5bf5, type: 3}
+        TypeNamesOptional: Scene
+        GoToSubdirectories: 0
+    - rid: 781960106801627137
+      type: {class: ExtractSceneListFromRefsList, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
+      data: 
     - rid: 3009908962306031616
       type: {class: ResourcesPopulateRefs, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
       data: 
@@ -39,23 +45,4 @@ MonoBehaviour:
       type: {class: AddRefsDirect, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
       data:
         _refs:
-        - {fileID: 102900000, guid: f04b33b7906a88b408e58e2c73f6840b, type: 3}
         - {fileID: 11400000, guid: 11f95cb70947da346bb92451118ea417, type: 2}
-        - {fileID: 102900000, guid: 1afdd18b2b9c65e4b866284337ba9044, type: 3}
-        - {fileID: 102900000, guid: 6bfc812ba38db7b47bc55722377eb3a5, type: 3}
-        - {fileID: 102900000, guid: 3fb4186ae0d813b44b8097bf7a82b451, type: 3}
-    - rid: 3009909224690941952
-      type: {class: RunOnBuildPreprocess, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
-      data: 
-    - rid: 3444707884455166015
-      type: {class: SetUniversalVersion, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
-      data:
-        _versionTag: Template
-        _n: 2025
-        _timeSource: 0
-        _major: 1
-        _minor: 2
-        _buildTime: 1
-    - rid: 3444707932763848767
-      type: {class: ReadAppRevisionAndBranchFromGit, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
-      data: 

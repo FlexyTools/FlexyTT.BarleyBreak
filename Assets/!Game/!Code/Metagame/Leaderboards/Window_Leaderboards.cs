@@ -1,6 +1,7 @@
 using System.Linq;
+using FlexyTT.BarleyBreak.Common;
 
-namespace FlexyTemplates.BarleyBreak.Metagame.Leaderboards
+namespace FlexyTT.BarleyBreak.Metagame.Leaderboards
 {
 	public class Window_Leaderboards : UIWindowEx
 	{
@@ -23,8 +24,8 @@ namespace FlexyTemplates.BarleyBreak.Metagame.Leaderboards
 		
 		public new record struct Opener( OpenCtx Ctx ) : IOpener
 		{
-			public	StateHandle		Open	( )					=> Ctx.Open();
-			public	StateHandle		Open	( EField board )	=> Ctx.Open(board);
+			public	FlowNode	Open	( )					=> Ctx.Open();
+			public	FlowNode	Open	( EField board )	=> Ctx.Open(board);
 		}
 	}
 }

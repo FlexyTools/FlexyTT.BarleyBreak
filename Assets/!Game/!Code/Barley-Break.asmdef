@@ -1,0 +1,26 @@
+{
+    "name": "Barley-Break",
+    "rootNamespace": "FlexyTT.BarleyBreak",
+    "references": [
+        "UniTask",
+        "UniTaskEmbed",
+        "Flexy.AssetRefs",
+        "Flexy.Core",
+        "Flexy.GameSettings",
+        "Flexy.GameFlow",
+        "Flexy.UI",
+        "Unity.Cinemachine",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

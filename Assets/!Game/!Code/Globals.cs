@@ -19,8 +19,8 @@ global using UnityEngine.Audio;
 global using UnityEngine.InputSystem;
 global using UnityEngine.Serialization;
 
-global using FlexyTemplates.BarleyBreak.Common;
-global using FlexyTemplates.BarleyBreak.Settings;
+global using FlexyTT.BarleyBreak.Common;
+global using FlexyTT.BarleyBreak.Settings;
 
 global using Cysharp.Threading.Tasks;
 

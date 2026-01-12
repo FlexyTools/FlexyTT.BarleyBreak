@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ab316f2041483ab2054ce15b8176de, type: 3}
+  m_Name: SetVersionInfo
+  m_EditorClassIdentifier: 
+  DisablePipeline: 0
+  EnabledTasks:
+  - Enabled: 1
+    Task:
+      rid: 3444707884455166015
+  - Enabled: 1
+    Task:
+      rid: 3444707932763848767
+  references:
+    version: 2
+    RefIds:
+    - rid: 3444707884455166015
+      type: {class: SetUniversalVersion, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
+      data:
+        _versionTag: Template
+        _n: 2025
+        _timeSource: 0
+        _major: 1
+        _minor: 2
+        _buildTime: 1
+        _setBuildNumber: 1
+    - rid: 3444707932763848767
+      type: {class: ReadAppRevisionAndBranchFromGit, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
+      data: 

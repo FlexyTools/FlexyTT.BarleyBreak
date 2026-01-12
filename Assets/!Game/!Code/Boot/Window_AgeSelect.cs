@@ -1,4 +1,4 @@
-namespace FlexyTemplates.BarleyBreak.Boot
+namespace FlexyTT.BarleyBreak.Boot
 {
 	public class Window_AgeSelect : UIWindowEx, IBootState
 	{
@@ -16,18 +16,17 @@ namespace FlexyTemplates.BarleyBreak.Boot
 				RebindProperty( "AgeString" ); 
 			} 
 		}
-		[Bindable]	String		AgeString	=> Age.ToString(CultureInfo.InvariantCulture);
+		[Bindable]	String		AgeString	=> Age.ToString(CultureInfo.InvariantCulture) + ((Int32)Age == 55 ? "+" : "" );
 		[Callable]	void		Accept		( )		
 		{
 			_ageSetting.Set(_age);
 			Close();
 		}
 	
-		protected override void	OnShow		( )		
+		protected override UniTask	OnShow	( )		
 		{
 			_ageSetting.Read();
-	    
-			base.OnShow();
+			return default;
 		}
 	}
 }

@@ -1,33 +1,37 @@
-namespace FlexyTemplates.BarleyBreak.Coregame
+using FlexyTT.BarleyBreak.Coregame.Kit;
+
+namespace FlexyTT.BarleyBreak.Coregame
 {
 	// Visually this state is Coregame HUD
     public class State_Play : StateEx
     {
-		[Bindable]	String	RunMinutes		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"mm" );
-		[Bindable]	String	RunSeconds		=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"ss" );
-		[Bindable]	String	RunMilliseconds	=> TimeSpan.FromSeconds( Game.Mode.RunTime ).ToString( @"ff" );
+		[Bindable]	String	RunMinutes		=> TimeSpan.FromSeconds( _gameMode.RunTime ).ToString( @"mm" );
+		[Bindable]	String	RunSeconds		=> TimeSpan.FromSeconds( _gameMode.RunTime ).ToString( @"ss" );
+		[Bindable]	String	RunMilliseconds	=> TimeSpan.FromSeconds( _gameMode.RunTime ).ToString( @"ff" );
 
-		private Boolean _finishingStarted;
+		private GameMode _gameMode = null!;
 
-		protected override void		OnShow		( )		
+		protected override UniTask	OnShow		( )		
 		{
-			_finishingStarted = false;
+			if (OpenParams is SceneRef sceneRef)
+			{
+				// We started from test scene because runtime flow dont have Params at all for this State
+				// So close to GameStage with replay request to load requested map
+				GameStage.CloseSubStates(true, false, (true, sceneRef));
+				return default;
+			}
+		
+			_gameMode = gameObject.GetService<GameMode>();
+			return default;
 		}
 		protected override Boolean	TryGoBack	( )		
 		{
-			Pause( );
+			Pause();
 			return false;
 		}
 
 		private		void	Update				( )						
 		{
-			if (Game.Mode.IsWin && !_finishingStarted)
-			{
-				_finishingStarted = true;
-				FinishGameAsync().Forget();
-				enabled = false;
-			}	
-			
 			RebindAll();
 		}
 		private		void	OnApplicationPause	( Boolean pauseStatus )	
@@ -40,14 +44,9 @@ namespace FlexyTemplates.BarleyBreak.Coregame
         {
 			Game.States.Pause.Open();
         }
-		
-		private async	UniTaskVoid		FinishGameAsync	( )	
-		{
-			await UniTask.Delay( 1000, DelayType.UnscaledDeltaTime );
-
-			GameStage.CloseSubStates(true);
-			
-			Game.States.FieldComplete.Open( Game.Mode.Board, Game.Mode.Result );
-		}
+        
+        [StateTest]	Object	Play_3x3 	( ) => new SceneRef("1afdd18b2b9c65e4b866284337ba9044");
+        [StateTest]	Object	Play_4x4 	( ) => new SceneRef("6bfc812ba38db7b47bc55722377eb3a5");
+        [StateTest]	Object	Play_5x5 	( ) => new SceneRef("3fb4186ae0d813b44b8097bf7a82b451");
     }
 }

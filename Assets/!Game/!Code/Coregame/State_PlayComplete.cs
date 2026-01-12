@@ -1,4 +1,4 @@
-namespace FlexyTemplates.BarleyBreak.Coregame
+namespace FlexyTT.BarleyBreak.Coregame
 {
 	public class State_PlayComplete : StateEx
     {
@@ -9,18 +9,25 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 
         protected override	Boolean	TryGoBack	( )		=> false;
 
-        [Callable]			void	Continue	( )			
+        protected override	UniTask	OnShow		( )		
+        {
+	        GameStage.CloseSubStates(true, false);
+	        
+	        return base.OnShow();
+        }
+
+        [Callable]			void	Continue	( )		
 		{
-			Close();			
+			GameStage.Close();			
 		}
         
 		public new record struct Opener( OpenCtx Ctx ) : IOpener
 		{
-			public	StateHandle		Open	( EField field, Single seconds ) => Ctx.Open( (field, seconds) );
+			public	FlowNode	Open	( EField field, Single seconds ) => Ctx.Open( (field, seconds) );
 		}
 		
-		[StateTest]		Object	Scoew_98	( ) => (EField.Board3x3, 98.1f);
-		[StateTest]		Object	Scoew_23	( ) => (EField.Board3x3, 23.5f);
-		[StateTest]		Object	Scoew_052	( ) => (EField.Board3x3, 0.52f); 
+		[StateTest]		Object	Score_98	( ) => (EField.Board3x3, 98.1f);
+		[StateTest]		Object	Score_23	( ) => (EField.Board3x3, 23.5f);
+		[StateTest]		Object	Score_052	( ) => (EField.Board3x3, 0.52f); 
     }
 }

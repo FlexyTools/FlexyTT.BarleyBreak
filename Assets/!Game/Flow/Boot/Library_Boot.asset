@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98dc713b27c7413490371c5ffc0749bc, type: 3}
+  m_Name: Library_Boot
+  m_EditorClassIdentifier: 
+  _autoGrabMode: 1
+  _dependencies: []
+  _states:
+  - TypeFullName: FlexyTT.BarleyBreak.Boot.Stage_Boot, Barley-Break
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: 86be155ef18fabb448f0ce6aa6544783
+      _subId: 0
+  - TypeFullName: FlexyTT.BarleyBreak.Boot.Window_AgeSelect, Barley-Break
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: 09d074ca0c8e0fb4ba78b96282866e4d
+      _subId: 0
+  - TypeFullName: FlexyTT.BarleyBreak.Boot.Window_EULA, Barley-Break
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: ca45dc890c3a22a45ae3c9c105f42d50
+      _subId: 0

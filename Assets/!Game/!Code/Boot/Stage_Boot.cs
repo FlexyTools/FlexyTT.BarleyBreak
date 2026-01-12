@@ -1,4 +1,4 @@
-﻿namespace FlexyTemplates.BarleyBreak.Boot
+﻿namespace FlexyTT.BarleyBreak.Boot
 {
 	[ServiceTypes(typeof(GameStage))]
 	public class Stage_Boot : GameStageEx
@@ -8,21 +8,21 @@
 		[SerializeField]	AssetRef<GameStage>	_metaStageRef;
 	
 		[Bindable] Int32	LoadingProgress		=> (Int32)(LoadingProgress01 * 100);
-        [Bindable] Single	LoadingProgress01	=> _loadTask.Progress; 
+        [Bindable] Single	LoadingProgress01	=> _loadTask?.Progress ?? 1; 
         
-        
-		private LoadSceneTask	_loadTask;
+		private LoadSceneTask?	_loadTask;
 
-		protected override	void	OnShow				( )		
+		protected override	UniTask		OnShow		( )		
 		{
 			BootGame().Forget();
+			return default;
 		}
-		private async	UniTask		BootGame			( )		
+		private async		UniTask		BootGame	( )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		
 			await UniTask.Delay(1_000, ignoreTimeScale:true);
-			await Context.WaitInitializing();
+			await Context.WaitInitialization();
 
 			_loaderOverlay.gameObject.SetActive(false);
 
@@ -31,9 +31,9 @@
 			// Check if we have test boot state already opened
 			if (AnySubStateOpened)
 			{
-				booti = 1 + Array.IndexOf(_bootStates, Node.FirstChild?.StateRef);
+				booti = 1 + Array.IndexOf(_bootStates, Node.FirstBaseChild?.State.PrefabRef);
 
-				var h = Node.FirstChild!.Handle;
+				var h = Node.FirstBaseChild!;
 				while (h.IsOpened)
 					await UniTask.Yield(PlayerLoopTiming.LastUpdate);
 			}		
@@ -43,7 +43,7 @@
 			
 			async UniTask ShowState( AssetRef<State> state )
 			{
-				var h = Graph.Open(state, this);
+				var h = Graph.Open(state, Node);
 				
 				if (h.State is IBootState { IsDone: true } )
 				{

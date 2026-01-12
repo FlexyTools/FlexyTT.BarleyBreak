@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98dc713b27c7413490371c5ffc0749bc, type: 3}
+  m_Name: Library_Meta
+  m_EditorClassIdentifier: 
+  _autoGrabMode: 1
+  _dependencies: []
+  _states:
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Stage_Metagame, Barley-Break
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: 069f665c8c7ec0543b84a34b2c307884
+      _subId: 0
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Window_AppInfo, Barley-Break
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: cc1db232150a596459a2769067f2b3fa
+      _subId: 0
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Window_PlayFields, Barley-Break
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: b63d37d8ee9500d47b535c3c984560a2
+      _subId: 0
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Window_GameSettings, Barley-Break
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: 59f65f829106a2b418bdb7eefd672868
+      _subId: 0
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Leaderboards.Window_Leaderboards,
+      Barley-Break
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: ea1798fd377e1be4583de3735b1ce55a
+      _subId: 0
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Window_MainMenu, Barley-Break
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: e35616b6349e6884481db3654ef57ef1
+      _subId: 0
