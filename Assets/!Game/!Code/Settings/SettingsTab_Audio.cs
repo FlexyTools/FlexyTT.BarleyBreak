@@ -1,4 +1,4 @@
-namespace FlexyTemplates.BarleyBreak.Settings;
+namespace FlexyTT.BarleyBreak.Settings;
 
 public class SettingsTab_Audio : GameSettingsTab
 {

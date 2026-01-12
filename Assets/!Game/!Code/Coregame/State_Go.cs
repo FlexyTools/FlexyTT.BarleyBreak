@@ -1,4 +1,4 @@
-namespace FlexyTemplates.BarleyBreak.Coregame
+namespace FlexyTT.BarleyBreak.Coregame
 {
 	public class State_Go : StateEx
 	{

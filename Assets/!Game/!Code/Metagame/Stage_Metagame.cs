@@ -1,4 +1,6 @@
-namespace FlexyTemplates.BarleyBreak.Metagame
+using FlexyTT.BarleyBreak.Common;
+
+namespace FlexyTT.BarleyBreak.Metagame
 {
 	[ServiceTypes(typeof(GameStage))]
 	public class Stage_Metagame : GameStageEx

@@ -1,4 +1,6 @@
-namespace FlexyTemplates.BarleyBreak.Coregame
+using FlexyTT.BarleyBreak.Common;
+
+namespace FlexyTT.BarleyBreak.Coregame
 {
 	public class State_PlayComplete : StateEx
     {

@@ -1,4 +1,6 @@
-namespace FlexyTemplates.BarleyBreak.Coregame.Kit
+using FlexyTT.BarleyBreak.Common;
+
+namespace FlexyTT.BarleyBreak.Coregame.Kit
 {
 	public class GameMode : MonoBehEx
 	{

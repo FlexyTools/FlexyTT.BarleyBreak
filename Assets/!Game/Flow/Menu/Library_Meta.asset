@@ -15,43 +15,44 @@ MonoBehaviour:
   _autoGrabMode: 1
   _dependencies: []
   _states:
-  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Popup_Test
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Popup_Test, Barley-Break
     Ref:
       _uid:
         serializedVersion: 2
         Hash: 69914280c6264d14aa7055265130581e
       _subId: 0
-  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Stage_Metagame
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Stage_Metagame, Barley-Break
     Ref:
       _uid:
         serializedVersion: 2
         Hash: 069f665c8c7ec0543b84a34b2c307884
       _subId: 0
-  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Window_AppInfo
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Window_AppInfo, Barley-Break
     Ref:
       _uid:
         serializedVersion: 2
         Hash: cc1db232150a596459a2769067f2b3fa
       _subId: 0
-  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Window_PlayFields
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Window_PlayFields, Barley-Break
     Ref:
       _uid:
         serializedVersion: 2
         Hash: b63d37d8ee9500d47b535c3c984560a2
       _subId: 0
-  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Window_GameSettings
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Window_GameSettings, Barley-Break
     Ref:
       _uid:
         serializedVersion: 2
         Hash: 59f65f829106a2b418bdb7eefd672868
       _subId: 0
-  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Leaderboards.Window_Leaderboards
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Leaderboards.Window_Leaderboards,
+      Barley-Break
     Ref:
       _uid:
         serializedVersion: 2
         Hash: ea1798fd377e1be4583de3735b1ce55a
       _subId: 0
-  - TypeFullName: FlexyTemplates.BarleyBreak.Metagame.Window_MainMenu
+  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Window_MainMenu, Barley-Break
     Ref:
       _uid:
         serializedVersion: 2

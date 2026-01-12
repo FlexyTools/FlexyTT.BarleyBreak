@@ -1,6 +1,6 @@
-﻿using FlexyTemplates.BarleyBreak.Metagame;
+﻿using FlexyTT.BarleyBreak.Metagame;
 
-namespace FlexyTemplates.BarleyBreak.Boot;
+namespace FlexyTT.BarleyBreak.Boot;
 
 public abstract class	GameStageEx: GameStage					
 {

@@ -1,7 +1,8 @@
-﻿using FlexyTemplates.BarleyBreak.Coregame.Kit;
+﻿using FlexyTT.BarleyBreak.Common;
+using FlexyTT.BarleyBreak.Coregame.Kit;
 using UnityEngine.SceneManagement;
 
-namespace FlexyTemplates.BarleyBreak.Coregame
+namespace FlexyTT.BarleyBreak.Coregame
 {
 	[ServiceTypes(typeof(GameStage))]
 	public class Stage_Coregame : GameStageEx, IStateWithResult<(EField, Single)>
@@ -68,8 +69,8 @@ namespace FlexyTemplates.BarleyBreak.Coregame
 			if (_gameMode == null)
 				return;
 		
-			CloseSubStates(true);
 			Game.States.Play.Open();
+			CloseSubStates(true, false);
 			
 			enabled = true;
 			_gameMode.StartPlay();

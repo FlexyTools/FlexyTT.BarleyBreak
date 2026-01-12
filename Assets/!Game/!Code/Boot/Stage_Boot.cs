@@ -1,4 +1,4 @@
-﻿namespace FlexyTemplates.BarleyBreak.Boot
+﻿namespace FlexyTT.BarleyBreak.Boot
 {
 	[ServiceTypes(typeof(GameStage))]
 	public class Stage_Boot : GameStageEx
@@ -30,9 +30,9 @@
 			// Check if we have test boot state already opened
 			if (AnySubStateOpened)
 			{
-				booti = 1 + Array.IndexOf(_bootStates, Node.FirstChild?.State.PrefabRef);
+				booti = 1 + Array.IndexOf(_bootStates, Node.FirstBaseChild?.State.PrefabRef);
 
-				var h = Node.FirstChild!;
+				var h = Node.FirstBaseChild!;
 				while (h.IsOpened)
 					await UniTask.Yield(PlayerLoopTiming.LastUpdate);
 			}		

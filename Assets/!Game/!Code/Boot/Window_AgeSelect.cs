@@ -1,4 +1,4 @@
-namespace FlexyTemplates.BarleyBreak.Boot
+namespace FlexyTT.BarleyBreak.Boot
 {
 	public class Window_AgeSelect : UIWindowEx, IBootState
 	{

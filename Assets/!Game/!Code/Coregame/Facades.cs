@@ -1,10 +1,11 @@
 // ReSharper disable AccessToStaticMemberViaDerivedType
 
-using FlexyTemplates.BarleyBreak.Coregame.Kit;
-using FlexyTemplates.BarleyBreak.Metagame;
-using FlexyTemplates.BarleyBreak.Metagame.Leaderboards;
+using FlexyTT.BarleyBreak.Metagame.Leaderboards;
+using FlexyTT.BarleyBreak.Common;
+using FlexyTT.BarleyBreak.Coregame.Kit;
+using FlexyTT.BarleyBreak.Metagame;
 
-namespace FlexyTemplates.BarleyBreak.Coregame;
+namespace FlexyTT.BarleyBreak.Coregame;
 
 public struct	Facade_Coregame : ICachedContext
 {

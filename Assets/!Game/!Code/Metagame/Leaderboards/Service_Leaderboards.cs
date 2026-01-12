@@ -1,4 +1,6 @@
-namespace FlexyTemplates.BarleyBreak.Metagame.Leaderboards
+using FlexyTT.BarleyBreak.Common;
+
+namespace FlexyTT.BarleyBreak.Metagame.Leaderboards
 {
 	public class Service_Leaderboards : MonoBehaviour, IService
 	{
