@@ -1,5 +1,3 @@
-using FlexyTT.BarleyBreak.Common;
-
 namespace FlexyTT.BarleyBreak.Coregame
 {
 	public class State_PlayComplete : StateEx
@@ -11,9 +9,16 @@ namespace FlexyTT.BarleyBreak.Coregame
 
         protected override	Boolean	TryGoBack	( )		=> false;
 
+        protected override	UniTask	OnShow		( )		
+        {
+	        GameStage.CloseSubStates(true, false);
+	        
+	        return base.OnShow();
+        }
+
         [Callable]			void	Continue	( )		
 		{
-			Close();			
+			GameStage.Close();			
 		}
         
 		public new record struct Opener( OpenCtx Ctx ) : IOpener

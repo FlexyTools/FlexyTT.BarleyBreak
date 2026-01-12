@@ -1,5 +1,4 @@
-﻿using FlexyTT.BarleyBreak.Common;
-using FlexyTT.BarleyBreak.Coregame.Kit;
+﻿using FlexyTT.BarleyBreak.Coregame.Kit;
 using UnityEngine.SceneManagement;
 
 namespace FlexyTT.BarleyBreak.Coregame
@@ -24,7 +23,7 @@ namespace FlexyTT.BarleyBreak.Coregame
 			CloseSubStates(true);
 		}
 		
-		protected override	void	OnShow				( )		
+		protected override	UniTask	OnShow				( )		
 		{
 			enabled = false;
 			Game.Audio.SwitchToCore();
@@ -32,10 +31,11 @@ namespace FlexyTT.BarleyBreak.Coregame
 			if (OpenParams == null && AnySubStateOpened) // Case of special boot from state scene
 			{
 				_loaderOverlay.SetActive(false);
-				return;
+				return default;
 			}
 			
-			LoadMap( OpenParams as SceneRef? ).Forget();
+			gameObject.SetActive(true);
+			return LoadMap( OpenParams as SceneRef? );
 		}
 		protected override	void	OnLastChildHide		( )		
 		{
@@ -54,11 +54,12 @@ namespace FlexyTT.BarleyBreak.Coregame
 				_resultScore = _gameMode.Result;
 			}
 			
-			UnloadMap().Forget();
+			Close();
 		}
-		protected override	void	OnHide				( )		
+		protected override	UniTask	OnHide				( )		
 		{
 			Game.Audio.SwitchToMeta();
+			return UnloadMap();
 		}
 		
 		public			void		StartPlay			( )		
@@ -86,7 +87,6 @@ namespace FlexyTT.BarleyBreak.Coregame
 			async UniTaskVoid FinishGameAsync ( ) 
 			{
 				await UniTask.Delay( 1000, DelayType.UnscaledDeltaTime );
-				CloseSubStates(true);
 				Game.States.PlayComplete.Open( _gameMode.Board, _gameMode.Result );
 			}
 		}

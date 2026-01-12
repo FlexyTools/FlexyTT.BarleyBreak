@@ -15,12 +15,6 @@ MonoBehaviour:
   _autoGrabMode: 1
   _dependencies: []
   _states:
-  - TypeFullName: FlexyTT.BarleyBreak.Metagame.Popup_Test, Barley-Break
-    Ref:
-      _uid:
-        serializedVersion: 2
-        Hash: 69914280c6264d14aa7055265130581e
-      _subId: 0
   - TypeFullName: FlexyTT.BarleyBreak.Metagame.Stage_Metagame, Barley-Break
     Ref:
       _uid:

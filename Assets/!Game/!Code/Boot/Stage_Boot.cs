@@ -12,11 +12,12 @@
         
 		private LoadSceneTask?	_loadTask;
 
-		protected override	void	OnShow				( )		
+		protected override	UniTask		OnShow		( )		
 		{
 			BootGame().Forget();
+			return default;
 		}
-		private async	UniTask		BootGame			( )		
+		private async		UniTask		BootGame	( )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		

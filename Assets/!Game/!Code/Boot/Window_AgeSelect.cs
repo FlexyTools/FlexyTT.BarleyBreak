@@ -23,11 +23,10 @@ namespace FlexyTT.BarleyBreak.Boot
 			Close();
 		}
 	
-		protected override void	OnShow		( )		
+		protected override UniTask	OnShow	( )		
 		{
 			_ageSetting.Read();
-	    
-			base.OnShow();
+			return default;
 		}
 	}
 }

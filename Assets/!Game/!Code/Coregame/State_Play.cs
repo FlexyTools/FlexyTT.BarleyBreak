@@ -11,17 +11,18 @@ namespace FlexyTT.BarleyBreak.Coregame
 
 		private GameMode _gameMode = null!;
 
-		protected override void		OnShow		( )		
+		protected override UniTask	OnShow		( )		
 		{
 			if (OpenParams is SceneRef sceneRef)
 			{
 				// We started from test scene because runtime flow dont have Params at all for this State
 				// So close to GameStage with replay request to load requested map
 				GameStage.CloseSubStates(true, false, (true, sceneRef));
-				return;
+				return default;
 			}
 		
 			_gameMode = gameObject.GetService<GameMode>();
+			return default;
 		}
 		protected override Boolean	TryGoBack	( )		
 		{

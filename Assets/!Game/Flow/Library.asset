@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9b6dca4bba14b264fb9ebc6b437a639e, type: 2}
   - {fileID: 11400000, guid: 37edc546be7a27c4ba54355ebaa475ac, type: 2}
   _states:
-  - TypeFullName: FlexyTT.BarleyBreak.BB_Gameflow, Barley-Break
+  - TypeFullName: Flexy.GameFlow.Service_GameFlow, Flexy.GameFlow
     Ref:
       _uid:
         serializedVersion: 2

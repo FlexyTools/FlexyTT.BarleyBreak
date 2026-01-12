@@ -5,16 +5,16 @@ namespace FlexyTT.BarleyBreak.Boot
 	    private		BooleanSetting	_eulaAccepted	= new("Boot_EulaAccepted", false, readLater:true);
 	    public		Boolean			IsDone			=> _eulaAccepted.Read();
 
-	    [Callable]	void		Accept	( )		
+	    [Callable]	void			Accept	( )		
         {
 			_eulaAccepted.Set(true);
 			Close();
         }
-	    protected override void	OnShow	( )		
+	    protected override UniTask	OnShow	( )		
 	    {
 		    _eulaAccepted.Read();
 	    
-		    base.OnShow();
+		    return default;
 	    }
     }
 }

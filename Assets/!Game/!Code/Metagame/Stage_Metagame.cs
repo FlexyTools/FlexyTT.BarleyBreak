@@ -1,5 +1,3 @@
-using FlexyTT.BarleyBreak.Common;
-
 namespace FlexyTT.BarleyBreak.Metagame
 {
 	[ServiceTypes(typeof(GameStage))]
