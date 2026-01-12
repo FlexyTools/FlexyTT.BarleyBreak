@@ -20,7 +20,7 @@ namespace FlexyTT.BarleyBreak.Coregame
 		public	void				Exit				( )		
 		{
 			_isLeaving = true;
-			CloseSubStates(true);
+			Close();
 		}
 		
 		protected override	UniTask	OnShow				( )		
