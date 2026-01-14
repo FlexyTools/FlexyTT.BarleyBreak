@@ -142,7 +142,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.527.88
+  bundleVersion: 1.113.82
   preloadedAssets:
   - {fileID: 0}
   - {fileID: -944628639613478452, guid: 28400d27034dfd146b7bc6d75ea4f182, type: 3}
@@ -172,12 +172,12 @@ PlayerSettings:
     Standalone: fun.flexytt.barleybreak
     iPhone: fun.flexytt.barleybreak
   buildNumber:
-    Standalone: 0.527.84
+    Standalone: 111382
     VisionOS: 2502200
-    iPhone: 0.527.84
-    tvOS: 0.527.84
+    iPhone: 111382
+    tvOS: 111382
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 52784
+  AndroidBundleVersionCode: 111382
   AndroidMinSdkVersion: 29
   AndroidTargetSdkVersion: 36
   AndroidPreferredInstallLocation: 0

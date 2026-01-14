@@ -40,9 +40,11 @@ MonoBehaviour:
       data: 
     - rid: 3009908962306031616
       type: {class: ResourcesPopulateRefs, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
-      data: 
+      data:
+        AddScenesToBuildSettings: 0
     - rid: 3009908962306031618
       type: {class: AddRefsDirect, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
       data:
         _refs:
+        - {fileID: 102900000, guid: f04b33b7906a88b408e58e2c73f6840b, type: 3}
         - {fileID: 11400000, guid: 11f95cb70947da346bb92451118ea417, type: 2}

@@ -59,3 +59,4 @@ ExportedObj/
 /Assets/Resources/Fun.Flexy/BuildArtifacts/**
 /Assets/Resources/Fun.Flexy/BuildArtifacts.meta
 Packages/fun.flexy.**
+Packages/com.unity.asset-store-tools**
