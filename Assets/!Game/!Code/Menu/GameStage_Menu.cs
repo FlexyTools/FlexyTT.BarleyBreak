@@ -10,7 +10,7 @@ namespace FlexyTT.BarleyBreak.Menu
 
 		public async	UniTaskVoid		Play_Field	( SceneRef map )	
 		{
-			var (field, score) = await Graph.Open( _coreGameStage, map ).WaitResult<(EField, Single)>();
+			var (field, score) = await Graph.Open( _coreGameStage, map ).WaitResultOnHide<(EField, Single)>();
 				
 			if (field == default && score == default) // If data is empty then field is not completed
 				return;
