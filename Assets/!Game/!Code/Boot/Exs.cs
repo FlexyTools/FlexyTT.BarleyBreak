@@ -1,4 +1,4 @@
-﻿using FlexyTT.BarleyBreak.Metagame;
+﻿using FlexyTT.BarleyBreak.Menu;
 
 namespace FlexyTT.BarleyBreak.Boot;
 

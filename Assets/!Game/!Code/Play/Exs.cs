@@ -1,4 +1,4 @@
-namespace FlexyTT.BarleyBreak.Coregame;
+namespace FlexyTT.BarleyBreak.Play;
 
 public abstract class	GameStageEx: GameStage					
 {
@@ -10,7 +10,7 @@ public abstract class	StateEx: State
 {
 	private		Facade_Coregame	_game; 
 	public	ref Facade_Coregame	Game		=> ref _game.GetCached( this );
-	public new	Stage_Coregame	GameStage	=> (Stage_Coregame)Node.GameStageNode.State;
+	public new	GameStage_Play	GameGameStage	=> (GameStage_Play)Node.GameStageNode.State;
 }
 
 public abstract class	MonoBehEx: MonoBehaviour				

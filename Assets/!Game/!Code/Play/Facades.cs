@@ -1,11 +1,9 @@
 // ReSharper disable AccessToStaticMemberViaDerivedType
 
-using FlexyTT.BarleyBreak.Metagame.Leaderboards;
-using FlexyTT.BarleyBreak.Common;
-using FlexyTT.BarleyBreak.Coregame.Kit;
-using FlexyTT.BarleyBreak.Metagame;
+using FlexyTT.BarleyBreak.Menu;
+using FlexyTT.BarleyBreak.Play.Kit;
 
-namespace FlexyTT.BarleyBreak.Coregame;
+namespace FlexyTT.BarleyBreak.Play;
 
 public struct	Facade_Coregame : ICachedContext
 {
@@ -13,13 +11,13 @@ public struct	Facade_Coregame : ICachedContext
 	public	Component				CallSource		{ get; set; }
 													
 	public  GameMode				Mode         	=> Ctx.GetService<GameMode>();
-	public	Facade_Flow				Flow 			=> new(Ctx.GetService<Stage_Coregame>());
+	public	Facade_Flow				Flow 			=> new(Ctx.GetService<GameStage_Play>());
     public	Facade_CoreStates		States			=> new(CallSource.GetComponentInParent<State>());
     public	Service_Audio			Audio			=> Ctx.GetService<Service_Audio>();
     public	Service_GameSettings	Settings		=> Ctx.GetService<Service_GameSettings>();
 }
 
-public readonly record struct	Facade_Flow	( Stage_Coregame Core )
+public readonly record struct	Facade_Flow	( GameStage_Play Core )
 {
 	public	void	ExitCoregame	( )		=> Core.Exit();
 }

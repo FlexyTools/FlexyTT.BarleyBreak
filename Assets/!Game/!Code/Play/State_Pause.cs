@@ -1,4 +1,4 @@
-﻿namespace FlexyTT.BarleyBreak.Coregame
+﻿namespace FlexyTT.BarleyBreak.Play
 {
 	public class State_Pause : StateEx
 	{

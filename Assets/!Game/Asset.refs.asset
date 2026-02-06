@@ -22,6 +22,9 @@ MonoBehaviour:
       rid: 781959606881222656
   - Enabled: 1
     Task:
+      rid: 2696339456443285504
+  - Enabled: 1
+    Task:
       rid: 781960106801627137
   - Enabled: 1
     Task:
@@ -38,6 +41,12 @@ MonoBehaviour:
     - rid: 781960106801627137
       type: {class: ExtractSceneListFromRefsList, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
       data: 
+    - rid: 2696339456443285504
+      type: {class: AddRefsFromDirectory, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
+      data:
+        DirectoryOptional: {fileID: 102900000, guid: 674196184bb55d343b07406db17e68b0, type: 3}
+        TypeNamesOptional: prefab
+        GoToSubdirectories: 0
     - rid: 3009908962306031616
       type: {class: ResourcesPopulateRefs, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
       data:

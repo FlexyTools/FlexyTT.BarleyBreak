@@ -1,6 +1,6 @@
 using FlexyTT.BarleyBreak.Common;
 
-namespace FlexyTT.BarleyBreak.Metagame.Leaderboards
+namespace FlexyTT.BarleyBreak.Menu.Leaderboards
 {
 	public class Service_Leaderboards : MonoBehaviour, IService
 	{

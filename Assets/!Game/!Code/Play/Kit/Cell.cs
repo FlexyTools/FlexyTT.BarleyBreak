@@ -1,4 +1,4 @@
-namespace FlexyTT.BarleyBreak.Coregame.Kit
+namespace FlexyTT.BarleyBreak.Play.Kit
 {
     public class Cell : MonoBehEx
     {

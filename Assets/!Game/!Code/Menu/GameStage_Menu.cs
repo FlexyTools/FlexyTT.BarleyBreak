@@ -1,7 +1,7 @@
-namespace FlexyTT.BarleyBreak.Metagame
+namespace FlexyTT.BarleyBreak.Menu
 {
 	[ServiceTypes(typeof(GameStage))]
-	public class Stage_Metagame : GameStageEx
+	public class GameStage_Menu : GameStageEx
 	{
 		[SerializeField] AssetRef<GameStage> _coreGameStage;
 

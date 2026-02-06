@@ -1,10 +1,12 @@
-﻿using FlexyTT.BarleyBreak.Coregame.Kit;
+﻿using FlexyTT.BarleyBreak.Play.Kit;
+using NUnit.Framework.Internal.Filters;
 using UnityEngine.SceneManagement;
 
-namespace FlexyTT.BarleyBreak.Coregame
+namespace FlexyTT.BarleyBreak.Play
 {
 	[ServiceTypes(typeof(GameStage))]
-	public class Stage_Coregame : GameStageEx, IStateWithResult<(EField, Single)>
+	
+	public class GameStage_Play : GameStageEx, IStateWithResult<(EField, Single)>
 	{
 		[SerializeField]	GameObject _loaderOverlay = null!;
 	
@@ -37,12 +39,15 @@ namespace FlexyTT.BarleyBreak.Coregame
 			gameObject.SetActive(true);
 			return LoadMap( OpenParams as SceneRef? );
 		}
-		protected override	void	OnLastChildHide		( )		
+		protected override	UniTask	OnChildHide			( FlowNode child, String tag )		
 		{
+			if (AnySubStateOpened)
+				return default;
+		
 			if (OpenParams is (Boolean replay, SceneRef map))
 			{
 				LoadMap( map ).Forget();
-				return;
+				return default;
 			}
 		
 			_resultBoard = default;
@@ -55,6 +60,7 @@ namespace FlexyTT.BarleyBreak.Coregame
 			}
 			
 			Close();
+			return default;
 		}
 		protected override	UniTask	OnHide				( )		
 		{

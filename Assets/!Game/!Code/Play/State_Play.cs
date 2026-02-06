@@ -1,6 +1,6 @@
-using FlexyTT.BarleyBreak.Coregame.Kit;
+using FlexyTT.BarleyBreak.Play.Kit;
 
-namespace FlexyTT.BarleyBreak.Coregame
+namespace FlexyTT.BarleyBreak.Play
 {
 	// Visually this state is Coregame HUD
     public class State_Play : StateEx
@@ -17,7 +17,7 @@ namespace FlexyTT.BarleyBreak.Coregame
 			{
 				// We started from test scene because runtime flow dont have Params at all for this State
 				// So close to GameStage with replay request to load requested map
-				GameStage.CloseSubStates(true, false, (true, sceneRef));
+				GameGameStage.CloseSubStates(true, false, (true, sceneRef));
 				return default;
 			}
 		

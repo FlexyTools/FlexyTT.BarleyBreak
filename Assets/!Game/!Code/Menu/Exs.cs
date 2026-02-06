@@ -1,4 +1,4 @@
-﻿namespace FlexyTT.BarleyBreak.Metagame;
+﻿namespace FlexyTT.BarleyBreak.Menu;
 
 public abstract class	GameStageEx: GameStage					
 {

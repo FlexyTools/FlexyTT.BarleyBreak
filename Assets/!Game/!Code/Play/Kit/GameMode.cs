@@ -1,6 +1,6 @@
 using FlexyTT.BarleyBreak.Common;
 
-namespace FlexyTT.BarleyBreak.Coregame.Kit
+namespace FlexyTT.BarleyBreak.Play.Kit
 {
 	public class GameMode : MonoBehEx
 	{

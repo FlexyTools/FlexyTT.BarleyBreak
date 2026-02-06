@@ -1,7 +1,7 @@
 using System.Linq;
 using FlexyTT.BarleyBreak.Common;
 
-namespace FlexyTT.BarleyBreak.Metagame.Leaderboards
+namespace FlexyTT.BarleyBreak.Menu.Leaderboards
 {
 	public class Window_Leaderboards : UIWindowEx
 	{
