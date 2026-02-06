@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3652846130661092897}
   - component: {fileID: 6552622680880447747}
   m_Layer: 0
-  m_Name: Bootstrap Core
+  m_Name: Play_Bootstrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -212,21 +212,21 @@
       }
     },
     "fun.flexy.assetrefs": {
-      "version": "https://github.com/FlexyTools/Flexy.AssetRefs.git",
+      "version": "https://github.com/FlexyTools/Flexy.AssetRefs.git#6.0.0",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "c1af6f8e84285593c14cb21f93a0b2be637e81c0"
     },
     "fun.flexy.core": {
-      "version": "https://github.com/FlexyTools/Flexy.Core.git",
+      "version": "https://github.com/FlexyTools/Flexy.Core.git#6.1.0",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "38c0758fd8192a14d537f58ae191a71aaa25d458"
     },
     "fun.flexy.gameflow": {
-      "version": "https://github.com/FlexyTools/Flexy.GameFlow-Lite.git",
+      "version": "https://github.com/FlexyTools/Flexy.GameFlow-Lite.git#6.2.0",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -237,14 +237,14 @@
       "hash": "a4f1e972233f63bdab467812aead750cecfe8564"
     },
     "fun.flexy.gamesettings": {
-      "version": "https://github.com/FlexyTools/Flexy.GameSettings.git",
+      "version": "https://github.com/FlexyTools/Flexy.GameSettings.git#6.0.1",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "077fe4ec2795be82cd1129c56ffe5fd41720764d"
     },
     "fun.flexy.ui": {
-      "version": "https://github.com/FlexyTools/Flexy.UI-Lite.git",
+      "version": "https://github.com/FlexyTools/Flexy.UI-Lite.git#6.0.0",
       "depth": 0,
       "source": "git",
       "dependencies": {

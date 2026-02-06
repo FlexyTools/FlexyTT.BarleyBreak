@@ -1,4 +1,4 @@
-using FlexyTT.BarleyBreak.Common;
+using FlexyTT.BarleyBreak.Global;
 
 namespace FlexyTT.BarleyBreak.Play.Kit
 {

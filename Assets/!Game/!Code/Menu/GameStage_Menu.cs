@@ -1,3 +1,5 @@
+using FlexyTT.BarleyBreak.Global;
+
 namespace FlexyTT.BarleyBreak.Menu
 {
 	[ServiceTypes(typeof(GameStage))]

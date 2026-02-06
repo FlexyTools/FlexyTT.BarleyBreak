@@ -1,6 +1,4 @@
-using FlexyTT.BarleyBreak.Settings;
-
-namespace FlexyTT.BarleyBreak.Common
+namespace FlexyTT.BarleyBreak.Global
 {
 	public class Service_Audio : MonoBehaviour, IService
 	{

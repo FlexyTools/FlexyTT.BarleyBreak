@@ -1,4 +1,5 @@
-﻿using FlexyTT.BarleyBreak.Play.Kit;
+﻿using FlexyTT.BarleyBreak.Global;
+using FlexyTT.BarleyBreak.Play.Kit;
 using UnityEngine.SceneManagement;
 
 namespace FlexyTT.BarleyBreak.Play

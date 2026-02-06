@@ -1,5 +1,5 @@
 using System.Linq;
-using FlexyTT.BarleyBreak.Common;
+using FlexyTT.BarleyBreak.Global;
 
 namespace FlexyTT.BarleyBreak.Menu.Leaderboards
 {

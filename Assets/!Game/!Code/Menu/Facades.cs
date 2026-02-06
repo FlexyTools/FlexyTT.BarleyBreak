@@ -1,7 +1,6 @@
 ﻿// ReSharper disable AccessToStaticMemberViaDerivedType
 
 using FlexyTT.BarleyBreak.Menu.Leaderboards;
-using FlexyTT.BarleyBreak.Settings;
 
 namespace FlexyTT.BarleyBreak.Menu;
 

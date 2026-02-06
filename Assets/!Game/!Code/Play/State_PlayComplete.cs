@@ -1,3 +1,5 @@
+using FlexyTT.BarleyBreak.Global;
+
 namespace FlexyTT.BarleyBreak.Play
 {
 	public class State_PlayComplete : StateEx

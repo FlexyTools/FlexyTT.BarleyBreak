@@ -1,4 +1,4 @@
-namespace FlexyTT.BarleyBreak.Common;
+namespace FlexyTT.BarleyBreak.Global;
 
 public enum EField: Byte
 {

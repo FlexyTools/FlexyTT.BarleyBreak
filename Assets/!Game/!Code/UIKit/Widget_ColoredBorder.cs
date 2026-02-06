@@ -1,7 +1,6 @@
 using FlexyTT.BarleyBreak.Menu;
-using FlexyTT.BarleyBreak.Settings;
 
-namespace FlexyTT.BarleyBreak.Common.Kit
+namespace FlexyTT.BarleyBreak.UIKit
 {
 	public class Widget_ColoredBorder : UIWidgetEx
 	{
