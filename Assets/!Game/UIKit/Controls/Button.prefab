@@ -141,10 +141,10 @@ MonoBehaviour:
   DoubleClickMode: 0
   Clicked:
     _action:
-      rid: 3782599429751570491
+      rid: 3782599433411887158
   Misclicked:
     _action:
-      rid: -2
+      rid: 3782599429751570491
   references:
     version: 2
     RefIds:
@@ -152,5 +152,9 @@ MonoBehaviour:
       type: {class: , ns: , asm: }
     - rid: 3782599429751570491
       type: {class: PlaySfxAction, ns: FlexyTT.BarleyBreak.Common, asm: Barley-Break}
+      data:
+        _clip: {fileID: 8300000, guid: 8868866812037aa4ca13b2dd879f1967, type: 3}
+    - rid: 3782599433411887158
+      type: {class: PlaySfxAction, ns: FlexyTT.BarleyBreak.Global, asm: Barley-Break}
       data:
         _clip: {fileID: 8300000, guid: 8868866812037aa4ca13b2dd879f1967, type: 3}
