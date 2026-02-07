@@ -1,4 +1,4 @@
-![Img](https://raw.githubusercontent.com/FlexyTools/Flexy.Docs/refs/heads/main/GameTemplates/Barley-Breaks/Src/GamePreview.webp?token=GHSAT0AAAAAADQTQBIBKHWXWH346RDDV5TS2KDRXBQ)
+![Img](https://github.com/user-attachments/assets/45a91b4e-9e19-4b6d-b9da-115d9254f168)
 
 [Flexy.Tools](https://github.com/FlexyTools/Flexy.Docs/tree/main) / [Game Templates](https://github.com/FlexyTools/Flexy.Docs/blob/main/GameTemplates/Readme.md) / Barley-Breaks
 
