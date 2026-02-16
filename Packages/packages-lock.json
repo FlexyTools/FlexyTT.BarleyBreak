@@ -24,18 +24,9 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.cinemachine": {
-      "version": "3.1.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.splines": "2.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.collections": {
       "version": "2.6.4",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.burst": "1.8.25",
@@ -46,16 +37,9 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.device-simulator.devices": {
-      "version": "1.0.1",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.ext.nunit": {
       "version": "2.0.5",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {}
     },
@@ -84,16 +68,9 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.mobile.android-logcat": {
-      "version": "1.4.6",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.6",
-      "depth": 1,
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -107,7 +84,7 @@
     },
     "com.unity.render-pipelines.core": {
       "version": "17.0.4",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.burst": "1.8.20",
@@ -132,7 +109,7 @@
     },
     "com.unity.render-pipelines.universal-config": {
       "version": "17.0.3",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "17.0.3"
@@ -140,7 +117,7 @@
     },
     "com.unity.rendering.light-transport": {
       "version": "1.0.1",
-      "depth": 1,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {
         "com.unity.collections": "2.2.0",
@@ -150,13 +127,6 @@
     },
     "com.unity.searcher": {
       "version": "4.9.3",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.settings-manager": {
-      "version": "2.1.0",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
@@ -164,23 +134,12 @@
     },
     "com.unity.shadergraph": {
       "version": "17.0.4",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "17.0.4",
         "com.unity.searcher": "4.9.3"
       }
-    },
-    "com.unity.splines": {
-      "version": "2.8.2",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.mathematics": "1.2.1",
-        "com.unity.modules.imgui": "1.0.0",
-        "com.unity.settings-manager": "1.0.3"
-      },
-      "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
       "version": "1.6.0",
@@ -219,14 +178,14 @@
       "hash": "c1af6f8e84285593c14cb21f93a0b2be637e81c0"
     },
     "fun.flexy.core": {
-      "version": "https://github.com/FlexyTools/Flexy.Core.git#6.1.0",
+      "version": "https://github.com/FlexyTools/Flexy.Core.git#6.1.1",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "38c0758fd8192a14d537f58ae191a71aaa25d458"
+      "hash": "344f4143ab9faa20c257bafc1f8c0d322e7cdc7a"
     },
     "fun.flexy.gameflow": {
-      "version": "https://github.com/FlexyTools/Flexy.GameFlow-Lite.git#6.2.0",
+      "version": "https://github.com/FlexyTools/Flexy.GameFlow-Lite.git#6.2.1",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -234,7 +193,7 @@
         "fun.flexy.core": "6.0.6",
         "com.unity.collections": "2.6.4"
       },
-      "hash": "a4f1e972233f63bdab467812aead750cecfe8564"
+      "hash": "eb0dd2b727356ce1cecb11fd46bf9279f7940aa9"
     },
     "fun.flexy.gamesettings": {
       "version": "https://github.com/FlexyTools/Flexy.GameSettings.git#6.0.1",
@@ -244,7 +203,7 @@
       "hash": "077fe4ec2795be82cd1129c56ffe5fd41720764d"
     },
     "fun.flexy.ui": {
-      "version": "https://github.com/FlexyTools/Flexy.UI-Lite.git#6.0.0",
+      "version": "https://github.com/FlexyTools/Flexy.UI-Lite.git#6.0.1",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -252,7 +211,13 @@
         "fun.flexy.core": "6.0.6",
         "fun.flexy.gameflow": "6.1.0"
       },
-      "hash": "027228bd60d7b68447296415b5e4f235fa642a98"
+      "hash": "2a2b3ce39956dc62ba36a75d0b061438efc38684"
+    },
+    "com.unity.modules.accessibility": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
