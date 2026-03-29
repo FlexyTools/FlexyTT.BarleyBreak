@@ -44,7 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c9cfcaa76644fe85de09d0cbd7a479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flowService: {fileID: 591606334878198627, guid: f0ddde7af7c741541b972b4f005cea5f, type: 3}
+  _flowService:
+    _uid:
+      serializedVersion: 2
+      Hash: f0ddde7af7c741541b972b4f005cea5f
+    _subId: 0
   _startGameStage:
     _uid:
       serializedVersion: 2
