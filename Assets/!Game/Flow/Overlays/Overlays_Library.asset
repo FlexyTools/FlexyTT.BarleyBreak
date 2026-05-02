@@ -10,18 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98dc713b27c7413490371c5ffc0749bc, type: 3}
-  m_Name: Library
+  m_Name: Overlays_Library
   m_EditorClassIdentifier: 
   _autoGrabMode: 1
-  _dependencies:
-  - {fileID: 11400000, guid: ef0596e176689794b9e007b370acf667, type: 2}
-  - {fileID: 11400000, guid: 0fd0a9e6752b6d14fa7fa06f5cb50c34, type: 2}
-  - {fileID: 11400000, guid: 9b6dca4bba14b264fb9ebc6b437a639e, type: 2}
-  - {fileID: 11400000, guid: 37edc546be7a27c4ba54355ebaa475ac, type: 2}
+  _dependencies: []
   _states:
-  - TypeFullName: Flexy.GameFlow.Service_GameFlow, Flexy.GameFlow
+  - TypeFullName: FlexyFun.BarleyBreak.Overlays.Overlay_NoInternet, Barley-Break
     Ref:
       _uid:
         serializedVersion: 2
-        Hash: f0ddde7af7c741541b972b4f005cea5f
+        Hash: 51768e9231b650448a2a9b8dbf032cea
       _subId: 0

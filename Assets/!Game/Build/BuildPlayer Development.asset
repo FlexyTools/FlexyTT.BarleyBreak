@@ -38,7 +38,7 @@ MonoBehaviour:
       type: {class: BuildPlayer, ns: Flexy.AssetRefs.Editor.PipelineTasks, asm: Flexy.AssetRefs.Editor}
       data:
         _outputDirectory: Builds
-        _buildName: FlexyTT Barley-Break
+        _buildName: FlexyTT Barley-Break Pro
         _disablePreprocessPipelines: 1
         _developmentBuild: 1
         _nameAddTime: 1

@@ -310,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _targetState._uid
-      value: 99f0d04628301734291aeaa0fcc0bac5
+      value: 59f65f829106a2b418bdb7eefd672868
       objectReference: {fileID: 0}
     - target: {fileID: 6552622680880447747, guid: d71559fe736a44b42a388300ccf5467a, type: 3}
       propertyPath: _bootstrapTarget._uid

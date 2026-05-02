@@ -1,6 +1,6 @@
 // ReSharper disable AccessToStaticMemberViaDerivedType
 
-using FlexyTT.BarleyBreak.Menu;
+using FlexyTT.BarleyBreak.Menu.Settings;
 using FlexyTT.BarleyBreak.Play.Kit;
 
 namespace FlexyTT.BarleyBreak.Play;
@@ -13,6 +13,7 @@ public struct	Facade_Coregame : ICachedContext
 	public  GameMode				Mode         	=> Ctx.GetService<GameMode>();
 	public	Facade_Flow				Flow 			=> new(Ctx.GetService<GameStage_Play>());
     public	Facade_CoreStates		States			=> new(CallSource.GetComponentInParent<State>());
+    public	Facade_Global			Global			=> new(CallSource.GetComponentInParent<State>().Flow);
     public	Service_Audio			Audio			=> Ctx.GetService<Service_Audio>();
     public	Service_GameSettings	Settings		=> Ctx.GetService<Service_GameSettings>();
 }

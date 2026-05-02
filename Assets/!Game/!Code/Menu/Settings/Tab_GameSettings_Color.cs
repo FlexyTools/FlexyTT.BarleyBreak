@@ -1,44 +1,8 @@
-﻿namespace FlexyTT.BarleyBreak.Menu
+namespace FlexyTT.BarleyBreak.Menu.Settings
 {
-	public class Window_GameSettings : UIWindowEx
+	[OpenAsSubStateIn(typeof(Window_GameSettings))]
+	public class Tab_GameSettings_Color : UIWindowEx
 	{
-		private		void	Awake	( )		
-		{
-			_settingsTabAudio = Game.Settings.Audio;
-			_settingsTabColor = Game.Settings.Color;
-			
-			_settingsTabColor.Primary.Changed += _ => RebindProperty( "Color" );
-		}
-	
-		private SettingsTab_Audio _settingsTabAudio = null!;
-		private SettingsTab_Color _settingsTabColor = null!;
-
-		// Audio Settings
-		[Bindable]	Single	SoundVolume		
-		{ 
-			get => _settingsTabAudio.SoundVolume; 
-			set 
-			{ 
-				_settingsTabAudio.SoundVolume.Set( value ); 
-				RebindProperty( "SoundVolume" ); 
-				RebindProperty( "SoundVolume_100" ); 
-			} 
-		}
-		[Bindable]	Single	SfxVolume		
-		{ 
-			get => _settingsTabAudio.SfxVolume;  
-			set 
-			{
-				_settingsTabAudio.SfxVolume.Set( value ); 
-				RebindProperty( "SfxVolume" ); 
-				RebindProperty( "SfxVolume_100" ); 
-			} 
-		}
-		
-		[Bindable]	String	SoundVolume_100 => ((Int32)(SoundVolume * 100)).ToString();
-		[Bindable]	String	SfxVolume_100	=> ((Int32)(SfxVolume * 100)).ToString();
-
-		// Color Settings
 		[Bindable]	Single	ColorR			
 		{
 			get => _settingsTabColor.Primary.Get().r / 255f;
@@ -75,5 +39,13 @@
 		[Bindable]	String	ColorB_255 		=> ((Int32)(ColorB * 255)).ToString();
 		
 		[Bindable]	Color	Color			=> _settingsTabColor.Primary.Get();
+	
+		private	new	void	Awake	( )		
+		{
+			base.Awake();
+			_settingsTabColor = Game.Settings.Color;
+		}
+	
+		private SettingsTab_Color _settingsTabColor = null!;	
 	}
-} 
+}
