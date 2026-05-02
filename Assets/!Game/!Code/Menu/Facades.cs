@@ -11,7 +11,7 @@ public struct	Facade_Game : ICachedContext
 	public	Component				CallSource		{ get; set; }
 
 	public	Facade_Flow				Flow			=> new( Ctx.GetService<GameStage_Menu>() );
-	public	Facade_UIWindows		UI				=> new( Ctx.GetService<GameStage>() );
+	public	Facade_UIWindows		UI				=> new( CallSource );
 	public	Facade_GameSettings		Settings		=> new( Ctx.GetService<Service_GameSettings>() );
 	public	Service_Leaderboards	Leaderboards	=> Ctx.GetService<Service_Leaderboards>();
 }

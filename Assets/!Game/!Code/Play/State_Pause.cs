@@ -1,5 +1,6 @@
 ﻿namespace FlexyTT.BarleyBreak.Play
 {
+	[OpenOnLayer(StateLayers.Popups)]
 	public class State_Pause : StateEx
 	{
 		protected override	UniTask	OnShow	( )		
