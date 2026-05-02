@@ -1,6 +1,6 @@
 namespace FlexyTT.BarleyBreak.Boot
 {
-    public class Window_EULA : UIWindowEx, IBootState
+    public class Window_EULA : UIWindowEx
     {
 	    private		BooleanSetting	_eulaAccepted	= new("Boot_EulaAccepted", false, readLater:true);
 	    public		Boolean			IsDone			=> _eulaAccepted.Read();
@@ -10,11 +10,13 @@ namespace FlexyTT.BarleyBreak.Boot
 			_eulaAccepted.Set(true);
 			Close();
         }
-	    protected override UniTask	OnShow	( )		
+
+	    protected override	void	OnOpen	( FlowNode node )	
 	    {
-		    _eulaAccepted.Read();
-	    
-		    return default;
+		    base.OnOpen(node);
+		    
+			if (_eulaAccepted.Read())
+				node.Close();
 	    }
     }
 }

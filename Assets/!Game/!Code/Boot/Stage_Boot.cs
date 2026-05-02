@@ -12,12 +12,12 @@
         
 		private LoadSceneTask?	_loadTask;
 
-		protected override	UniTask		OnShow		( )		
+		protected override	UniTask			OnShow		( )		
 		{
 			BootGame().Forget();
 			return default;
 		}
-		private async		UniTask		BootGame	( )		
+		private async		UniTask			BootGame	( )		
 		{
 			_loaderOverlay.gameObject.SetActive(true);
 		
@@ -26,41 +26,25 @@
 
 			_loaderOverlay.gameObject.SetActive(false);
 
-			var booti = 0;
-
-			// Check if we have test boot state already opened
-			if (AnySubStateOpened)
-			{
-				booti = 1 + Array.IndexOf(_bootStates, Node.FirstBaseChild?.State.PrefabRef);
-
-				var h = Node.FirstBaseChild!;
-				while (h.IsOpened)
-					await UniTask.Yield(PlayerLoopTiming.LastUpdate);
-			}		
-
-			for (; booti < _bootStates.Length; booti++)
-				await ShowState(_bootStates[booti]);
-			
-			async UniTask ShowState( AssetRef<State> state )
-			{
-				var h = Graph.Open(state, Node);
-				
-				if (h.State is IBootState { IsDone: true } )
-				{
-					h.Close();
-					return;
-				}
-				
-				while (h.IsOpened)
-					await UniTask.Yield(PlayerLoopTiming.LastUpdate);
-			}
+			for (var i = await GetInitialStateIndex(); i < _bootStates.Length; i++)
+				await Graph.Open(_bootStates[i], Node).WaitClose();
 			
 			Graph.Open(_metaStageRef, Context);
 		}
-	}
+		
+		private async		UniTask<Int32>	GetInitialStateIndex ( )	
+		{
+			// Check if we have test boot state already opened
+			if (!AnySubStateOpened) 
+				return 0;
+				
+			var booti = 1 + Array.IndexOf(_bootStates, Node.FirstBaseChild?.State.PrefabRef);
 
-	internal interface IBootState
-	{
-		Boolean IsDone { get; }
+			var h = Node.FirstBaseChild!;
+			while (h.IsOpened)
+				await UniTask.Yield(PlayerLoopTiming.LastUpdate);
+
+			return booti;
+		}
 	}
 }

@@ -31,7 +31,7 @@ public readonly record struct	Facade_UIWindows	( LibCtx LibCtx )
 {
 	public Window_GameSettings		.Opener		Settings		=> LibCtx.GetState<Window_GameSettings>();
 	public Tab_GameSettings_Audio	.Opener		Settings_Audio	=> LibCtx.GetState<Tab_GameSettings_Audio>();
-	public Tab_GameSettings_Color	.Opener		Settings_Input	=> LibCtx.GetState<Tab_GameSettings_Color>();
+	public Tab_GameSettings_Color	.Opener		Settings_Color	=> LibCtx.GetState<Tab_GameSettings_Color>();
 
 	public Window_AppInfo			.Opener		AppInfo			=> LibCtx.GetState<Window_AppInfo>();
 	public Window_PlayFields		.Opener		PlayFields		=> LibCtx.GetState<Window_PlayFields>();

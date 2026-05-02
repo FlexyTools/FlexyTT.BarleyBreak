@@ -8,24 +8,12 @@ namespace FlexyTT.BarleyBreak.Menu.Settings
 		[SerializeField]	RectTransform	_tabsContainer = null!;
 	
 		[Callable]			void	OpenAudioTab	( ) => Game.UI.Settings_Audio.Open();
-		[Callable]			void	OpenInputTab	( ) => Game.UI.Settings_Input.Open();
+		[Callable]			void	OpenColorTab	( ) => Game.UI.Settings_Color.Open();
 
-		private		void	Update		( )		
-		{
-			
-			Debug.Log($"Hello from update in GameSettings enabled: {enabled} " +
-			          $"active: {gameObject.activeInHierarchy} " +
-			          $"at {Time.realtimeSinceStartup:F3} {Time.frameCount:000}");
-			
-		}
-		private		void	FixedUpdate	( )		
-		{
-			Profiler.BeginSample("Window_GameSettings.FixedUpdate");
-			Debug.Log($"Hello from update i am {"name"} adn i am is {enabled} and {gameObject.activeInHierarchy} at {Time.renderedFrameCount:000} {Time.realtimeSinceStartupAsDouble:F3} {Time.frameCount:000}");
-			Profiler.EndSample();
-		}  
+		[Bindable]			Boolean	IsOpened_TabAudio => Game.UI.Settings_Audio.Ctx.StateRef == Node.FirstBaseChild?.State.PrefabRef;
+		[Bindable]			Boolean	IsOpened_TabColor => Game.UI.Settings_Color.Ctx.StateRef == Node.FirstBaseChild?.State.PrefabRef;
 
-		protected override	UniTask	OnShow			( )	
+		protected override	UniTask	OnShow			( )		
 		{
 			if (Node.BaseLayer?.FirstNode == null)
 				Game.UI.Settings_Audio.Open();
@@ -40,6 +28,8 @@ namespace FlexyTT.BarleyBreak.Menu.Settings
 		{
 			if (node.BaseLayer?.FirstNode != child)
 				node.BaseLayer?.FirstNode?.Close();
+				
+			RebindAll();
 		}
 
 		StateTransition						ISubStates.TransitionStore	{ get; } = new ();
@@ -49,4 +39,4 @@ namespace FlexyTT.BarleyBreak.Menu.Settings
 		State		ISubStates.InstantiateSubState	( State prefab, String layer )	=> Instantiate(prefab, _tabsContainer);
 		void		ISubStates.DestroySubState		( State state )					=> state.Destroy();
 	}
-} 
+}

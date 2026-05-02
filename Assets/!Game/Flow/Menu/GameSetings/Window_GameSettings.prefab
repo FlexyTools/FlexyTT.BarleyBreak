@@ -412,8 +412,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1676810426863724115, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2501655669114421531}
   m_SourcePrefab: {fileID: 100100000, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
+--- !u!1 &1287327373039622477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1676810426863724115, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
+  m_PrefabInstance: {fileID: 475335773681090334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2501655669114421531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287327373039622477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cfd369890549bf8ee676ac86585441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source:
+    Component: {fileID: 8390432923379559843}
+    MemberName: IsOpened_TabAudio
+    Params: 
+  _widget: {fileID: 0}
+  _true: {r: 0.9764706, g: 0.5921569, b: 0.22745098, a: 1}
+  _false: {r: 1, g: 0.96862745, b: 0.44313726, a: 1}
 --- !u!224 &8519957658575720299 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8116686128717607029, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
@@ -949,7 +976,7 @@ PrefabInstance:
       objectReference: {fileID: 8390432923379559843}
     - target: {fileID: 5347086588793694454, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: _methodName
-      value: OpenInputTab
+      value: OpenColorTab
       objectReference: {fileID: 0}
     - target: {fileID: 6886206471213423095, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1054,10 +1081,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1676810426863724115, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6081418451193098384}
   m_SourcePrefab: {fileID: 100100000, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
 --- !u!224 &3897476970450732793 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8116686128717607029, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
   m_PrefabInstance: {fileID: 5094377807915972236}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5906444054607220959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1676810426863724115, guid: c8fcdb537d37ee14c8257ffa2625a06c, type: 3}
+  m_PrefabInstance: {fileID: 5094377807915972236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6081418451193098384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5906444054607220959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cfd369890549bf8ee676ac86585441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source:
+    Component: {fileID: 8390432923379559843}
+    MemberName: IsOpened_TabColor
+    Params: 
+  _widget: {fileID: 0}
+  _true: {r: 0.97735846, g: 0.5906923, b: 0.22682086, a: 1}
+  _false: {r: 1, g: 0.96862745, b: 0.44313726, a: 1}
