@@ -45,3 +45,9 @@ MonoBehaviour:
         serializedVersion: 2
         Hash: f3499ec521edf35408d5415b0e98a3b3
       _subId: 0
+  - TypeFullName: FlexyTT.BarleyBreak.Play.State_TestExternalOpen, Barley-Break
+    Ref:
+      _uid:
+        serializedVersion: 2
+        Hash: 955c723d90129914f9c907588c0a91e9
+      _subId: 0

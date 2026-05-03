@@ -19,6 +19,7 @@
 		[Callable] void		OpenSettings	( )		=> Game.States.GameSettings.Open();
 		[Callable] void		LeaveField		( )		=> Game.Flow.ExitCoregame();
 		
-		[Callable] void		Share			( )		=> Game.Global.NoInternet.Open();
+		[Callable] void		Share			( )		=> Game.Overlay.NoInternet.Open();
+		[Callable] void		TestExternalOpen( )		=> Game.States.ExternalOpen.Open();
 	}
 }

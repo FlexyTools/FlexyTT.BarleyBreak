@@ -13,7 +13,7 @@ public struct	Facade_Coregame : ICachedContext
 	public  GameMode				Mode         	=> Ctx.GetService<GameMode>();
 	public	Facade_Flow				Flow 			=> new(Ctx.GetService<GameStage_Play>());
     public	Facade_CoreStates		States			=> new(CallSource);
-    public	Facade_Global			Global			=> new(CallSource.GetComponentInParent<State>().Flow);
+    public	Facade_Overlay			Overlay			=> new(CallSource);
     public	Service_Audio			Audio			=> Ctx.GetService<Service_Audio>();
     public	Service_GameSettings	Settings		=> Ctx.GetService<Service_GameSettings>();
 }
@@ -29,4 +29,8 @@ public readonly record struct	Facade_CoreStates	( LibCtx LibCtx )
 	public State_Pause				.Opener		Pause				=> LibCtx.GetState<State_Pause>();
 	public State_PlayComplete		.Opener		PlayComplete		=> LibCtx.GetOpener<State_PlayComplete.Opener>();
 	public Window_GameSettings		.Opener		GameSettings		=> LibCtx.GetState<Window_GameSettings>();
+	
+	public State_TestExternalOpen	.Opener		ExternalOpen		=> new LibCtx(LibCtx.Src.GameStageNode).GetState<State_TestExternalOpen>();
+	
+	
 }
