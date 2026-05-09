@@ -15,7 +15,7 @@ MonoBehaviour:
   _autoGrabMode: 1
   _dependencies: []
   _states:
-  - TypeFullName: FlexyTT.BarleyBreak.Boot.Stage_Boot, Barley-Break
+  - TypeFullName: FlexyTT.BarleyBreak.Boot.GameStage_Boot, Barley-Break
     Ref:
       _uid:
         serializedVersion: 2

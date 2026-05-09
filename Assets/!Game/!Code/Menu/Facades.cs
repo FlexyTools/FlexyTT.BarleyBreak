@@ -36,4 +36,6 @@ public readonly record struct	Facade_UIWindows	( LibCtx LibCtx )
 	public Window_AppInfo			.Opener		AppInfo			=> LibCtx.GetState<Window_AppInfo>();
 	public Window_PlayFields		.Opener		PlayFields		=> LibCtx.GetState<Window_PlayFields>();
 	public Window_Leaderboards		.Opener		Leaderboards	=> LibCtx.GetOpener<Window_Leaderboards.Opener>();
+	
+	public Popup_ExitGame			.Opener		Popup_Exit		=> LibCtx.GetState<Popup_ExitGame>();
 }

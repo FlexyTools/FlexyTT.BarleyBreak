@@ -14,16 +14,7 @@ namespace FlexyTT.BarleyBreak.Menu
 		}
 		[Callable]	void	ExitGame			( )		
 		{
-			if( !Application.isEditor )
-			{
-				Application.Quit( );
-			}
-			else
-			{
-	#if UNITY_EDITOR
-				UnityEditor.EditorApplication.ExitPlaymode( );
-	#endif
-			}
+			Game.UI.Popup_Exit.Open();
 		}
 		
 		[Callable]	void	OpenAppInfo			( )		

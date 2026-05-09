@@ -1,7 +1,7 @@
 ﻿namespace FlexyTT.BarleyBreak.Boot
 {
 	[ServiceTypes(typeof(GameStage))]
-	public class Stage_Boot : GameStageEx
+	public class GameStage_Boot : GameStageEx
 	{
 		[SerializeField]	GameObject			_loaderOverlay = null!;
 		[SerializeField]	AssetRef<State>[]	_bootStates = null!;
@@ -34,6 +34,10 @@
 		
 		private async		UniTask<Int32>	GetInitialStateIndex ( )	
 		{
+			#if !UNITY_EDITOR
+			return 0;
+			
+			#else
 			// Check if we have test boot state already opened
 			if (!AnySubStateOpened) 
 				return 0;
@@ -42,9 +46,10 @@
 
 			var h = Node.FirstBaseChild!;
 			while (h.IsOpened)
-				await UniTask.Yield(PlayerLoopTiming.LastUpdate);
+				await h.WaitClose();
 
 			return booti;
-		}
+			#endif
+		}	
 	}
 }

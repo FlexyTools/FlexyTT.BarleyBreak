@@ -1,8 +1,9 @@
 namespace FlexyTT.BarleyBreak.Menu
 {
+	[OpenOnLayer(StateLayers.Popups)]
 	public class Popup_ExitGame : UIPopupEx
 	{
-		[Callable]	void	ExitGame			( )		
+		[Callable]	void	ExitGame	( )		
 		{
 			if (!Application.isEditor)
 			{
