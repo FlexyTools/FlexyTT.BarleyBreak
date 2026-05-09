@@ -1,12 +1,11 @@
-using FlexyTT.BarleyBreak.Global;
-
 namespace FlexyTT.BarleyBreak.Menu
 {
 	[ServiceTypes(typeof(GameStage))]
 	public class GameStage_Menu : GameStageEx
 	{
-		[SerializeField] AssetRef<GameStage> _coreGameStage;
-
+		[SerializeField] FlowLibrary			_menuLibrary = null!;
+		[SerializeField] AssetRef<GameStage>	_coreGameStage;
+		
 		private			Facade_Game		_game; 
 		private			Facade_Game		Game		=> _game.GetCached( this );
 
@@ -19,6 +18,19 @@ namespace FlexyTT.BarleyBreak.Menu
 		
 			Game.Leaderboards.AddRecord( field, score );
 			Game.UI.Leaderboards.Open( field );
+		}
+
+		protected override UniTask		OnShow			( )		
+		{
+			this.PreloadLibrary(_menuLibrary, 1).Forget();
+			
+			return base.OnShow();
+		}
+		protected override UniTask		OnForwardHide	( )		
+		{
+			this.ClearStatesCache().Forget();
+			
+			return base.OnForwardHide();
 		}
 	}
 }

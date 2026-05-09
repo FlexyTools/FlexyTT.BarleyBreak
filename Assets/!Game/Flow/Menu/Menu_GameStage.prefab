@@ -69,6 +69,7 @@ MonoBehaviour:
     _subId: 0
   _statesContainer: {fileID: 6528645526937086107}
   _popupsContainer: {fileID: 3879406312384450221}
+  _menuLibrary: {fileID: 11400000, guid: 9b6dca4bba14b264fb9ebc6b437a639e, type: 2}
   _coreGameStage:
     _uid:
       serializedVersion: 2
